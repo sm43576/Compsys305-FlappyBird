@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue May 10 15:12:56 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : miniproject
+Top-level Entity Name : VGA_SYNC
+Family : Cyclone III
+Total logic elements : 79
+    Total combinational functions : 58
+    Dedicated logic registers : 48
+Total registers : 48
+Total pins : 29
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
