@@ -98,3 +98,4 @@ set_global_assignment -name BDF_FILE VGAdisplay.bdf
 set_global_assignment -name QIP_FILE altpll0.qip
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE "mouse interface.bdf"
