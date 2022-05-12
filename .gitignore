@@ -7,3 +7,63 @@ Lab3 Final/work/bcd2sevenseg/_primary.dbs
 Lab3 Final/work/bcd2sevenseg/_primary.dat
 Lab3 Final/work/_vmake
 Lab3 Final/work/_info
+*.hdb
+*.rdb
+*.qmsg
+*.tdf
+*.dat
+*.dat
+*.dat
+*.xml
+*.idb
+*.bpm
+*.ddb
+*.cdb
+*.dat
+*.kpt
+*.hsd
+*.hif
+*.hier_info
+*.db_info
+*.db_info
+*.logdb
+*.txt
+*.html
+*.qns
+*.ammdb
+*.ipinfo
+*.sci
+*.db_info
+*.sci
+*.qns
+*.ipinfo
+Quartus Files/db/logic_util_heursitic.dat
+Quartus Files/db/miniproject.db_info
+Quartus Files/db/miniproject.ipinfo
+Quartus Files/db/miniproject.qns
+Quartus Files/db/miniproject.sld_design_entry.sci
+Quartus Files/db/miniproject.sta_cmp.6_slow_1200mv_85c.tdb
+Quartus Files/db/miniproject.syn_hier_info
+Quartus Files/db/miniproject.tmw_info
+Quartus Files/db/prev_cmp_miniproject.qmsg
+Quartus Files/incremental_db/compiled_partitions/miniproject.db_info
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.cmp.rcfdb
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.map.dpi
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.map.hbdb.hb_info
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.map.hbdb.sig
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.map.kpt
+Quartus Files/miniproject.qsf
+Quartus Files/miniproject.qsf.bak
+Quartus Files/miniproject.qws
+Quartus Files/db/logic_util_heursitic.dat
+Quartus Files/db/miniproject.db_info
+Quartus Files/db/miniproject.ipinfo
+Quartus Files/db/miniproject.qns
+Quartus Files/db/miniproject.sld_design_entry.sci
+Quartus Files/db/prev_cmp_miniproject.qmsg
+Quartus Files/incremental_db/compiled_partitions/miniproject.db_info
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.map.dpi
+Quartus Files/incremental_db/compiled_partitions/miniproject.root_partition.map.kpt
+Quartus Files/miniproject.qsf
+Quartus Files/miniproject.qsf.bak
+Quartus Files/miniproject.qws

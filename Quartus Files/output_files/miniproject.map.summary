@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue May 10 15:12:56 2022
+Analysis & Synthesis Status : Successful - Thu May 12 14:50:22 2022
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : miniproject
-Top-level Entity Name : VGA_SYNC
+Top-level Entity Name : ballWMouse
 Family : Cyclone III
-Total logic elements : 79
-    Total combinational functions : 58
-    Dedicated logic registers : 48
-Total registers : 48
-Total pins : 29
+Total logic elements : 213
+    Total combinational functions : 167
+    Dedicated logic registers : 120
+Total registers : 120
+Total pins : 8
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1
