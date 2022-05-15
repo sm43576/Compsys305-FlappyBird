@@ -1,6 +1,6 @@
 Flow report for miniproject
-Tue May 10 15:13:17 2022
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Sun May 15 15:00:33 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 10 15:13:11 2022       ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
-; Revision Name                      ; miniproject                                 ;
-; Top-level Entity Name              ; VGA_SYNC                                    ;
-; Family                             ; Cyclone III                                 ;
-; Device                             ; EP3C16F484C6                                ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 77 / 15,408 ( < 1 % )                       ;
-;     Total combinational functions  ; 58 / 15,408 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 48 / 15,408 ( < 1 % )                       ;
-; Total registers                    ; 48                                          ;
-; Total pins                         ; 29 / 347 ( 8 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Sun May 15 15:00:30 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; miniproject                                     ;
+; Top-level Entity Name              ; ballWMouse                                      ;
+; Family                             ; Cyclone III                                     ;
+; Device                             ; EP3C16F484C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 202 / 15,408 ( 1 % )                            ;
+;     Total combinational functions  ; 168 / 15,408 ( 1 % )                            ;
+;     Dedicated logic registers      ; 121 / 15,408 ( < 1 % )                          ;
+; Total registers                    ; 121                                             ;
+; Total pins                         ; 8 / 347 ( 2 % )                                 ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,27 +64,34 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/10/2022 15:12:53 ;
+; Start date & time ; 05/15/2022 15:00:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; miniproject         ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                 ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 118933449006424.165215237306272 ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; vga_sync    ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; vga_sync    ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; vga_sync    ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; vga_sync                        ; miniproject   ; --          ; --         ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 194042951463353.165258361806280       ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; altpll0.bsf                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; altpll0.cmp                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; altpll0.ppf                           ; --            ; --          ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; ballWMouse  ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; ballWMouse  ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; ballWMouse  ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; ballWMouse                            ; miniproject   ; --          ; --         ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -92,11 +99,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4653 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:07     ; 2.4                     ; 5462 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4635 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 4912 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,10 +112,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; EN403186         ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; EN403186         ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; EN403186         ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; EN403186         ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; sn43576          ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; sn43576          ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; sn43576          ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; sn43576          ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
