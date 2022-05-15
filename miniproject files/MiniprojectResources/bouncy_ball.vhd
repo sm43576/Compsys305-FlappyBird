@@ -19,12 +19,14 @@ SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0); --change to match mouse movement.
 SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 
+
 BEGIN           
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
+--ball_y_pos <= CONV_STD_LOGIC_VECTOR(10,10);
 
 						-- and here is adding 0 to ball_x_pos making it unsigned
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
@@ -44,14 +46,14 @@ Move_Ball: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
 	if (rising_edge(vert_sync)) then			
-		if (pb1='1' and   ball_y_pos <= CONV_STD_LOGIC_VECTOR(479,10))then
+		if (pb1='1' and   ball_y_pos > CONV_STD_LOGIC_VECTOR(0,10))then
 			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10); -- ball goes up 
 			
-		elsif (ball_y_pos <= size) then 
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10); -- ball keeps going down
+		elsif (ball_y_pos < CONV_STD_LOGIC_VECTOR(479,10)) then 
+			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10); -- stops ball at height
 	
-		-- Bounce off top or bottom of the screen	
-		elsif ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
+		
+	elsif ( ball_y_pos > CONV_STD_LOGIC_VECTOR(479,10)) then
 			ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10); 
 			
 		end if;
