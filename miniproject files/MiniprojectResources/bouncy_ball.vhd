@@ -45,14 +45,14 @@ begin
 	-- Move ball once every vertical sync
 	if (rising_edge(vert_sync)) then			
 		if (pb1='1' and   ball_y_pos <= CONV_STD_LOGIC_VECTOR(479,10))then
-			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10);
+			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10); -- ball goes up 
 			
 		elsif (ball_y_pos <= size) then 
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);-- should be 0 keep ball at bottom of screen
+			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10); -- ball keeps going down
 	
 		-- Bounce off top or bottom of the screen	
-	--	elsif ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
-	--		ball_y_motion <=  CONV_STD_LOGIC_VECTOR(2,10); 
+		elsif ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
+			ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10); 
 			
 		end if;
 		-- Compute next ball Y position
