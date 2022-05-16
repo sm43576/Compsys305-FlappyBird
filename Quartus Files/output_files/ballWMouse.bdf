@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect -408 216 -240 232)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -445,25 +445,68 @@ applicable agreement for further details.
 		(pt 192 32)
 		(output)
 		(text "red" (rect 0 0 15 12)(font "Arial" ))
-		(text "red" (rect 159 27 171 39)(font "Arial" ))
+		(text "red" (rect 159 27 174 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32))
 	)
 	(port
 		(pt 192 48)
 		(output)
 		(text "green" (rect 0 0 27 12)(font "Arial" ))
-		(text "green" (rect 149 43 171 55)(font "Arial" ))
+		(text "green" (rect 149 43 176 55)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48))
 	)
 	(port
 		(pt 192 64)
 		(output)
 		(text "blue" (rect 0 0 20 12)(font "Arial" ))
-		(text "blue" (rect 155 59 171 71)(font "Arial" ))
+		(text "blue" (rect 155 59 175 71)(font "Arial" ))
 		(line (pt 192 64)(pt 176 64))
 	)
 	(drawing
 		(rectangle (rect 16 16 176 128))
+	)
+)
+(symbol
+	(rect 192 504 456 616)
+	(text "char_rom" (rect 5 0 51 12)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "character_address[5..0]" (rect 0 0 116 12)(font "Arial" ))
+		(text "character_address[5..0]" (rect 21 27 137 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "font_row[2..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "font_row[2..0]" (rect 21 43 89 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "font_col[2..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "font_col[2..0]" (rect 21 59 87 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 75 46 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "rom_mux_output" (rect 0 0 82 12)(font "Arial" ))
+		(text "rom_mux_output" (rect 174 27 256 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 248 96))
 	)
 )
 (connector
@@ -495,20 +538,8 @@ applicable agreement for further details.
 	(pt 504 344)
 )
 (connector
-	(pt 0 464)
-	(pt 0 456)
-)
-(connector
 	(pt -8 464)
 	(pt 0 464)
-)
-(connector
-	(pt 0 456)
-	(pt 464 456)
-)
-(connector
-	(pt 464 456)
-	(pt 464 360)
 )
 (connector
 	(pt 504 376)
@@ -545,10 +576,6 @@ applicable agreement for further details.
 (connector
 	(pt 16 488)
 	(pt 488 488)
-)
-(connector
-	(pt 472 472)
-	(pt 472 376)
 )
 (connector
 	(pt 728 344)
@@ -599,11 +626,6 @@ applicable agreement for further details.
 	(pt 776 288)
 )
 (connector
-	(pt 760 600)
-	(pt 760 424)
-	(bus)
-)
-(connector
 	(pt 760 424)
 	(pt 728 424)
 	(bus)
@@ -612,15 +634,6 @@ applicable agreement for further details.
 	(pt 744 440)
 	(pt 728 440)
 	(bus)
-)
-(connector
-	(pt 744 440)
-	(pt 744 584)
-	(bus)
-)
-(connector
-	(pt 464 360)
-	(pt 504 360)
 )
 (connector
 	(pt 224 168)
@@ -667,16 +680,8 @@ applicable agreement for further details.
 	(pt 776 672)
 )
 (connector
-	(pt 144 400)
-	(pt -336 400)
-)
-(connector
 	(pt -336 400)
 	(pt -336 480)
-)
-(connector
-	(pt -336 480)
-	(pt -200 480)
 )
 (connector
 	(pt -248 672)
@@ -691,33 +696,13 @@ applicable agreement for further details.
 	(pt -200 496)
 )
 (connector
-	(pt -232 600)
-	(pt -232 512)
-	(bus)
-)
-(connector
 	(pt -200 512)
 	(pt -232 512)
 	(bus)
 )
 (connector
 	(pt -216 528)
-	(pt -216 584)
-	(bus)
-)
-(connector
-	(pt -216 528)
 	(pt -200 528)
-	(bus)
-)
-(connector
-	(pt -232 600)
-	(pt 760 600)
-	(bus)
-)
-(connector
-	(pt -216 584)
-	(pt 744 584)
 	(bus)
 )
 (connector
@@ -740,6 +725,138 @@ applicable agreement for further details.
 	(pt -200 464)
 	(pt -304 464)
 )
+(connector
+	(pt -336 480)
+	(pt -200 480)
+)
+(connector
+	(pt 760 424)
+	(pt 760 656)
+	(bus)
+)
+(connector
+	(pt 744 440)
+	(pt 744 640)
+	(bus)
+)
+(connector
+	(pt -232 512)
+	(pt -232 656)
+	(bus)
+)
+(connector
+	(pt -216 528)
+	(pt -216 640)
+	(bus)
+)
+(connector
+	(pt -232 656)
+	(pt 760 656)
+	(bus)
+)
+(connector
+	(pt -216 640)
+	(pt 744 640)
+	(bus)
+)
+(connector
+	(text "pixel_row[3..1]" (rect 90 536 182 551)(font "Arial" (font_size 9)))
+	(pt 56 552)
+	(pt 192 552)
+	(bus)
+)
+(connector
+	(text "pixel_column[3..1]" (rect 66 552 182 567)(font "Arial" (font_size 9)))
+	(pt 56 568)
+	(pt 192 568)
+	(bus)
+)
+(connector
+	(text "pixel_row[9..4]" (rect 58 520 128 532)(font "Arial" ))
+	(pt 56 536)
+	(pt 192 536)
+	(bus)
+)
+(connector
+	(pt 0 456)
+	(pt 0 464)
+)
+(connector
+	(pt -336 400)
+	(pt 0 400)
+)
+(connector
+	(pt 0 400)
+	(pt 144 400)
+)
+(connector
+	(text "clock1" (rect -16 411 -4 442)(font "Arial" )(vertical))
+	(pt 0 400)
+	(pt 0 448)
+)
+(connector
+	(pt 184 584)
+	(pt 184 600)
+)
+(connector
+	(pt 192 584)
+	(pt 184 584)
+)
+(connector
+	(text "clock1" (rect 10 584 41 596)(font "Arial" ))
+	(pt 184 600)
+	(pt 0 600)
+)
+(connector
+	(pt 0 456)
+	(pt 456 456)
+)
+(connector
+	(pt 504 360)
+	(pt 456 360)
+)
+(connector
+	(text "muxout" (rect 456 520 492 532)(font "Arial" ))
+	(pt 456 536)
+	(pt 472 536)
+)
+(connector
+	(pt 456 360)
+	(pt 456 384)
+)
+(connector
+	(pt 456 384)
+	(pt 456 456)
+)
+(connector
+	(pt 432 384)
+	(pt 432 416)
+)
+(connector
+	(text "muxout" (rect 392 368 428 380)(font "Arial" ))
+	(pt 392 384)
+	(pt 432 384)
+)
+(connector
+	(pt 432 384)
+	(pt 456 384)
+)
+(connector
+	(pt 432 416)
+	(pt 472 416)
+)
+(connector
+	(pt 472 376)
+	(pt 472 416)
+)
+(connector
+	(pt 472 416)
+	(pt 472 472)
+)
 (junction (pt 776 448))
 (junction (pt 144 344))
 (junction (pt 144 280))
+(junction (pt 0 400))
+(junction (pt 456 384))
+(junction (pt 432 384))
+(junction (pt 472 416))
