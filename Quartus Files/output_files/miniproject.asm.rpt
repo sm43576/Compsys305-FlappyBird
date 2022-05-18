@@ -1,5 +1,5 @@
 Assembler report for miniproject
-Wed May 18 22:21:58 2022
+Wed May 18 22:51:41 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed May 18 22:21:58 2022 ;
+; Assembler Status      ; Successful - Wed May 18 22:51:41 2022 ;
 ; Revision Name         ; miniproject                           ;
-; Top-level Entity Name ; Priority                              ;
+; Top-level Entity Name ; ballWMouse                            ;
 ; Family                ; Cyclone III                           ;
 ; Device                ; EP3C16F484C6                          ;
 +-----------------------+---------------------------------------+
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                     ;
 +----------------+-------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                                ;
-; JTAG usercode  ; 0x000CA8AE                                                                                                  ;
-; Checksum       ; 0x000CA8AE                                                                                                  ;
+; JTAG usercode  ; 0x000ECB7C                                                                                                  ;
+; Checksum       ; 0x000ECB7C                                                                                                  ;
 +----------------+-------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 18 22:21:57 2022
+    Info: Processing started: Wed May 18 22:51:40 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off miniproject -c miniproject
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4543 megabytes
-    Info: Processing ended: Wed May 18 22:21:58 2022
+    Info: Peak virtual memory: 4544 megabytes
+    Info: Processing ended: Wed May 18 22:51:41 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

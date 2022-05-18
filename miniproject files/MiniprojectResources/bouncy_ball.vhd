@@ -8,12 +8,12 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  red, green, blue 			: OUT std_logic);		
+		  red, green, blue, ball_on 			: OUT std_logic);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
 
-SIGNAL ball_on					: std_logic;
+SIGNAL temp_ball_on					: std_logic;
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0); --change to match mouse movement.
@@ -29,16 +29,17 @@ ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
 --ball_y_pos <= CONV_STD_LOGIC_VECTOR(10,10);
 
 						-- and here is adding 0 to ball_x_pos making it unsigned
-ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
+temp_ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 --checks if pixel is in the ball boundary 
+ball_on <= temp_ball_on;
 
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
-Red <=  '0';
-Green <= not ball_on;
-Blue <=  not ball_on;
+Red <=  '1';
+Green <= not temp_ball_on;
+Blue <=  not temp_ball_on;
 
 
 

@@ -54,9 +54,16 @@ applicable agreement for further details.
 	(port
 		(pt 264 32)
 		(output)
-		(text "rom_mux_output" (rect 0 0 69 12)(font "Arial" ))
-		(text "rom_mux_output" (rect 174 27 243 39)(font "Arial" ))
+		(text "text_on" (rect 0 0 29 12)(font "Arial" ))
+		(text "text_on" (rect 214 27 243 39)(font "Arial" ))
 		(line (pt 264 32)(pt 248 32)(line_width 1))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "rom_mux_output" (rect 0 0 69 12)(font "Arial" ))
+		(text "rom_mux_output" (rect 174 43 243 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 248 96)(line_width 1))
