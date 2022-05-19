@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed May 18 22:51:33 2022
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Thu May 19 13:08:19 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : miniproject
 Top-level Entity Name : ballWMouse
 Family : Cyclone III
-Total logic elements : 223
-    Total combinational functions : 176
+Total logic elements : 221
+    Total combinational functions : 174
     Dedicated logic registers : 125
 Total registers : 125
 Total pins : 8

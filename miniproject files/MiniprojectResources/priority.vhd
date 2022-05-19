@@ -17,10 +17,10 @@ architecture a OF Priority IS
 	signal tempRedOut, tempGreenOut, tempBlueOut: std_logic;
 	
 begin
-prioritise: process (vert_sync)  	
+prioritise: process (clock_25Mhz)  	
 begin
 -- Assume first if is in foreground and last elsif is in background
-	if(rising_edge(vert_sync)) then
+	if(rising_edge(clock_25Mhz)) then
 		if(birdOn = '1') then
 			tempRedOut <= redBird;
 			tempGreenOut <= greenBird;
