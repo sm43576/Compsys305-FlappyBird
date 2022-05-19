@@ -1,0 +1,16 @@
+library IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+use  IEEE.STD_LOGIC_ARITH.all;
+use  IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY textToDisplay IS
+	PORT(	clock_25Mhz, mode: IN	STD_LOGIC;
+		character_address	:	OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+		font_row, font_col	:	OUT STD_LOGIC_VECTOR (2 DOWNTO 0));
+end textToDisplay;
+
+architecture a OF textToDisplay IS
+	
+begin
+
+end a;
