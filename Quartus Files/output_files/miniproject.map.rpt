@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Thu May 19 13:08:19 2022
+Thu May 19 15:51:53 2022
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -53,7 +53,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 19 13:08:19 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 19 15:51:53 2022       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; miniproject                                 ;
 ; Top-level Entity Name              ; ballWMouse                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Total registers                    ; 125                                         ;
 ; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,048                                       ;
+; Total memory bits                  ; 64                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
@@ -174,34 +174,35 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                     ;
-+-----------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                  ; Library ;
-+-----------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
-; ../miniproject files/MiniprojectResources/vga_sync.vhd    ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd    ;         ;
-; ../miniproject files/MiniprojectResources/mouse.vhd       ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd       ;         ;
-; ../miniproject files/MiniprojectResources/char_rom.vhd    ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd    ;         ;
-; ../miniproject files/MiniprojectResources/bouncy_ball.vhd ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd ;         ;
-; altpll0.vhd                                               ; yes             ; User Wizard-Generated File         ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                              ;         ;
-; output_files/ballWMouse.bdf                               ; yes             ; User Block Diagram/Schematic File  ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/ballWMouse.bdf              ;         ;
-; ../miniproject files/MiniprojectResources/priority.vhd    ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd    ;         ;
-; altpll.tdf                                                ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altpll.tdf                                                                     ;         ;
-; aglobal130.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                                                 ;         ;
-; stratix_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_pll.inc                                                                ;         ;
-; stratixii_pll.inc                                         ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                                              ;         ;
-; cycloneii_pll.inc                                         ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                                              ;         ;
-; db/altpll0_altpll.v                                       ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                      ;         ;
-; altsyncram.tdf                                            ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                                                                 ;         ;
-; stratix_ram_block.inc                                     ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                                          ;         ;
-; lpm_mux.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                                                                    ;         ;
-; lpm_decode.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                                                                 ;         ;
-; a_rdenreg.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                                  ;         ;
-; altrom.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                                                                     ;         ;
-; altram.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                                                                     ;         ;
-; altdpram.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                                                                   ;         ;
-; db/altsyncram_kt91.tdf                                    ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                   ;         ;
-+-----------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                         ;
++-------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                    ; Library ;
++-------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
+; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
+; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
+; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
+; output_files/ballWMouse.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/ballWMouse.bdf                ;         ;
+; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
+; altpll.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altpll.tdf                                                                       ;         ;
+; aglobal130.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                                                   ;         ;
+; stratix_pll.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_pll.inc                                                                  ;         ;
+; stratixii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                                                ;         ;
+; cycloneii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                                                ;         ;
+; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
+; altsyncram.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                                                                   ;         ;
+; stratix_ram_block.inc                                       ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                                            ;         ;
+; lpm_mux.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                                                                      ;         ;
+; lpm_decode.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                                                                   ;         ;
+; a_rdenreg.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                                    ;         ;
+; altrom.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                                                                       ;         ;
+; altram.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                                                                       ;         ;
+; altdpram.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                                                                     ;         ;
+; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
++-------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -226,15 +227,15 @@ applicable agreement for further details.
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
 ; I/O pins                                    ; 8                                                                                    ;
-; Total memory bits                           ; 2048                                                                                 ;
+; Total memory bits                           ; 64                                                                                   ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
 ; Total PLLs                                  ; 1                                                                                    ;
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 88                                                                                   ;
-; Total fan-out                               ; 928                                                                                  ;
-; Average fan-out                             ; 2.85                                                                                 ;
+; Total fan-out                               ; 888                                                                                  ;
+; Average fan-out                             ; 2.72                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -243,7 +244,7 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
-; |ballWMouse                               ; 174 (0)           ; 125 (0)      ; 2048        ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ;              ;
+; |ballWMouse                               ; 174 (0)           ; 125 (0)      ; 64          ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ;              ;
 ;    |MOUSE:inst2|                          ; 52 (52)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|MOUSE:inst2                                                                  ;              ;
 ;    |Priority:inst5|                       ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|Priority:inst5                                                               ;              ;
 ;    |VGA_SYNC:inst8|                       ; 57 (57)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|VGA_SYNC:inst8                                                               ;              ;
@@ -251,9 +252,9 @@ applicable agreement for further details.
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component                                        ;              ;
 ;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ;              ;
 ;    |bouncy_ball:inst7|                    ; 59 (59)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|bouncy_ball:inst7                                                            ;              ;
-;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst                                                                ;              ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ;              ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
+;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst                                                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ;              ;
+;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -858,9 +859,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu May 19 13:08:16 2022
+    Info: Processing started: Thu May 19 15:51:50 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
+    Info (12022): Found design unit 1: textToDisplay-a
+    Info (12023): Found entity 1: textToDisplay
 Info (12021): Found 1 design units, including 1 entities, in source file mouseinterface.bdf
     Info (12023): Found entity 1: mouseInterface
 Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
@@ -991,12 +995,13 @@ Info (12133): Instantiated megafunction "char_rom:inst|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
     Info (12023): Found entity 1: altsyncram_kt91
 Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
+Info (12128): Elaborating entity "textToDisplay" for hierarchy "textToDisplay:inst3"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM"
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 241 device resources after synthesis - the final resource count might be different
@@ -1007,9 +1012,9 @@ Info (21057): Implemented 241 device resources after synthesis - the final resou
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Thu May 19 13:08:19 2022
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Thu May 19 15:51:54 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

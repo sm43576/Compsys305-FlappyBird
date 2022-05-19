@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -408 216 -232 232)
+	(rect -872 152 -696 168)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "clk" (rect 9 0 23 12)(font "Arial" ))
 	(pt 176 8)
@@ -34,7 +34,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -464 232 -408 248))
+	(annotation_block (location)(rect -928 168 -872 184))
 )
 (pin
 	(output)
@@ -239,7 +239,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -224 208 88 384)
+	(rect -688 144 -376 320)
 	(text "altpll0" (rect 136 0 176 16)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 160 31 172)(font "Arial" ))
 	(port
@@ -386,7 +386,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -312 304 -280 336)
+	(rect -776 240 -744 272)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst9" (rect 3 21 26 33)(font "Arial" )(invisible))
 	(port
@@ -927,29 +927,79 @@ applicable agreement for further details.
 		(line (pt 8 8)(pt 24 8))
 	)
 )
-(connector
-	(pt -224 304)
-	(pt -296 304)
+(symbol
+	(rect -144 824 104 936)
+	(text "textToDisplay" (rect 5 0 73 12)(font "Arial" ))
+	(text "inst3" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock_25Mhz" (rect 0 0 62 12)(font "Arial" ))
+		(text "clock_25Mhz" (rect 21 27 83 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "mode[2..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "mode[2..0]" (rect 21 43 74 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "pix_row[9..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "pix_row[9..0]" (rect 21 59 83 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "pix_col[9..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "pix_col[9..0]" (rect 21 75 81 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "character_address[5..0]" (rect 0 0 116 12)(font "Arial" ))
+		(text "character_address[5..0]" (rect 129 27 245 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "font_row[2..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "font_row[2..0]" (rect 170 43 238 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "font_col[2..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "font_col[2..0]" (rect 172 59 238 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 96))
+	)
 )
-(connector
-	(pt 88 280)
-	(pt 144 280)
-)
-(connector
-	(pt 88 304)
-	(pt 104 304)
-)
-(connector
-	(pt -224 280)
-	(pt -232 280)
-)
-(connector
-	(pt -232 280)
-	(pt -232 224)
-)
-(connector
-	(pt -232 224)
-	(pt -240 224)
+(symbol
+	(rect -312 888 -280 920)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst22" (rect 3 21 32 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
 )
 (connector
 	(pt 728 344)
@@ -1031,10 +1081,6 @@ applicable agreement for further details.
 )
 (connector
 	(pt 144 152)
-	(pt 144 280)
-)
-(connector
-	(pt 144 152)
 	(pt 224 152)
 )
 (connector
@@ -1109,10 +1155,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 776 672)
-	(pt 112 672)
-)
-(connector
 	(pt 112 672)
 	(pt 112 472)
 )
@@ -1159,10 +1201,6 @@ applicable agreement for further details.
 (connector
 	(pt 184 456)
 	(pt -40 456)
-)
-(connector
-	(pt -528 400)
-	(pt -40 400)
 )
 (connector
 	(pt -40 400)
@@ -1249,10 +1287,6 @@ applicable agreement for further details.
 (connector
 	(pt 144 344)
 	(pt 504 344)
-)
-(connector
-	(pt 144 280)
-	(pt 144 344)
 )
 (connector
 	(pt 144 344)
@@ -1357,34 +1391,140 @@ applicable agreement for further details.
 	(pt 632 744)
 )
 (connector
-	(text "pixel_row[9..4]" (rect 202 728 272 740)(font "Arial" ))
-	(pt 200 744)
+	(pt -376 240)
+	(pt -360 240)
+)
+(connector
+	(pt -688 216)
+	(pt -696 216)
+)
+(connector
+	(pt -696 216)
+	(pt -696 160)
+)
+(connector
+	(pt -696 160)
+	(pt -704 160)
+)
+(connector
+	(pt 144 152)
+	(pt 144 216)
+)
+(connector
+	(pt 144 216)
+	(pt 144 344)
+)
+(connector
+	(pt -376 216)
+	(pt 144 216)
+)
+(connector
+	(pt -760 240)
+	(pt -688 240)
+)
+(connector
+	(pt -120 400)
+	(pt -120 656)
+)
+(connector
+	(pt -120 656)
+	(pt -176 656)
+)
+(connector
+	(pt -528 400)
+	(pt -120 400)
+)
+(connector
+	(pt -120 400)
+	(pt -40 400)
+)
+(connector
+	(text "clock1" (rect 218 776 249 788)(font "Arial" ))
+	(pt 336 792)
+	(pt 208 792)
+)
+(connector
+	(pt -176 656)
+	(pt -176 856)
+)
+(connector
+	(pt -176 856)
+	(pt -144 856)
+)
+(connector
+	(text "<<__$DEF_ALIAS3589>>" (rect 202 728 325 740)(font "Arial" )(invisible))
+	(pt 104 744)
 	(pt 336 744)
 	(bus)
 )
 (connector
-	(text "pixel_row[2..0]" (rect 234 744 326 759)(font "Arial" (font_size 9)))
-	(pt 200 760)
+	(pt 104 744)
+	(pt 104 856)
+	(bus)
+)
+(connector
 	(pt 336 760)
+	(pt 112 760)
 	(bus)
 )
 (connector
-	(text "pixel_column[3..1]" (rect 210 760 326 775)(font "Arial" (font_size 9)))
-	(pt 200 776)
+	(pt 104 872)
+	(pt 112 872)
+	(bus)
+)
+(connector
+	(pt 112 760)
+	(pt 112 872)
+	(bus)
+)
+(connector
 	(pt 336 776)
+	(pt 128 776)
 	(bus)
 )
 (connector
-	(text "clock1" (rect 146 776 177 788)(font "Arial" ))
-	(pt 136 792)
-	(pt 336 792)
+	(pt 104 888)
+	(pt 128 888)
+	(bus)
+)
+(connector
+	(pt 128 776)
+	(pt 128 888)
+	(bus)
+)
+(connector
+	(pt 112 672)
+	(pt 776 672)
+)
+(connector
+	(text "pixel_row[9..0]" (rect -238 872 -146 887)(font "Arial" (font_size 9)))
+	(pt -272 888)
+	(pt -144 888)
+	(bus)
+)
+(connector
+	(text "pixel_column[9..0]" (rect -262 888 -146 903)(font "Arial" (font_size 9)))
+	(pt -272 904)
+	(pt -144 904)
+	(bus)
+)
+(connector
+	(pt -144 872)
+	(pt -296 872)
+	(bus)
+)
+(connector
+	(pt -296 872)
+	(pt -296 888)
+	(bus)
 )
 (junction (pt 776 448))
 (junction (pt 144 344))
-(junction (pt 144 280))
 (junction (pt 0 400))
 (junction (pt 744 512))
 (junction (pt 760 560))
 (junction (pt -40 400))
 (junction (pt 776 520))
 (junction (pt -520 704))
+(junction (pt 144 216))
+(junction (pt -120 400))

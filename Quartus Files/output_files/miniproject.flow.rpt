@@ -1,5 +1,5 @@
 Flow report for miniproject
-Thu May 19 13:08:35 2022
+Thu May 19 15:52:11 2022
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 19 13:08:30 2022       ;
+; Flow Status                        ; Successful - Thu May 19 15:52:06 2022       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; miniproject                                 ;
 ; Top-level Entity Name              ; ballWMouse                                  ;
@@ -53,7 +53,7 @@ applicable agreement for further details.
 ; Total registers                    ; 125                                         ;
 ; Total pins                         ; 8 / 347 ( 2 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 2,048 / 516,096 ( < 1 % )                   ;
+; Total memory bits                  ; 64 / 516,096 ( < 1 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2022 13:08:16 ;
+; Start date & time ; 05/19/2022 15:51:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; miniproject         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053328745635.165292249611636       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053328737435.165293231013368       ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -99,11 +99,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4665 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:05     ; 2.4                     ; 5590 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4648 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4674 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:06     ; 2.2                     ; 5589 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4658 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,10 +112,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; EN399248         ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; EN399248         ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; EN399248         ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; EN399248         ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; EN399267         ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; EN399267         ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; EN399267         ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EN399267         ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

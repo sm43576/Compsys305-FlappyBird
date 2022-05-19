@@ -1,4 +1,4 @@
-Fitter Status : Successful - Thu May 19 13:08:26 2022
+Fitter Status : Successful - Thu May 19 15:52:01 2022
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : miniproject
 Top-level Entity Name : ballWMouse
@@ -11,6 +11,6 @@ Total logic elements : 205 / 15,408 ( 1 % )
 Total registers : 125
 Total pins : 8 / 347 ( 2 % )
 Total virtual pins : 0
-Total memory bits : 2,048 / 516,096 ( < 1 % )
+Total memory bits : 64 / 516,096 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
 Total PLLs : 1 / 4 ( 25 % )

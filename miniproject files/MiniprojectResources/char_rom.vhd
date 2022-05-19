@@ -71,9 +71,10 @@ BEGIN
 		address_a => rom_address,
 		q_a => rom_data
 	);
-
-	rom_address <= character_address & font_row;
-	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
+	
+	if(128<p_row< 160 and col = 32 )then
+		rom_address <= character_address& font_row;
+		rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
 	text_on <= '1';
 
 END SYN;
