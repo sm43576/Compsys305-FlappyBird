@@ -1,6 +1,6 @@
 Fitter report for miniproject
-Thu May 19 15:52:01 2022
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Fri May 20 12:42:47 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -71,26 +71,26 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Fitter Summary                                                                   ;
-+------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 19 15:52:01 2022       ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
-; Revision Name                      ; miniproject                                 ;
-; Top-level Entity Name              ; ballWMouse                                  ;
-; Family                             ; Cyclone III                                 ;
-; Device                             ; EP3C16F484C6                                ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 205 / 15,408 ( 1 % )                        ;
-;     Total combinational functions  ; 175 / 15,408 ( 1 % )                        ;
-;     Dedicated logic registers      ; 125 / 15,408 ( < 1 % )                      ;
-; Total registers                    ; 125                                         ;
-; Total pins                         ; 8 / 347 ( 2 % )                             ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 64 / 516,096 ( < 1 % )                      ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Fri May 20 12:42:46 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; miniproject                                     ;
+; Top-level Entity Name              ; ballWMouse                                      ;
+; Family                             ; Cyclone III                                     ;
+; Device                             ; EP3C16F484C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 205 / 15,408 ( 1 % )                            ;
+;     Total combinational functions  ; 175 / 15,408 ( 1 % )                            ;
+;     Dedicated logic registers      ; 125 / 15,408 ( < 1 % )                          ;
+; Total registers                    ; 125                                             ;
+; Total pins                         ; 8 / 347 ( 2 % )                                 ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 64 / 516,096 ( < 1 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -154,21 +154,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 2.17        ;
-; Maximum used               ; 8           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;  16.7%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +-------------------------------------------------------+
@@ -264,7 +258,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.pin.
+The pin-out file can be found in C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -1010,17 +1004,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------+--------------+
-; |ballWMouse                               ; 205 (0)     ; 125 (0)                   ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 8    ; 0            ; 80 (0)       ; 30 (0)            ; 95 (0)           ; |ballWMouse                                                                              ;              ;
-;    |MOUSE:inst2|                          ; 76 (76)     ; 63 (63)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 23 (23)           ; 40 (40)          ; |ballWMouse|MOUSE:inst2                                                                  ;              ;
-;    |Priority:inst5|                       ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; |ballWMouse|Priority:inst5                                                               ;              ;
-;    |VGA_SYNC:inst8|                       ; 80 (80)     ; 47 (47)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (33)      ; 5 (5)             ; 42 (42)          ; |ballWMouse|VGA_SYNC:inst8                                                               ;              ;
-;    |altpll0:inst1|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|altpll0:inst1                                                                ;              ;
-;       |altpll:altpll_component|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|altpll0:inst1|altpll:altpll_component                                        ;              ;
-;          |altpll0_altpll:auto_generated|  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ;              ;
-;    |bouncy_ball:inst7|                    ; 59 (59)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 29 (29)          ; |ballWMouse|bouncy_ball:inst7                                                            ;              ;
-;    |char_rom:inst|                        ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|char_rom:inst                                                                ;              ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ;              ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
+; |ballWMouse                               ; 205 (0)     ; 125 (0)                   ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 8    ; 0            ; 80 (0)       ; 30 (0)            ; 95 (0)           ; |ballWMouse                                                                              ; work         ;
+;    |MOUSE:inst2|                          ; 76 (76)     ; 63 (63)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 23 (23)           ; 40 (40)          ; |ballWMouse|MOUSE:inst2                                                                  ; work         ;
+;    |Priority:inst5|                       ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; |ballWMouse|Priority:inst5                                                               ; work         ;
+;    |VGA_SYNC:inst8|                       ; 80 (80)     ; 47 (47)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (33)      ; 5 (5)             ; 42 (42)          ; |ballWMouse|VGA_SYNC:inst8                                                               ; work         ;
+;    |altpll0:inst1|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|altpll0:inst1                                                                ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|altpll0:inst1|altpll:altpll_component                                        ; work         ;
+;          |altpll0_altpll:auto_generated|  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ; work         ;
+;    |bouncy_ball:inst7|                    ; 59 (59)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 29 (29)          ; |ballWMouse|bouncy_ball:inst7                                                            ; work         ;
+;    |char_rom:inst|                        ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|char_rom:inst                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_kt91:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 64          ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1828,7 +1822,7 @@ Note: This table only shows the top 12 path(s) that have the largest delay added
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP3C16F484C6 for design "miniproject"
 Info (21077): Core supply voltage is 1.2V
 Info (21077): Low junction temperature is 0 degrees C
@@ -1836,6 +1830,7 @@ Info (21077): High junction temperature is 85 degrees C
 Info (15535): Implemented PLL "altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|pll1" as Cyclone III PLL type
     Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] port
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP3C40F484C6 is compatible
     Info (176445): Device EP3C55F484C6 is compatible
@@ -1914,24 +1909,24 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 5589 megabytes
-    Info: Processing ended: Thu May 19 15:52:02 2022
-    Info: Elapsed time: 00:00:07
+Info (144001): Generated suppressed messages file C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4897 megabytes
+    Info: Processing ended: Fri May 20 12:42:47 2022
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.fit.smsg.
+The suppressed messages can be found in C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.fit.smsg.
 
 

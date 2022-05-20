@@ -17,7 +17,7 @@ begin
 --process(clock_25Mhz)
 --begin
 	--if(mode = '000') then
-	
+		--if(128<p_row< 160 and col = 32 )then
 	
 		--- main menu texts
 	character_address <= "000001";
