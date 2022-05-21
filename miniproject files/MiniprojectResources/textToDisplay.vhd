@@ -12,17 +12,21 @@ ENTITY textToDisplay IS
 end textToDisplay;
 
 architecture a OF textToDisplay IS
-	
+	signal p_row: integer;
+	signal p_col: integer;
 begin
---process(clock_25Mhz)
---begin
+process(clock_25Mhz)
+begin
+	p_row <= conv_integer(unsigned(pix_row));
+	p_col <= conv_integer(unsigned(pix_col));
 	--if(mode = '000') then
-		--if(128<p_row< 160 and col = 32 )then
+	if(0<p_row and p_row<64 and 0<p_col and p_col<64 )then
 	
-		--- main menu texts
-	character_address <= "000001";
-	font_row <= pix_row(6 downto 4);
-	font_col <= pix_col(6 downto 4);
+			--- main menu texts
+		character_address <= "000001";
+		font_row <= pix_row(6 downto 4);
+		font_col <= pix_col(6 downto 4);
+	end if;
 	--elsif (mode = '001') then
 	-- score
 	
@@ -31,5 +35,5 @@ begin
 	 
 	 --elseif (mode = '011') then
 	 -- game finished text
---end process;	 
+end process;	 
 end a;
