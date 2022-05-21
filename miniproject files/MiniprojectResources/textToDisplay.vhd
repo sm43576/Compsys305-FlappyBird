@@ -21,16 +21,72 @@ begin
 	p_col <= conv_integer(unsigned(pix_col));
 	--if(mode = '000') then
 	
-	if(100<p_row and p_row<132) and (100<p_col and p_col<132)then
+	--title[]= ["000110", "001100", "000001", "010000", "010000", "011001", "100000", "000010", "001001", "010010", "000100"];
+	
+	
+	if(96<p_row and p_row<128) and (96<p_col and p_col<128)then
 			--- main menu texts
-		character_address <= "000001";
+		character_address <= "000110"; -- F
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
-	end if;
 	
-	if(100<p_row and p_row<132) and (132<p_col and p_col<164)then
+	
+	elsif(96<p_row and p_row<128) and (128<p_col and p_col<160)then
 			--- main menu texts
-		character_address <= "000010";
+		character_address <= "001100"; -- L
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (160<p_col and p_col<192)then
+			--- main menu texts
+		character_address <= "000001"; -- A
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+		
+	elsif(96<p_row and p_row<128) and (192<p_col and p_col<224)then
+			--- main menu texts
+		character_address <= "010000"; -- P
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (224<p_col and p_col<256)then
+			--- main menu texts
+		character_address <= "010000";
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+			--- main menu texts
+		character_address <= "011001"; --Y
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+			--- main menu texts
+		character_address <= "100000"; -- space
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+			--- main menu texts
+		character_address <= "000010"; -- B
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+			--- main menu texts
+		character_address <= "001001"; --I
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
+	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+			--- main menu texts
+		character_address <= "010010"; -- R
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+			--- main menu texts
+		character_address <= "000100"; -- D
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
 	end if;
