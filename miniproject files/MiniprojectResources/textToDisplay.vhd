@@ -21,10 +21,15 @@ begin
 	p_col <= conv_integer(unsigned(pix_col));
 	--if(mode = '000') then
 	
-	if(0<p_row and p_row<32) and (0<p_col and p_col<64)then
-	
+	if(100<p_row and p_row<132) and (100<p_col and p_col<132)then
 			--- main menu texts
 		character_address <= "000001";
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	end if;
+	
+	if(100<p_row and p_row<132) and (132<p_col and p_col<164)then
+			--- main menu texts
 		character_address <= "000010";
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
