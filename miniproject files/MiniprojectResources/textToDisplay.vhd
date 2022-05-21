@@ -61,30 +61,30 @@ begin
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
 	
-	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+	elsif(96<p_row and p_row<128) and (288<p_col and p_col<320)then
 			--- main menu texts
 		character_address <= "100000"; -- space
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
 	
-	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+	elsif(96<p_row and p_row<128) and (320<p_col and p_col<352)then
 			--- main menu texts
 		character_address <= "000010"; -- B
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
 	
-	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+	elsif(96<p_row and p_row<128) and (352<p_col and p_col<384)then
 			--- main menu texts
 		character_address <= "001001"; --I
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
 	
-	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+	elsif(96<p_row and p_row<128) and (384<p_col and p_col<416)then
 			--- main menu texts
 		character_address <= "010010"; -- R
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
-	elsif(96<p_row and p_row<128) and (256<p_col and p_col<288)then
+	elsif(96<p_row and p_row<128) and (416<p_col and p_col<448)then
 			--- main menu texts
 		character_address <= "000100"; -- D
 		font_row <= pix_row(4 downto 2);
