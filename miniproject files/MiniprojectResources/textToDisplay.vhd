@@ -15,8 +15,8 @@ architecture a OF textToDisplay IS
 	signal p_row: integer;
 	signal p_col: integer;
 	signal value: std_logic_vector(5 downto 0);
-	type dummy_array is array(0 to 10) of std_logic_vector(5 downto 0);
-   signal ins_dummy : dummy_array := ("000110","001100","000001","010000","010000","011001","100000", "000010", "001001", "010010","000100");
+	type dummy_array is array(0 to 11) of std_logic_vector(5 downto 0);
+   signal ins_dummy : dummy_array := ("000110","001100","000001","010000","010000","011001","100000", "000010", "001001", "010010","000100","100000");
 
 	
 	
