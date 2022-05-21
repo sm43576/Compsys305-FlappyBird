@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sat May 21 16:42:56 2022
+Sat May 21 16:51:31 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -54,18 +54,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 21 16:42:56 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 21 16:51:31 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; ballWMouse                                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 260                                             ;
-;     Total combinational functions  ; 213                                             ;
+; Total logic elements               ; 292                                             ;
+;     Total combinational functions  ; 245                                             ;
 ;     Dedicated logic registers      ; 125                                             ;
 ; Total registers                    ; 125                                             ;
 ; Total pins                         ; 8                                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 2,048                                           ;
+; Total memory bits                  ; 4,096                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 1                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -205,16 +205,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 260                                                                                  ;
+; Estimated Total logic elements              ; 292                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 213                                                                                  ;
+; Total combinational functions               ; 245                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 80                                                                                   ;
-;     -- 3 input functions                    ; 66                                                                                   ;
-;     -- <=2 input functions                  ; 67                                                                                   ;
+;     -- 4 input functions                    ; 104                                                                                  ;
+;     -- 3 input functions                    ; 68                                                                                   ;
+;     -- <=2 input functions                  ; 73                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 145                                                                                  ;
+;     -- normal mode                          ; 177                                                                                  ;
 ;     -- arithmetic mode                      ; 68                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Total registers                             ; 125                                                                                  ;
@@ -222,15 +222,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
 ; I/O pins                                    ; 8                                                                                    ;
-; Total memory bits                           ; 2048                                                                                 ;
+; Total memory bits                           ; 4096                                                                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
 ; Total PLLs                                  ; 1                                                                                    ;
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 88                                                                                   ;
-; Total fan-out                               ; 1059                                                                                 ;
-; Average fan-out                             ; 2.90                                                                                 ;
+; Total fan-out                               ; 1181                                                                                 ;
+; Average fan-out                             ; 2.97                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -239,18 +239,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
-; |ballWMouse                               ; 213 (0)           ; 125 (0)      ; 2048        ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ; work         ;
-;    |MOUSE:inst2|                          ; 51 (51)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|MOUSE:inst2                                                                  ; work         ;
+; |ballWMouse                               ; 245 (0)           ; 125 (0)      ; 4096        ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ; work         ;
+;    |MOUSE:inst2|                          ; 52 (52)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|MOUSE:inst2                                                                  ; work         ;
 ;    |Priority:inst5|                       ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|Priority:inst5                                                               ; work         ;
 ;    |VGA_SYNC:inst8|                       ; 56 (56)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|VGA_SYNC:inst8                                                               ; work         ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1                                                                ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component                                        ; work         ;
 ;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ; work         ;
 ;    |bouncy_ball:inst7|                    ; 61 (61)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|bouncy_ball:inst7                                                            ; work         ;
-;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
-;    |textToDisplay:inst3|                  ; 39 (39)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|textToDisplay:inst3                                                          ; work         ;
+;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
+;    |textToDisplay:inst3|                  ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|textToDisplay:inst3                                                          ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -304,7 +304,8 @@ Encoding Type:  One-Hot
 ; textToDisplay:inst3|character_address[2]            ; GND                                      ; yes                    ;
 ; textToDisplay:inst3|character_address[3]            ; GND                                      ; yes                    ;
 ; textToDisplay:inst3|character_address[4]            ; GND                                      ; yes                    ;
-; Number of user-specified and inferred latches = 11  ;                                          ;                        ;
+; textToDisplay:inst3|character_address[5]            ; GND                                      ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                                          ;                        ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -375,10 +376,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ballWMouse|VGA_SYNC:inst8|v_count[3]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ballWMouse|VGA_SYNC:inst8|v_count[2]                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |ballWMouse|bouncy_ball:inst7|ball_y_motion[1]       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[0] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[3] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[1] ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -878,7 +880,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 21 16:42:53 2022
+    Info: Processing started: Sat May 21 16:51:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
@@ -1061,6 +1063,10 @@ Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(87): signal
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(87): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(90): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(91): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(92): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(92): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(94): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(95): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(18): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(18): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(18): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
@@ -1093,20 +1099,19 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 263 logic cells
+    Info (21061): Implemented 295 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Sat May 21 16:42:56 2022
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 4631 megabytes
+    Info: Processing ended: Sat May 21 16:51:31 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

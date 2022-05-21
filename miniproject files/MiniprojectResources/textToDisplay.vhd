@@ -51,7 +51,7 @@ begin
 	
 	elsif(96<p_row and p_row<128) and (224<p_col and p_col<256)then
 			--- main menu texts
-		character_address <= "010000";
+		character_address <= "010000"; -- P
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
 	
@@ -89,6 +89,11 @@ begin
 		character_address <= "000100"; -- D
 		font_row <= pix_row(4 downto 2);
 		font_col <= pix_col(4 downto 2);
+	elsif(((96<p_row and p_row<128)and(0<p_col and p_col<96)) or((96<p_row and p_row<128)and(448<p_col)) ) then
+		character_address <= "100000"; -- space
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	
 	end if;
 	--elsif (mode = '001') then
 	-- score
