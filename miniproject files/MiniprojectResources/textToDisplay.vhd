@@ -14,6 +14,12 @@ end textToDisplay;
 architecture a OF textToDisplay IS
 	signal p_row: integer;
 	signal p_col: integer;
+	signal value: std_logic_vector(5 downto 0);
+	type dummy_array is array(0 to 10) of std_logic_vector(5 downto 0);
+   signal ins_dummy : dummy_array := ("000110","001100","000001","010000","010000","011001","100000", "000010", "001001", "010010","000100");
+
+	
+	
 begin
 process(clock_25Mhz)
 begin
@@ -21,8 +27,17 @@ begin
 	p_col <= conv_integer(unsigned(pix_col));
 	--if(mode = '000') then
 	
-	--title[]= ["000110", "001100", "000001", "010000", "010000", "011001", "100000", "000010", "001001", "010010", "000100"];
+	--title[]= [];
+	for i in 0 to 9 loop
 	
+	
+	if(128<p_row and p_row<156) and (96<p_col and p_col<96+(i*16))	 then
+	   value <= ins_dummy(i);
+		character_address <= value ; -- L
+		font_row <= pix_row(4 downto 2);
+		font_col <= pix_col(4 downto 2);
+	end if;
+	end loop;
 	
 	if(96<p_row and p_row<128) and (96<p_col and p_col<128)then
 			--- main menu texts

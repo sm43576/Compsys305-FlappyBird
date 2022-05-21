@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sat May 21 16:51:31 2022
+Sat May 21 17:01:22 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -54,13 +54,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 21 16:51:31 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 21 17:01:22 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; ballWMouse                                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 292                                             ;
-;     Total combinational functions  ; 245                                             ;
+; Total logic elements               ; 332                                             ;
+;     Total combinational functions  ; 285                                             ;
 ;     Dedicated logic registers      ; 125                                             ;
 ; Total registers                    ; 125                                             ;
 ; Total pins                         ; 8                                               ;
@@ -164,7 +164,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -174,20 +174,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                     ; Library ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
-; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
-; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
-; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
-; output_files/ballWMouse.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/ballWMouse.bdf                ;         ;
-; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
+; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
+; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
+; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
+; output_files/ballWMouse.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/ballWMouse.bdf                ;         ;
+; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
 ; altpll.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
 ; aglobal130.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
 ; stratix_pll.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
 ; stratixii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                              ;         ;
 ; cycloneii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                              ;         ;
-; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
+; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
 ; altsyncram.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
 ; stratix_ram_block.inc                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
 ; lpm_mux.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
@@ -196,7 +196,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
 ; altram.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
 ; altdpram.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
-; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
+; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -205,16 +205,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 292                                                                                  ;
+; Estimated Total logic elements              ; 332                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 245                                                                                  ;
+; Total combinational functions               ; 285                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 104                                                                                  ;
-;     -- 3 input functions                    ; 68                                                                                   ;
+;     -- 4 input functions                    ; 130                                                                                  ;
+;     -- 3 input functions                    ; 82                                                                                   ;
 ;     -- <=2 input functions                  ; 73                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 177                                                                                  ;
+;     -- normal mode                          ; 217                                                                                  ;
 ;     -- arithmetic mode                      ; 68                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Total registers                             ; 125                                                                                  ;
@@ -229,8 +229,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 88                                                                                   ;
-; Total fan-out                               ; 1181                                                                                 ;
-; Average fan-out                             ; 2.97                                                                                 ;
+; Total fan-out                               ; 1327                                                                                 ;
+; Average fan-out                             ; 3.04                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -239,18 +239,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
-; |ballWMouse                               ; 245 (0)           ; 125 (0)      ; 4096        ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ; work         ;
+; |ballWMouse                               ; 285 (0)           ; 125 (0)      ; 4096        ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ; work         ;
 ;    |MOUSE:inst2|                          ; 52 (52)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|MOUSE:inst2                                                                  ; work         ;
 ;    |Priority:inst5|                       ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|Priority:inst5                                                               ; work         ;
 ;    |VGA_SYNC:inst8|                       ; 56 (56)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|VGA_SYNC:inst8                                                               ; work         ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1                                                                ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component                                        ; work         ;
 ;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ; work         ;
-;    |bouncy_ball:inst7|                    ; 61 (61)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|bouncy_ball:inst7                                                            ; work         ;
+;    |bouncy_ball:inst7|                    ; 62 (62)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|bouncy_ball:inst7                                                            ; work         ;
 ;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
-;    |textToDisplay:inst3|                  ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|textToDisplay:inst3                                                          ; work         ;
+;    |textToDisplay:inst3|                  ; 109 (109)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|textToDisplay:inst3                                                          ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -269,7 +269,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------+-----------------------------------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File                                                                   ;
 +--------+--------------+---------+--------------+--------------+---------------------------+-----------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |ballWMouse|altpll0:inst1 ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |ballWMouse|altpll0:inst1 ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+---------------------------+-----------------------------------------------------------------------------------+
 
 
@@ -293,19 +293,25 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+------------------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal                      ; Free of Timing Hazards ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
-; textToDisplay:inst3|font_col[1]                     ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|font_col[0]                     ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|font_col[2]                     ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|font_row[0]                     ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|font_row[1]                     ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|font_row[2]                     ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|character_address[0]            ; GND                                      ; yes                    ;
-; textToDisplay:inst3|character_address[1]            ; GND                                      ; yes                    ;
-; textToDisplay:inst3|character_address[2]            ; GND                                      ; yes                    ;
-; textToDisplay:inst3|character_address[3]            ; GND                                      ; yes                    ;
-; textToDisplay:inst3|character_address[4]            ; GND                                      ; yes                    ;
-; textToDisplay:inst3|character_address[5]            ; GND                                      ; yes                    ;
-; Number of user-specified and inferred latches = 12  ;                                          ;                        ;
+; textToDisplay:inst3|font_col[1]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|font_col[0]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|font_col[2]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|font_row[0]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|font_row[1]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|font_row[2]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|character_address[0]            ; textToDisplay:inst3|character_address[5] ; no                     ;
+; textToDisplay:inst3|character_address[1]            ; textToDisplay:inst3|character_address[5] ; no                     ;
+; textToDisplay:inst3|character_address[2]            ; textToDisplay:inst3|character_address[5] ; no                     ;
+; textToDisplay:inst3|character_address[3]            ; textToDisplay:inst3|character_address[5] ; no                     ;
+; textToDisplay:inst3|character_address[4]            ; textToDisplay:inst3|character_address[5] ; no                     ;
+; textToDisplay:inst3|character_address[5]            ; textToDisplay:inst3|character_address[5] ; no                     ;
+; textToDisplay:inst3|value[0]                        ; GND                                      ; yes                    ;
+; textToDisplay:inst3|value[1]                        ; GND                                      ; yes                    ;
+; textToDisplay:inst3|value[2]                        ; GND                                      ; yes                    ;
+; textToDisplay:inst3|value[3]                        ; GND                                      ; yes                    ;
+; textToDisplay:inst3|value[4]                        ; GND                                      ; yes                    ;
+; textToDisplay:inst3|value[5]                        ; GND                                      ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                                          ;                        ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -376,10 +382,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ballWMouse|VGA_SYNC:inst8|v_count[2]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ballWMouse|VGA_SYNC:inst8|v_count[5]                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |ballWMouse|bouncy_ball:inst7|ball_y_motion[1]       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[3] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[0] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|value[0]             ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[1] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|value[1]             ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|character_address[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
@@ -880,32 +888,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 21 16:51:29 2022
+    Info: Processing started: Sat May 21 17:01:19 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
     Info (12022): Found design unit 1: textToDisplay-a
     Info (12023): Found entity 1: textToDisplay
 Info (12021): Found 1 design units, including 1 entities, in source file mouseinterface.bdf
     Info (12023): Found entity 1: mouseInterface
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior
     Info (12023): Found entity 1: MOUSE
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
     Info (12022): Found design unit 1: char_rom-SYN
     Info (12023): Found entity 1: char_rom
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
     Info (12022): Found design unit 1: bouncy_ball-behavior
     Info (12023): Found entity 1: bouncy_ball
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior
     Info (12023): Found entity 1: ball
 Info (12021): Found 1 design units, including 1 entities, in source file textdisplay.bdf
     Info (12023): Found entity 1: TextDisplay
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-arc2
     Info (12023): Found entity 1: seven_seg
 Info (12021): Found 1 design units, including 1 entities, in source file movingball.bdf
@@ -917,10 +925,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file altpll0
     Info (12023): Found entity 1: altpll0
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/ballwmouse.bdf
     Info (12023): Found entity 1: ballWMouse
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
     Info (12022): Found design unit 1: Priority-a
     Info (12023): Found entity 1: Priority
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
     Info (12022): Found design unit 1: Background-a
     Info (12023): Found entity 1: Background
 Info (12127): Elaborating entity "ballWMouse" for the top level hierarchy
@@ -1017,71 +1025,85 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_kt91
 Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
 Info (12128): Elaborating entity "textToDisplay" for hierarchy "textToDisplay:inst3"
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(20): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(21): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(27): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(27): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(30): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(31): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(19): used explicit default value for signal "ins_dummy" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(26): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(27): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(34): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(34): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(35): signal "ins_dummy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(36): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(37): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(38): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(40): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(40): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(43): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(44): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(46): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(46): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(49): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(50): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(52): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(52): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(55): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(56): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(58): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(58): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(61): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(62): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(64): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(64): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(67): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(68): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(70): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(70): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(73): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(74): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(76): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(76): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(80): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(82): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(82): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(85): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(86): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(87): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(87): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(90): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(91): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(92): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(92): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(42): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(42): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(45): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(46): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(49): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(49): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(52): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(53): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(55): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(55): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(58): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(59): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(61): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(61): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(64): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(65): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(67): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(67): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(70): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(71): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(73): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(73): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(76): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(77): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(82): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(83): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(85): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(85): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(88): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(89): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(91): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(91): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(94): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(95): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(18): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(18): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(18): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "font_col[0]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "font_col[1]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "font_col[2]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "font_row[0]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "font_row[1]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "font_row[2]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "character_address[0]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "character_address[1]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "character_address[2]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "character_address[3]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "character_address[4]" at textToDisplay.vhd(18)
-Info (10041): Inferred latch for "character_address[5]" at textToDisplay.vhd(18)
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(97): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(97): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(100): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(101): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(102): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(102): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(105): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(106): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(107): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(107): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(109): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(110): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(24): inferring latch(es) for signal or variable "value", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(24): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(24): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(24): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "font_col[0]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "font_col[1]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "font_col[2]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "font_row[0]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "font_row[1]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "font_row[2]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "character_address[0]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "character_address[1]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "character_address[2]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "character_address[3]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "character_address[4]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "character_address[5]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "value[0]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "value[1]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "value[2]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "value[3]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "value[4]" at textToDisplay.vhd(24)
+Info (10041): Inferred latch for "value[5]" at textToDisplay.vhd(24)
 Warning (13012): Latch textToDisplay:inst3|font_col[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[3]
 Warning (13012): Latch textToDisplay:inst3|font_col[0] has unsafe behavior
@@ -1094,24 +1116,37 @@ Warning (13012): Latch textToDisplay:inst3|font_row[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[3]
 Warning (13012): Latch textToDisplay:inst3|font_row[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[4]
+Warning (13012): Latch textToDisplay:inst3|character_address[0] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[8]
+Warning (13012): Latch textToDisplay:inst3|character_address[1] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[8]
+Warning (13012): Latch textToDisplay:inst3|character_address[2] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[8]
+Warning (13012): Latch textToDisplay:inst3|character_address[3] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[8]
+Warning (13012): Latch textToDisplay:inst3|character_address[4] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[8]
+Warning (13012): Latch textToDisplay:inst3|character_address[5] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[8]
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Warning (14025): LATCH primitive "textToDisplay:inst3|value[4]" is permanently disabled
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 352 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 295 logic cells
+    Info (21061): Implemented 335 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 73 warnings
-    Info: Peak virtual memory: 4631 megabytes
-    Info: Processing ended: Sat May 21 16:51:31 2022
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 94 warnings
+    Info: Peak virtual memory: 4636 megabytes
+    Info: Processing ended: Sat May 21 17:01:22 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
