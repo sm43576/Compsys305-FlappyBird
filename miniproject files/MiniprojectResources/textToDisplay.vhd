@@ -40,7 +40,7 @@ process(clock_25Mhz)
 begin
 	p_row <= conv_integer(unsigned(pix_row));
 	p_col <= conv_integer(unsigned(pix_col));
-	if(mode = '000') then
+	if(mode = "000") then
 	
 		-- Flappy Bird Title
 		for i in 0 to 11 loop
@@ -75,19 +75,19 @@ begin
 				font_col <= pix_col(3 downto 1);
 			end if;
 		end loop;
-	elsif (mode = '001') then
-		if(96<p_row and p_row<128) and 96<p_col and p_col<128)
+	elsif (mode = "001") then
+		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
 			character_address <= "000001" ;
 			font_row <= pix_row(4 downto 2);
 			font_col <= pix_col(4 downto 2);
 		end if;
 	
 	
-	elsif(mode = '010') then
+	--elsif(mode = "010'") then
 	 -- game over text
 	 
-	elsif (mode = '011') then
+	--elsif (mode = "011") then
 	 -- game finished text
-	 end if;
+	end if;
 end process;	 
 end a;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sun May 22 15:27:23 2022
+Sun May 22 16:46:16 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,20 +15,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |ballWMouse|MOUSE:inst2|mouse_state
+ 10. State Machine - |FSMandBackground|fsm:inst7|state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
  13. Removed Registers Triggering Further Register Optimizations
  14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
- 18. Parameter Settings for User Entity Instance: altpll0:inst1|altpll:altpll_component
- 19. Parameter Settings for User Entity Instance: char_rom:inst|altsyncram:altsyncram_component
- 20. altpll Parameter Settings by Entity Instance
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
+ 17. Parameter Settings for User Entity Instance: altpll0:inst1|altpll:altpll_component
+ 18. Parameter Settings for User Entity Instance: char_rom:inst|altsyncram:altsyncram_component
+ 19. altpll Parameter Settings by Entity Instance
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -54,16 +53,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 22 15:27:23 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 22 16:46:15 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
-; Top-level Entity Name              ; ballWMouse                                      ;
+; Top-level Entity Name              ; FSMandBackground                                ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 483                                             ;
-;     Total combinational functions  ; 436                                             ;
-;     Dedicated logic registers      ; 125                                             ;
-; Total registers                    ; 125                                             ;
-; Total pins                         ; 8                                               ;
+; Total logic elements               ; 341                                             ;
+;     Total combinational functions  ; 318                                             ;
+;     Dedicated logic registers      ; 52                                              ;
+; Total registers                    ; 52                                              ;
+; Total pins                         ; 9                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,096                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -77,7 +76,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; ballWMouse         ; miniproject        ;
+; Top-level entity name                                                      ; FSMandBackground   ; miniproject        ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -174,14 +173,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                     ; Library ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
 ; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
 ; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
 ; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
 ; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
-; output_files/ballWMouse.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/ballWMouse.bdf                ;         ;
 ; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
+; FSMandBackground.bdf                                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/FSMandBackground.bdf                       ;         ;
 ; altpll.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
 ; aglobal130.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
 ; stratix_pll.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
@@ -205,53 +204,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 483                                                                                  ;
+; Estimated Total logic elements              ; 341                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 436                                                                                  ;
+; Total combinational functions               ; 318                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 235                                                                                  ;
-;     -- 3 input functions                    ; 115                                                                                  ;
-;     -- <=2 input functions                  ; 86                                                                                   ;
+;     -- 4 input functions                    ; 218                                                                                  ;
+;     -- 3 input functions                    ; 67                                                                                   ;
+;     -- <=2 input functions                  ; 33                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 368                                                                                  ;
-;     -- arithmetic mode                      ; 68                                                                                   ;
+;     -- normal mode                          ; 300                                                                                  ;
+;     -- arithmetic mode                      ; 18                                                                                   ;
 ;                                             ;                                                                                      ;
-; Total registers                             ; 125                                                                                  ;
-;     -- Dedicated logic registers            ; 125                                                                                  ;
+; Total registers                             ; 52                                                                                   ;
+;     -- Dedicated logic registers            ; 52                                                                                   ;
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
-; I/O pins                                    ; 8                                                                                    ;
+; I/O pins                                    ; 9                                                                                    ;
 ; Total memory bits                           ; 4096                                                                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
 ; Total PLLs                                  ; 1                                                                                    ;
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 88                                                                                   ;
-; Total fan-out                               ; 1872                                                                                 ;
-; Average fan-out                             ; 3.18                                                                                 ;
+; Maximum fan-out                             ; 61                                                                                   ;
+; Total fan-out                               ; 1357                                                                                 ;
+; Average fan-out                             ; 3.42                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
-; |ballWMouse                               ; 436 (0)           ; 125 (0)      ; 4096        ; 0            ; 0       ; 0         ; 8    ; 0            ; |ballWMouse                                                                              ; work         ;
-;    |MOUSE:inst2|                          ; 52 (52)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|MOUSE:inst2                                                                  ; work         ;
-;    |Priority:inst5|                       ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|Priority:inst5                                                               ; work         ;
-;    |VGA_SYNC:inst8|                       ; 56 (56)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|VGA_SYNC:inst8                                                               ; work         ;
-;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1                                                                ; work         ;
-;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component                                        ; work         ;
-;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ; work         ;
-;    |bouncy_ball:inst7|                    ; 61 (61)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|bouncy_ball:inst7                                                            ; work         ;
-;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
-;    |textToDisplay:inst3|                  ; 261 (261)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ballWMouse|textToDisplay:inst3                                                          ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
+; |FSMandBackground                         ; 318 (0)           ; 52 (0)       ; 4096        ; 0            ; 0       ; 0         ; 9    ; 0            ; |FSMandBackground                                                                              ; work         ;
+;    |Priority:inst5|                       ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|Priority:inst5                                                               ; work         ;
+;    |VGA_SYNC:inst8|                       ; 55 (55)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|VGA_SYNC:inst8                                                               ; work         ;
+;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1                                                                ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1|altpll:altpll_component                                        ; work         ;
+;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ; work         ;
+;    |char_rom:inst|                        ; 5 (5)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
+;    |fsm:inst7|                            ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|fsm:inst7                                                                    ; work         ;
+;    |textToDisplay:inst3|                  ; 254 (254)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|textToDisplay:inst3                                                          ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -264,28 +262,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                         ;
-+--------+--------------+---------+--------------+--------------+---------------------------+-----------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance           ; IP Include File                                                                   ;
-+--------+--------------+---------+--------------+--------------+---------------------------+-----------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |ballWMouse|altpll0:inst1 ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
-+--------+--------------+---------+--------------+--------------+---------------------------+-----------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                 ; IP Include File                                                                   ;
++--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |FSMandBackground|altpll0:inst1 ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
++--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ballWMouse|MOUSE:inst2|mouse_state                                                                                                                                                     ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-; mouse_state.INHIBIT_TRANS     ; 0                         ; 0                        ; 0                             ; 0                         ; 0                        ; 0                         ;
-; mouse_state.LOAD_COMMAND      ; 0                         ; 0                        ; 0                             ; 0                         ; 1                        ; 1                         ;
-; mouse_state.LOAD_COMMAND2     ; 0                         ; 0                        ; 0                             ; 1                         ; 0                        ; 1                         ;
-; mouse_state.WAIT_OUTPUT_READY ; 0                         ; 0                        ; 1                             ; 0                         ; 0                        ; 1                         ;
-; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
-; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
++----------------------------------------------------------------------------+
+; State Machine - |FSMandBackground|fsm:inst7|state                          ;
++----------+----------+----------+----------+----------+----------+----------+
+; Name     ; state.S5 ; state.S4 ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
++----------+----------+----------+----------+----------+----------+----------+
+; state.S0 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.S1 ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.S2 ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.S3 ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.S4 ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; state.S5 ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+----------+----------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -305,36 +303,33 @@ Encoding Type:  One-Hot
 ; textToDisplay:inst3|character_address[3]            ; textToDisplay:inst3|character_address[5] ; yes                    ;
 ; textToDisplay:inst3|character_address[4]            ; textToDisplay:inst3|character_address[5] ; yes                    ;
 ; textToDisplay:inst3|character_address[5]            ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|value[0]                        ; GND                                      ; yes                    ;
-; textToDisplay:inst3|value[1]                        ; GND                                      ; yes                    ;
-; textToDisplay:inst3|value[2]                        ; GND                                      ; yes                    ;
-; textToDisplay:inst3|value[3]                        ; GND                                      ; yes                    ;
-; textToDisplay:inst3|value[4]                        ; GND                                      ; yes                    ;
-; textToDisplay:inst3|value[5]                        ; GND                                      ; yes                    ;
+; textToDisplay:inst3|value[0]                        ; textToDisplay:inst3|value[0]             ; yes                    ;
+; textToDisplay:inst3|value[1]                        ; textToDisplay:inst3|value[0]             ; yes                    ;
+; textToDisplay:inst3|value[2]                        ; textToDisplay:inst3|value[0]             ; yes                    ;
+; textToDisplay:inst3|value[3]                        ; textToDisplay:inst3|value[0]             ; yes                    ;
+; textToDisplay:inst3|value[4]                        ; textToDisplay:inst3|value[0]             ; yes                    ;
+; textToDisplay:inst3|value[5]                        ; textToDisplay:inst3|value[0]             ; yes                    ;
 ; Number of user-specified and inferred latches = 18  ;                                          ;                        ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+----------------------------------------+------------------------------------------------+
-; Register name                          ; Reason for Removal                             ;
-+----------------------------------------+------------------------------------------------+
-; Priority:inst5|tempBlueOut             ; Stuck at GND due to stuck port data_in         ;
-; Priority:inst5|blue_out                ; Stuck at GND due to stuck port data_in         ;
-; VGA_SYNC:inst8|blue_out                ; Stuck at GND due to stuck port data_in         ;
-; MOUSE:inst2|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in         ;
-; MOUSE:inst2|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in         ;
-; MOUSE:inst2|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in         ;
-; MOUSE:inst2|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in         ;
-; MOUSE:inst2|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in         ;
-; bouncy_ball:inst7|ball_y_motion[3..9]  ; Merged with bouncy_ball:inst7|ball_y_motion[2] ;
-; bouncy_ball:inst7|ball_y_motion[0]     ; Stuck at GND due to stuck port data_in         ;
-; bouncy_ball:inst7|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in         ;
-; VGA_SYNC:inst8|pixel_row[9]            ; Stuck at GND due to stuck port data_in         ;
-; Total Number of Removed Registers = 22 ;                                                ;
-+----------------------------------------+------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++---------------------------------------+-----------------------------------------+
+; Register name                         ; Reason for Removal                      ;
++---------------------------------------+-----------------------------------------+
+; Priority:inst5|tempBlueOut            ; Stuck at GND due to stuck port data_in  ;
+; Priority:inst5|blue_out               ; Stuck at GND due to stuck port data_in  ;
+; VGA_SYNC:inst8|blue_out               ; Stuck at GND due to stuck port data_in  ;
+; Priority:inst5|red_out                ; Merged with Priority:inst5|green_out    ;
+; Priority:inst5|tempRedOut             ; Merged with Priority:inst5|tempGreenOut ;
+; VGA_SYNC:inst8|pixel_row[9]           ; Stuck at GND due to stuck port data_in  ;
+; fsm:inst7|state.S3                    ; Lost fanout                             ;
+; fsm:inst7|state.S4                    ; Lost fanout                             ;
+; fsm:inst7|state.S5                    ; Lost fanout                             ;
+; Total Number of Removed Registers = 9 ;                                         ;
++---------------------------------------+-----------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -352,43 +347,27 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 125   ;
+; Total registers                              ; 52    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 62    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; MOUSE:inst2|send_char                  ; 3       ;
-; MOUSE:inst2|SHIFTOUT[3]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[5]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[6]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[7]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[8]                ; 1       ;
-; Total number of inverted registers = 6 ;         ;
-+----------------------------------------+---------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ballWMouse|VGA_SYNC:inst8|v_count[7]                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |ballWMouse|bouncy_ball:inst7|ball_y_motion[1]       ;
-; 26:1               ; 6 bits    ; 102 LEs       ; 6 LEs                ; 96 LEs                 ; No         ; |ballWMouse|textToDisplay:inst3|font_col[2]          ;
-; 49:1               ; 6 bits    ; 192 LEs       ; 6 LEs                ; 186 LEs                ; No         ; |ballWMouse|textToDisplay:inst3|character_address[1] ;
-; 59:1               ; 2 bits    ; 78 LEs        ; 76 LEs               ; 2 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|value[2]             ;
-; 60:1               ; 2 bits    ; 80 LEs        ; 76 LEs               ; 4 LEs                  ; No         ; |ballWMouse|textToDisplay:inst3|value[1]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FSMandBackground|VGA_SYNC:inst8|v_count[9]                ;
+; 27:1               ; 6 bits    ; 108 LEs       ; 6 LEs                ; 102 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|font_col[2]          ;
+; 50:1               ; 6 bits    ; 198 LEs       ; 12 LEs               ; 186 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|character_address[0] ;
+; 59:1               ; 2 bits    ; 78 LEs        ; 76 LEs               ; 2 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[2]             ;
+; 60:1               ; 2 bits    ; 80 LEs        ; 76 LEs               ; 4 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[1]             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -877,7 +856,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -887,7 +866,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 22 15:27:15 2022
+    Info: Processing started: Sun May 22 16:46:07 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
@@ -933,7 +912,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
     Info (12022): Found design unit 1: Background-a
     Info (12023): Found entity 1: Background
-Info (12127): Elaborating entity "ballWMouse" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file fsmandbackground.bdf
+    Info (12023): Found entity 1: FSMandBackground
+Info (12127): Elaborating entity "FSMandBackground" for the top level hierarchy
+Warning (275011): Block or symbol "GND" of instance "inst22" overlaps another block or symbol
+Warning (275011): Block or symbol "GND" of instance "inst33" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst8"
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst1"
 Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst1|altpll:altpll_component"
@@ -998,13 +981,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated"
 Info (12128): Elaborating entity "Priority" for hierarchy "Priority:inst5"
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst7"
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Background" for hierarchy "Background:inst23"
+Warning (10492): VHDL Process Statement warning at background.vhd(19): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at background.vhd(25): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at background.vhd(31): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at background.vhd(37): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at background.vhd(43): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at background.vhd(16): inferring latch(es) for signal or variable "red_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at background.vhd(16): inferring latch(es) for signal or variable "green_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at background.vhd(16): inferring latch(es) for signal or variable "blue_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "blue_out" at background.vhd(16)
+Info (10041): Inferred latch for "green_out" at background.vhd(16)
+Info (10041): Inferred latch for "red_out" at background.vhd(16)
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst7"
+Warning (10541): VHDL Signal Declaration warning at statemachinet.vhd(9): used implicit default value for signal "parity" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at statemachinet.vhd(78): signal "pb1_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at statemachinet.vhd(80): signal "pb2_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "char_rom:inst|altsyncram:altsyncram_component"
@@ -1032,6 +1024,7 @@ Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(23): used 
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(29): used explicit default value for signal "sig_normT" because signal was never assigned a value
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(41): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(42): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(43): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(48): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(48): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(49): signal "sig_title" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -1052,6 +1045,11 @@ Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(72): signal
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(73): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(74): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(75): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(78): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(81): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(82): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(39): inferring latch(es) for signal or variable "value", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(39): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(39): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
@@ -1075,47 +1073,57 @@ Info (10041): Inferred latch for "value[3]" at textToDisplay.vhd(39)
 Info (10041): Inferred latch for "value[4]" at textToDisplay.vhd(39)
 Info (10041): Inferred latch for "value[5]" at textToDisplay.vhd(39)
 Warning (13012): Latch textToDisplay:inst3|font_col[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[3]
-Warning (13012): Latch textToDisplay:inst3|font_col[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[2]
+Warning (13012): Latch textToDisplay:inst3|font_col[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[1]
 Warning (13012): Latch textToDisplay:inst3|font_col[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[3]
 Warning (13012): Latch textToDisplay:inst3|font_row[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[1]
 Warning (13012): Latch textToDisplay:inst3|font_row[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[3]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[2]
 Warning (13012): Latch textToDisplay:inst3|font_row[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[3]
 Warning (13012): Latch textToDisplay:inst3|character_address[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
 Warning (13012): Latch textToDisplay:inst3|character_address[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
 Warning (13012): Latch textToDisplay:inst3|character_address[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
 Warning (13012): Latch textToDisplay:inst3|character_address[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
 Warning (13012): Latch textToDisplay:inst3|character_address[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
 Warning (13012): Latch textToDisplay:inst3|character_address[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+Warning (13012): Latch textToDisplay:inst3|value[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13012): Latch textToDisplay:inst3|value[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|value[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|value[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|value[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|value[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 503 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 362 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
-    Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 486 logic cells
+    Info (21061): Implemented 344 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4655 megabytes
-    Info: Processing ended: Sun May 22 15:27:23 2022
-    Info: Elapsed time: 00:00:08
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 87 warnings
+    Info: Peak virtual memory: 4664 megabytes
+    Info: Processing ended: Sun May 22 16:46:16 2022
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 
 

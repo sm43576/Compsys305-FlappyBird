@@ -46,9 +46,8 @@ begin
 			when S0 =>
 				if(pb1_in='0') then
 					mode_out <="001";	--trainingmode
-				end if;
-			when S0 =>
-				if(pb2_in='0') then
+				
+				elsif(pb2_in='0') then
 					mode_out <="001";	--actualmode
 				end if;
 				
@@ -61,12 +60,13 @@ begin
 				if(x='0') then
 					mode_out <="011";
 				end if;
-				
+			when others =>
+				mode_out <= "000";
 			--pass
-			when S1 =>
-				if(x='1') then
-					parity <= '1';
-				end if;
+			--when S1 =>
+			--	if(x='1') then
+			--		parity <= '1';
+			--	end if;
 			--S2 does not have a finish, endless
 		end case;
 end process OUTPUT_DECODE;		
@@ -77,24 +77,22 @@ begin
 		when S0 =>
 			if(pb1_in='0') then
 				next_state<=S1;	--trainingmode
-			end if;
-		when S0 =>
-			if(pb2_in='0') then
+			elsif(pb2_in='0') then
 				next_state<=S2;	--actualmode
-			end if;
+			end if;	
 		when S1 =>
 			if(x='0') then
 				next_state<=S3;
-			end if;
-		when S1 =>
-			if(x='1') then
+				
+			elsif(x='1') then
 				next_state<=S0;
 			end if;
 		when S2 =>
 			if(x='0') then
 				next_state<=S3;
 			end if;
-		
+		when others =>
+			next_state <= S0;
 	end case;
 end process NEXT_STATE_DECODE;
 end Mealy;		
