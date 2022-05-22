@@ -5,6 +5,8 @@ entity fsm is
 			 pb1_in: in STD_LOGIC;
 			 pb2_in: in STD_LOGIC;
 			 input : in  STD_LOGIC;
+			 x		 : in STD_LOGIC;
+			 parity: out STD_LOGIC;
 			 mode_out : out  STD_LOGIC_VECTOR (2 downto 0);
 			 clk : in  STD_LOGIC);
 end fsm;
@@ -34,11 +36,11 @@ begin
 		
 	end if;
 
-end process
+end process;
 
-OUTPUT_DECODE : process(state,x)
+OUTPUT_DECODE : process(state,pb1_in,pb2_in,x)
 begin
-mode_out<="000"
+	mode_out<="000";
 		case(state) is
 			--Mainmenu
 			when S0 =>
@@ -62,39 +64,39 @@ mode_out<="000"
 				
 			--pass
 			when S1 =>
-				if(x='1')
+				if(x='1') then
 					parity <= '1';
 				end if;
 			--S2 does not have a finish, endless
-		end case
-		
+		end case;
+end process OUTPUT_DECODE;		
 NEXT_STATE_DECODE: process(state,x)
 begin
 	next_state<=s0;
 	case (state) is
 		when S0 =>
 			if(pb1_in='0') then
-				next_state<=S1	--trainingmode
+				next_state<=S1;	--trainingmode
 			end if;
 		when S0 =>
 			if(pb2_in='0') then
-				next_state<=S2	--actualmode
+				next_state<=S2;	--actualmode
 			end if;
 		when S1 =>
 			if(x='0') then
-				next_state<=S3
+				next_state<=S3;
 			end if;
 		when S1 =>
 			if(x='1') then
-				next_state<=S0
+				next_state<=S0;
 			end if;
 		when S2 =>
 			if(x='0') then
-				next_state<=S3
+				next_state<=S3;
 			end if;
 		
-end case;
-end process;
+	end case;
+end process NEXT_STATE_DECODE;
 end Mealy;		
 		
 	
