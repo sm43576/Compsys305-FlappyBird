@@ -23,7 +23,7 @@ backgroundOn <= '1';
 		blue_out <= '1';
 	
 	elsif(mode = "001") then
-	--- Training mode
+	--- Training mode 
 		red_out <= '1';
 		green_out <= '0';
 		blue_out <= '0';
