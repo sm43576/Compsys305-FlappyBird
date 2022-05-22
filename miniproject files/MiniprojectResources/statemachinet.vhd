@@ -60,8 +60,8 @@ begin
 				if(x='0') then
 					mode_out <="011";
 				end if;
-			when others =>
-				mode_out <= "000";
+			--when others =>
+			--	mode_out <= "000";
 			--pass
 			--when S1 =>
 			--	if(x='1') then
