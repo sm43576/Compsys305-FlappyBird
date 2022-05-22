@@ -1,4 +1,16 @@
-architecture Mealy of Parity is 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity fsm is
+    Port (reset : in  STD_LOGIC;
+			 pb1_in: in STD_LOGIC;
+			 pb2_in: in STD_LOGIC;
+			 input : in  STD_LOGIC;
+			 mode_out : out  STD_LOGIC_VECTOR (2 downto 0);
+			 clk : in  STD_LOGIC);
+end fsm;
+
+
+architecture Mealy of fsm is 
 type state_type is (S0,S1,S2,S3,S4,S5);
 
 
@@ -10,9 +22,9 @@ type state_type is (S0,S1,S2,S3,S4,S5);
 --
 signal state,next_state: state_type;
 
-being
+begin
 SYNC_PROC: process(clk)
-being
+begin
 	if rising_edge(clk) then
 		if (reset='1') then
 			state <=S0;
@@ -25,36 +37,35 @@ being
 end process
 
 OUTPUT_DECODE : process(state,x)
-being
-parity<='0'
+begin
+mode_out<="000"
 		case(state) is
 			--Mainmenu
 			when S0 =>
-				if(x='0') then
-					parity <='0';	--trainingmode
+				if(pb1_in='0') then
+					mode_out <="001";	--trainingmode
 				end if;
 			when S0 =>
-				if(x='1') then
-					parity <='1';	--actualmode
+				if(pb2_in='0') then
+					mode_out <="001";	--actualmode
 				end if;
 				
-			--game over section
+			--S1 in training mode
 			when S1 =>
 				if(x='0') then
-					parity <='0';
+					mode_out <="011"; -- game over screen
 				end if;
-			when S2 =>
+			when S2 => -- S2 in actual game mode
 				if(x='0') then
-					parity <='0';
+					mode_out <="011";
 				end if;
 				
 			--pass
 			when S1 =>
 				if(x='1')
-					parity <= '1'
+					parity <= '1';
 				end if;
 			--S2 does not have a finish, endless
-				
 		end case
 		
 NEXT_STATE_DECODE: process(state,x)
@@ -62,11 +73,11 @@ begin
 	next_state<=s0;
 	case (state) is
 		when S0 =>
-			if(x='0') then
+			if(pb1_in='0') then
 				next_state<=S1	--trainingmode
 			end if;
 		when S0 =>
-			if(x='1') then
+			if(pb2_in='0') then
 				next_state<=S2	--actualmode
 			end if;
 		when S1 =>

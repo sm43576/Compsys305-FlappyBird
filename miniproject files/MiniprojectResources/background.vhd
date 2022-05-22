@@ -27,19 +27,19 @@ begin
 		green_out <= '1';
 		blue_out <= '1';
 	
-	elsif(mode = "001") then
+	elsif(mode = "010") then
 	--- Game mode
 		red_out <= '1';
 		green_out <= '1';
 		blue_out <= '1';
 		
-	elsif(mode = "001") then
+	elsif(mode = "011") then
 	--- Game Over
 		red_out <= '0';
 		green_out <= '0';
 		blue_out <= '0';
 		
-	elsif(mode = "001") then
+	elsif(mode = "100") then
 	--- Last difficulty in game mode
 		red_out <= '1';
 		green_out <= '1';

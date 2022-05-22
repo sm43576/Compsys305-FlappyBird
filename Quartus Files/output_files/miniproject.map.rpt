@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sun May 22 14:56:33 2022
+Sun May 22 14:57:39 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun May 22 14:56:33 2022               ;
+; Analysis & Synthesis Status        ; Failed - Sun May 22 14:57:39 2022               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; ballWMouse                                      ;
@@ -157,21 +157,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 22 14:56:32 2022
+    Info: Processing started: Sun May 22 14:57:38 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10500): VHDL syntax error at statemachinet.vhd(13) near text "being";  expecting "begin", or a declaration statement File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 13
-Error (10500): VHDL syntax error at statemachinet.vhd(63) near text "case";  expecting "end", or "(", or an identifier ("case" is a reserved keyword), or a concurrent statement File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 63
-Error (10500): VHDL syntax error at statemachinet.vhd(63) near text "is";  expecting "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 63
-Error (10500): VHDL syntax error at statemachinet.vhd(65) near text "then";  expecting "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 65
+Error (10500): VHDL syntax error at statemachinet.vhd(27) near text ":";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 27
+Error (10500): VHDL syntax error at statemachinet.vhd(28) near text "begin";  expecting ":=", or "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 28
+Error (10500): VHDL syntax error at statemachinet.vhd(30) near text "case";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 30
+Error (10500): VHDL syntax error at statemachinet.vhd(42) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 42
+Error (10500): VHDL syntax error at statemachinet.vhd(46) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 46
+Error (10500): VHDL syntax error at statemachinet.vhd(52) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a sequential statement File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 52
+Error (10500): VHDL syntax error at statemachinet.vhd(54) near text "parity";  expecting "then" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 54
+Error (10500): VHDL syntax error at statemachinet.vhd(55) near text "end";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 55
+Error (10500): VHDL syntax error at statemachinet.vhd(61) near text "begin";  expecting ":=", or "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 61
 Error (10500): VHDL syntax error at statemachinet.vhd(67) near text "end";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 67
-Error (10500): VHDL syntax error at statemachinet.vhd(69) near text "then";  expecting "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 69
 Error (10500): VHDL syntax error at statemachinet.vhd(71) near text "end";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 71
-Error (10500): VHDL syntax error at statemachinet.vhd(73) near text "then";  expecting "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 73
 Error (10500): VHDL syntax error at statemachinet.vhd(75) near text "end";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 75
-Error (10500): VHDL syntax error at statemachinet.vhd(77) near text "then";  expecting "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 77
 Error (10500): VHDL syntax error at statemachinet.vhd(79) near text "end";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 79
-Error (10500): VHDL syntax error at statemachinet.vhd(81) near text "then";  expecting "<=" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 81
 Error (10500): VHDL syntax error at statemachinet.vhd(83) near text "end";  expecting ";" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd Line: 83
 Info (12021): Found 0 design units, including 0 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
@@ -214,9 +215,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
     Info (12022): Found design unit 1: Background-a
     Info (12023): Found entity 1: Background
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 13 errors, 1 warning
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 14 errors, 1 warning
     Error: Peak virtual memory: 4610 megabytes
-    Error: Processing ended: Sun May 22 14:56:33 2022
+    Error: Processing ended: Sun May 22 14:57:39 2022
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
