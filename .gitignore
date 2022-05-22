@@ -70,3 +70,16 @@ Quartus Files/miniproject.qws
 Quartus Files/db/miniproject.quiproj.12500.rdr.flock
 Quartus Files/db/miniproject.quiproj.17652.rdr.flock
 *.flock
+Quartus Files/output_files/miniproject.sta.summary
+Quartus Files/output_files/miniproject.sta.rpt
+Quartus Files/output_files/miniproject.sof
+Quartus Files/output_files/miniproject.map.summary
+Quartus Files/output_files/miniproject.map.rpt
+Quartus Files/output_files/miniproject.jdi
+Quartus Files/output_files/miniproject.flow.rpt
+Quartus Files/output_files/miniproject.fit.summary
+Quartus Files/output_files/miniproject.fit.rpt
+Quartus Files/output_files/miniproject.done
+Quartus Files/output_files/miniproject.asm.rpt
+Quartus Files/db/prev_cmp_miniproject.qmsg
+Quartus Files/db/logic_util_heursitic.dat
