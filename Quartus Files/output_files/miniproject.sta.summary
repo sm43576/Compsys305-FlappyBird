@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -7.729
-TNS   : -15.051
+Slack : -6.543
+TNS   : -19.028
 
 Type  : Slow 1200mV 85C Model Setup 'pb0'
-Slack : -2.067
-TNS   : -21.865
+Slack : -2.355
+TNS   : -30.022
 
 Type  : Slow 1200mV 85C Model Hold 'pb0'
-Slack : -6.002
-TNS   : -74.882
+Slack : -2.998
+TNS   : -40.474
 
 Type  : Slow 1200mV 85C Model Hold 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.359
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pb0'
@@ -31,19 +31,19 @@ Slack : 19.736
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -6.759
-TNS   : -13.184
+Slack : -5.770
+TNS   : -16.683
 
 Type  : Slow 1200mV 0C Model Setup 'pb0'
-Slack : -1.787
-TNS   : -20.365
+Slack : -2.129
+TNS   : -27.300
 
 Type  : Slow 1200mV 0C Model Hold 'pb0'
-Slack : -5.276
-TNS   : -63.971
+Slack : -2.585
+TNS   : -34.343
 
 Type  : Slow 1200mV 0C Model Hold 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.313
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pb0'
@@ -55,20 +55,20 @@ Slack : 9.785
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.742
+Slack : 19.740
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.697
-TNS   : -9.219
+Slack : -3.936
+TNS   : -11.750
 
 Type  : Fast 1200mV 0C Model Setup 'pb0'
-Slack : -1.351
-TNS   : -6.849
+Slack : -1.022
+TNS   : -10.153
 
 Type  : Fast 1200mV 0C Model Hold 'pb0'
-Slack : -3.602
-TNS   : -47.806
+Slack : -1.834
+TNS   : -26.226
 
 Type  : Fast 1200mV 0C Model Hold 'inst1|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.188
@@ -76,14 +76,14 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pb0'
 Slack : -3.000
-TNS   : -11.960
+TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : 9.585
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst1|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.749
+Slack : 19.746
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -76,13 +76,18 @@ begin
 				font_col <= pix_col(3 downto 1);
 			end if;
 		end loop;
-	elsif (mode = "001") then
+	elsif (mode = "001") then -- training mode
 		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
 			character_address <= "000001" ;
 			font_row <= pix_row(4 downto 2);
 			font_col <= pix_col(4 downto 2);
 		end if;
-	
+	elsif (mode = "010") then -- game mode
+		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
+			character_address <= "000010" ;
+			font_row <= pix_row(4 downto 2);
+			font_col <= pix_col(4 downto 2);
+		end if;
 	
 	--elsif(mode = "010'") then
 	 -- game over text
