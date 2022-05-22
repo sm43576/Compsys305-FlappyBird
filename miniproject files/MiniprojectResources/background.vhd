@@ -13,7 +13,7 @@ architecture a OF Background IS
 	signal tempRedOut, tempGreenOut, tempBlueOut: std_logic;
 	
 begin
-modeColours:process(clock_25Mhz)
+modeColours:process(clock_25Mhz,mode)
 begin
 backgroundOn <= '1';
 	if(mode = "000") then

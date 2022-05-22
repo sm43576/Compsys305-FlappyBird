@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sun May 22 16:46:16 2022
+Sun May 22 17:22:55 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -53,15 +53,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 22 16:46:15 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 22 17:22:55 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; FSMandBackground                                ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 341                                             ;
-;     Total combinational functions  ; 318                                             ;
-;     Dedicated logic registers      ; 52                                              ;
-; Total registers                    ; 52                                              ;
+; Total logic elements               ; 337                                             ;
+;     Total combinational functions  ; 314                                             ;
+;     Dedicated logic registers      ; 51                                              ;
+; Total registers                    ; 51                                              ;
 ; Total pins                         ; 9                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,096                                           ;
@@ -163,7 +163,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -173,20 +173,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                     ; Library ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
-; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
-; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
-; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
-; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
-; FSMandBackground.bdf                                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/FSMandBackground.bdf                       ;         ;
+; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
+; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
+; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
+; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
+; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
+; FSMandBackground.bdf                                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/FSMandBackground.bdf                       ;         ;
 ; altpll.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
 ; aglobal130.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
 ; stratix_pll.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
 ; stratixii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                              ;         ;
 ; cycloneii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                              ;         ;
-; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
+; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
 ; altsyncram.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
 ; stratix_ram_block.inc                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
 ; lpm_mux.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
@@ -195,7 +195,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
 ; altram.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
 ; altdpram.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
-; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
+; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -204,20 +204,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 341                                                                                  ;
+; Estimated Total logic elements              ; 337                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 318                                                                                  ;
+; Total combinational functions               ; 314                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 218                                                                                  ;
-;     -- 3 input functions                    ; 67                                                                                   ;
-;     -- <=2 input functions                  ; 33                                                                                   ;
+;     -- 4 input functions                    ; 214                                                                                  ;
+;     -- 3 input functions                    ; 65                                                                                   ;
+;     -- <=2 input functions                  ; 35                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 300                                                                                  ;
+;     -- normal mode                          ; 296                                                                                  ;
 ;     -- arithmetic mode                      ; 18                                                                                   ;
 ;                                             ;                                                                                      ;
-; Total registers                             ; 52                                                                                   ;
-;     -- Dedicated logic registers            ; 52                                                                                   ;
+; Total registers                             ; 51                                                                                   ;
+;     -- Dedicated logic registers            ; 51                                                                                   ;
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
 ; I/O pins                                    ; 9                                                                                    ;
@@ -227,9 +227,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 61                                                                                   ;
-; Total fan-out                               ; 1357                                                                                 ;
-; Average fan-out                             ; 3.42                                                                                 ;
+; Maximum fan-out                             ; 60                                                                                   ;
+; Total fan-out                               ; 1337                                                                                 ;
+; Average fan-out                             ; 3.41                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -238,7 +238,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
-; |FSMandBackground                         ; 318 (0)           ; 52 (0)       ; 4096        ; 0            ; 0       ; 0         ; 9    ; 0            ; |FSMandBackground                                                                              ; work         ;
+; |FSMandBackground                         ; 314 (0)           ; 51 (0)       ; 4096        ; 0            ; 0       ; 0         ; 9    ; 0            ; |FSMandBackground                                                                              ; work         ;
 ;    |Priority:inst5|                       ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|Priority:inst5                                                               ; work         ;
 ;    |VGA_SYNC:inst8|                       ; 55 (55)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|VGA_SYNC:inst8                                                               ; work         ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1                                                                ; work         ;
@@ -247,8 +247,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |char_rom:inst|                        ; 5 (5)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
-;    |fsm:inst7|                            ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|fsm:inst7                                                                    ; work         ;
-;    |textToDisplay:inst3|                  ; 254 (254)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|textToDisplay:inst3                                                          ; work         ;
+;    |fsm:inst7|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|fsm:inst7                                                                    ; work         ;
+;    |textToDisplay:inst3|                  ; 252 (252)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|textToDisplay:inst3                                                          ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -267,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                 ; IP Include File                                                                   ;
 +--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |FSMandBackground|altpll0:inst1 ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |FSMandBackground|altpll0:inst1 ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------------------------+
 
 
@@ -314,22 +314,23 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+---------------------------------------+-----------------------------------------+
-; Register name                         ; Reason for Removal                      ;
-+---------------------------------------+-----------------------------------------+
-; Priority:inst5|tempBlueOut            ; Stuck at GND due to stuck port data_in  ;
-; Priority:inst5|blue_out               ; Stuck at GND due to stuck port data_in  ;
-; VGA_SYNC:inst8|blue_out               ; Stuck at GND due to stuck port data_in  ;
-; Priority:inst5|red_out                ; Merged with Priority:inst5|green_out    ;
-; Priority:inst5|tempRedOut             ; Merged with Priority:inst5|tempGreenOut ;
-; VGA_SYNC:inst8|pixel_row[9]           ; Stuck at GND due to stuck port data_in  ;
-; fsm:inst7|state.S3                    ; Lost fanout                             ;
-; fsm:inst7|state.S4                    ; Lost fanout                             ;
-; fsm:inst7|state.S5                    ; Lost fanout                             ;
-; Total Number of Removed Registers = 9 ;                                         ;
-+---------------------------------------+-----------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++----------------------------------------+-----------------------------------------+
+; Register name                          ; Reason for Removal                      ;
++----------------------------------------+-----------------------------------------+
+; Priority:inst5|tempBlueOut             ; Stuck at GND due to stuck port data_in  ;
+; Priority:inst5|blue_out                ; Stuck at GND due to stuck port data_in  ;
+; VGA_SYNC:inst8|blue_out                ; Stuck at GND due to stuck port data_in  ;
+; Priority:inst5|red_out                 ; Merged with Priority:inst5|green_out    ;
+; Priority:inst5|tempRedOut              ; Merged with Priority:inst5|tempGreenOut ;
+; VGA_SYNC:inst8|pixel_row[9]            ; Stuck at GND due to stuck port data_in  ;
+; fsm:inst7|state.S3                     ; Lost fanout                             ;
+; fsm:inst7|state.S4                     ; Lost fanout                             ;
+; fsm:inst7|state.S5                     ; Lost fanout                             ;
+; fsm:inst7|state.S2                     ; Lost fanout                             ;
+; Total Number of Removed Registers = 10 ;                                         ;
++----------------------------------------+-----------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -347,7 +348,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 52    ;
+; Total registers                              ; 51    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -362,10 +363,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FSMandBackground|VGA_SYNC:inst8|v_count[9]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FSMandBackground|VGA_SYNC:inst8|v_count[7]                ;
 ; 27:1               ; 6 bits    ; 108 LEs       ; 6 LEs                ; 102 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|font_col[2]          ;
 ; 50:1               ; 6 bits    ; 198 LEs       ; 12 LEs               ; 186 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|character_address[0] ;
-; 59:1               ; 2 bits    ; 78 LEs        ; 76 LEs               ; 2 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[2]             ;
+; 59:1               ; 2 bits    ; 78 LEs        ; 76 LEs               ; 2 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[0]             ;
 ; 60:1               ; 2 bits    ; 80 LEs        ; 76 LEs               ; 4 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[1]             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
@@ -866,35 +867,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 22 16:46:07 2022
+    Info: Processing started: Sun May 22 17:22:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
     Info (12022): Found design unit 1: fsm-Mealy
     Info (12023): Found entity 1: fsm
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
     Info (12022): Found design unit 1: textToDisplay-a
     Info (12023): Found entity 1: textToDisplay
 Info (12021): Found 1 design units, including 1 entities, in source file mouseinterface.bdf
     Info (12023): Found entity 1: mouseInterface
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior
     Info (12023): Found entity 1: MOUSE
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
     Info (12022): Found design unit 1: char_rom-SYN
     Info (12023): Found entity 1: char_rom
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
     Info (12022): Found design unit 1: bouncy_ball-behavior
     Info (12023): Found entity 1: bouncy_ball
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior
     Info (12023): Found entity 1: ball
 Info (12021): Found 1 design units, including 1 entities, in source file textdisplay.bdf
     Info (12023): Found entity 1: TextDisplay
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-arc2
     Info (12023): Found entity 1: seven_seg
 Info (12021): Found 1 design units, including 1 entities, in source file movingball.bdf
@@ -906,10 +907,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file altpll0
     Info (12023): Found entity 1: altpll0
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/ballwmouse.bdf
     Info (12023): Found entity 1: ballWMouse
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
     Info (12022): Found design unit 1: Priority-a
     Info (12023): Found entity 1: Priority
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
     Info (12022): Found design unit 1: Background-a
     Info (12023): Found entity 1: Background
 Info (12021): Found 1 design units, including 1 entities, in source file fsmandbackground.bdf
@@ -982,11 +983,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated"
 Info (12128): Elaborating entity "Priority" for hierarchy "Priority:inst5"
 Info (12128): Elaborating entity "Background" for hierarchy "Background:inst23"
-Warning (10492): VHDL Process Statement warning at background.vhd(19): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at background.vhd(25): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at background.vhd(31): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at background.vhd(37): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at background.vhd(43): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at background.vhd(16): inferring latch(es) for signal or variable "red_out", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at background.vhd(16): inferring latch(es) for signal or variable "green_out", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at background.vhd(16): inferring latch(es) for signal or variable "blue_out", which holds its previous value in one or more paths through the process
@@ -995,8 +991,12 @@ Info (10041): Inferred latch for "green_out" at background.vhd(16)
 Info (10041): Inferred latch for "red_out" at background.vhd(16)
 Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst7"
 Warning (10541): VHDL Signal Declaration warning at statemachinet.vhd(9): used implicit default value for signal "parity" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at statemachinet.vhd(78): signal "pb1_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at statemachinet.vhd(80): signal "pb2_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at statemachinet.vhd(42): inferring latch(es) for signal or variable "pb1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at statemachinet.vhd(42): inferring latch(es) for signal or variable "pb2", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at statemachinet.vhd(81): signal "pb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at statemachinet.vhd(83): signal "pb2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "pb2" at statemachinet.vhd(42)
+Info (10041): Inferred latch for "pb1" at statemachinet.vhd(42)
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "char_rom:inst|altsyncram:altsyncram_component"
@@ -1022,34 +1022,9 @@ Info (12128): Elaborating entity "textToDisplay" for hierarchy "textToDisplay:in
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(19): used explicit default value for signal "sig_title" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(23): used explicit default value for signal "sig_trainT" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(29): used explicit default value for signal "sig_normT" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(41): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(42): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(43): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(48): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(48): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(49): signal "sig_title" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(50): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(51): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(52): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(53): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(53): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(61): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(61): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(62): signal "sig_trainT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(63): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(64): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(65): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(71): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(71): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(72): signal "sig_normT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(73): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(74): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(75): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(78): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "p_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(79): signal "p_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(81): signal "pix_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(82): signal "pix_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(51): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(64): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(74): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(39): inferring latch(es) for signal or variable "value", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(39): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(39): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
@@ -1073,11 +1048,11 @@ Info (10041): Inferred latch for "value[3]" at textToDisplay.vhd(39)
 Info (10041): Inferred latch for "value[4]" at textToDisplay.vhd(39)
 Info (10041): Inferred latch for "value[5]" at textToDisplay.vhd(39)
 Warning (13012): Latch textToDisplay:inst3|font_col[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|font_col[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|font_col[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[3]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[4]
 Warning (13012): Latch textToDisplay:inst3|font_row[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[1]
 Warning (13012): Latch textToDisplay:inst3|font_row[1] has unsafe behavior
@@ -1085,17 +1060,17 @@ Warning (13012): Latch textToDisplay:inst3|font_row[1] has unsafe behavior
 Warning (13012): Latch textToDisplay:inst3|font_row[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[3]
 Warning (13012): Latch textToDisplay:inst3|character_address[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|character_address[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|character_address[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|character_address[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|character_address[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|character_address[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst7|state.S1
 Warning (13012): Latch textToDisplay:inst3|value[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
 Warning (13012): Latch textToDisplay:inst3|value[1] has unsafe behavior
@@ -1111,19 +1086,19 @@ Warning (13012): Latch textToDisplay:inst3|value[5] has unsafe behavior
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 362 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 358 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 344 logic cells
+    Info (21061): Implemented 340 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 87 warnings
-    Info: Peak virtual memory: 4664 megabytes
-    Info: Processing ended: Sun May 22 16:46:16 2022
-    Info: Elapsed time: 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Sun May 22 17:22:55 2022
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:09
 
 

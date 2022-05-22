@@ -23,6 +23,7 @@ type state_type is (S0,S1,S2,S3,S4,S5);
 -- S4 (maybe different background harder difficulyt
 --
 signal state,next_state: state_type;
+signal pb1,pb2: std_logic;
 
 begin
 SYNC_PROC: process(clk)
@@ -46,9 +47,11 @@ begin
 			when S0 =>
 				if(pb1_in='0') then
 					mode_out <="001";	--trainingmode
+					pb1<= '1';
 				
 				elsif(pb2_in='0') then
 					mode_out <="010";	--actualmode
+					pb2<= '1';
 				end if;
 				
 			--S1 in training mode
@@ -60,8 +63,8 @@ begin
 				if(x='0') then
 					mode_out <="011";
 				end if;
-			--when others =>
-			--	mode_out <= "000";
+			when others =>
+				mode_out <= "000";
 			--pass
 			--when S1 =>
 			--	if(x='1') then
@@ -75,9 +78,9 @@ begin
 	next_state<=s0;
 	case (state) is
 		when S0 =>
-			if(pb1_in='0') then
+			if(pb1='1') then
 				next_state<=S1;	--trainingmode
-			elsif(pb2_in='0') then
+			elsif(pb2='1') then
 				next_state<=S2;	--actualmode
 			end if;	
 		when S1 =>

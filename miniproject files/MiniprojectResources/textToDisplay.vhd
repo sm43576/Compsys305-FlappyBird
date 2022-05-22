@@ -36,10 +36,11 @@ architecture a OF textToDisplay IS
 	
 	
 begin
-process(clock_25Mhz)
+process(clock_25Mhz,p_row,p_col,pix_row,pix_col,		mode,sig_title,sig_trainT,sig_normT)
 begin
 	p_row <= conv_integer(unsigned(pix_row));
 	p_col <= conv_integer(unsigned(pix_col));
+	
 	if(mode = "000") then
 	
 		-- Flappy Bird Title
