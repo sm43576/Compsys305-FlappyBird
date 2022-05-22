@@ -28,7 +28,7 @@ begin
 SYNC_PROC: process(clk)
 begin
 	if rising_edge(clk) then
-		if (reset='1') then
+		if (reset='0') then
 			state <=S0;
 		else
 			state<= next_state;

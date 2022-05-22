@@ -40,48 +40,54 @@ process(clock_25Mhz)
 begin
 	p_row <= conv_integer(unsigned(pix_row));
 	p_col <= conv_integer(unsigned(pix_col));
-	--if(mode = '000') then
+	if(mode = '000') then
 	
-	-- Flappy Bird Title
-	for i in 0 to 11 loop
-	
-		if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
-			value <= sig_title(i);
-			character_address <= value ; -- L
+		-- Flappy Bird Title
+		for i in 0 to 11 loop
+		
+			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
+				value <= sig_title(i);
+				character_address <= value ; -- L
+				font_row <= pix_row(4 downto 2);
+				font_col <= pix_col(4 downto 2);
+			elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
+				character_address <= "100000";
+			end if;
+		end loop;
+		
+		-- train start instructions
+		for i in 0 to 24 loop
+		
+			if(320<p_row and p_row<336) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
+				value <= sig_trainT(i);
+				character_address <= value ; 
+				font_row <= pix_row(3 downto 1);
+				font_col <= pix_col(3 downto 1);
+			end if;
+		end loop;
+		
+		-- Normal game mode start instruction
+		for i in 0 to 23 loop
+			if(336<p_row and p_row<352) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
+				value <= sig_normT(i);
+				character_address <= value ; 
+				font_row <= pix_row(3 downto 1);
+				font_col <= pix_col(3 downto 1);
+			end if;
+		end loop;
+	elsif (mode = '001') then
+		if(96<p_row and p_row<128) and 96<p_col and p_col<128)
+			character_address <= "000001" ;
 			font_row <= pix_row(4 downto 2);
 			font_col <= pix_col(4 downto 2);
-		elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
-			character_address <= "100000";
 		end if;
-	end loop;
 	
-	-- train start instructions
-	for i in 0 to 24 loop
 	
-		if(320<p_row and p_row<336) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
-			value <= sig_trainT(i);
-			character_address <= value ; 
-			font_row <= pix_row(3 downto 1);
-			font_col <= pix_col(3 downto 1);
-		end if;
-	end loop;
-	
-	-- Normal game mode start instruction
-	for i in 0 to 23 loop
-		if(336<p_row and p_row<352) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
-			value <= sig_normT(i);
-			character_address <= value ; 
-			font_row <= pix_row(3 downto 1);
-			font_col <= pix_col(3 downto 1);
-		end if;
-	end loop;
-	--elsif (mode = '001') then
-	-- score
-	
-	--elsif(mode = '010') then
+	elsif(mode = '010') then
 	 -- game over text
 	 
-	 --elseif (mode = '011') then
+	elsif (mode = '011') then
 	 -- game finished text
+	 end if;
 end process;	 
 end a;
