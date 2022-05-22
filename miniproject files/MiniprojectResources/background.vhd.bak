@@ -1,0 +1,15 @@
+ibrary IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+use  IEEE.STD_LOGIC_ARITH.all;
+use  IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY Background IS
+	PORT(	clock_25Mhz: IN	STD_LOGIC;
+			mode: IN STD_LOGIC_VECTOR[2..0];
+			red_out, green_out, blue_out	: OUT	STD_LOGIC);
+end Background;
+
+architecture a OF Background IS
+	signal tempRedOut, tempGreenOut, tempBlueOut: std_logic;
+	
+begin

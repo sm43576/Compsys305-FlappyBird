@@ -1,5 +1,5 @@
 Assembler report for miniproject
-Sun May 15 15:00:30 2022
+Sun May 22 15:27:35 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.sof
+  5. Assembler Device Options: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun May 15 15:00:30 2022 ;
+; Assembler Status      ; Successful - Sun May 22 15:27:35 2022 ;
 ; Revision Name         ; miniproject                           ;
 ; Top-level Entity Name ; ballWMouse                            ;
 ; Family                ; Cyclone III                           ;
@@ -82,18 +82,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------------------+
 ; File Name                                                                                          ;
 +----------------------------------------------------------------------------------------------------+
-; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.sof ;
+; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.sof ;
 +----------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.sof ;
+; Assembler Device Options: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/output_files/miniproject.sof ;
 +----------------+-------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                     ;
 +----------------+-------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                                ;
-; JTAG usercode  ; 0x000E12ED                                                                                                  ;
-; Checksum       ; 0x000E12ED                                                                                                  ;
+; JTAG usercode  ; 0x00119B48                                                                                                  ;
+; Checksum       ; 0x00119B48                                                                                                  ;
 +----------------+-------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 15 15:00:29 2022
+    Info: Processing started: Sun May 22 15:27:34 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off miniproject -c miniproject
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4548 megabytes
-    Info: Processing ended: Sun May 15 15:00:30 2022
+    Info: Peak virtual memory: 4544 megabytes
+    Info: Processing ended: Sun May 22 15:27:35 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
