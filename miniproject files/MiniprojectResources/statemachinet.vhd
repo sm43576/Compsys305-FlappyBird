@@ -48,7 +48,7 @@ begin
 					mode_out <="001";	--trainingmode
 				
 				elsif(pb2_in='0') then
-					mode_out <="001";	--actualmode
+					mode_out <="010";	--actualmode
 				end if;
 				
 			--S1 in training mode
@@ -70,7 +70,7 @@ begin
 			--S2 does not have a finish, endless
 		end case;
 end process OUTPUT_DECODE;		
-NEXT_STATE_DECODE: process(state,x)
+NEXT_STATE_DECODE: process(state,pb1_in,pb2_in,x)
 begin
 	next_state<=s0;
 	case (state) is
