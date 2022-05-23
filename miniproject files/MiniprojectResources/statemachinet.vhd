@@ -41,28 +41,16 @@ end process;
 
 OUTPUT_DECODE : process(state,pb1_in,pb2_in,x)
 begin
-	mode_out<="000";
 		case(state) is
 			--Mainmenu
 			when S0 =>
-				if(pb1_in='0') then
-					mode_out <="001";	--trainingmode
-					pb1<= '1';
-				
-				elsif(pb2_in='0') then
-					mode_out <="010";	--actualmode
-					pb2<= '1';
-				end if;
+				mode_out<="000";
 				
 			--S1 in training mode
 			when S1 =>
-				if(x='0') then
-					mode_out <="011"; -- game over screen
-				end if;
-			when S2 => -- S2 in actual game mode
-				if(x='0') then
-					mode_out <="011";
-				end if;
+				mode_out<="001";
+			when S2 => -- S2 in actual game mode		
+				mode_out <="010";
 			when others =>
 				mode_out <= "000";
 			--pass
@@ -75,25 +63,33 @@ begin
 end process OUTPUT_DECODE;		
 NEXT_STATE_DECODE: process(state,pb1_in,pb2_in,x)
 begin
-	next_state<=s0;
+
 	case (state) is
 		when S0 =>
-			if(pb1='1') then
+			if(pb1_in='0') then
 				next_state<=S1;	--trainingmode
-			elsif(pb2='1') then
+			elsif(pb2_in='0') then
 				next_state<=S2;	--actualmode
+			else -- Stay on main menu if nothing happens
+				next_state<=S0;
 			end if;	
 		when S1 =>
-			if(x='0') then
+			if(x ='1') then
 				next_state<=S3;
-				
-			elsif(x='1') then
+			elsif(reset='0') then
 				next_state<=S0;
+			else	-- Stay on training mode if no inputs
+				next_state<=S1;
 			end if;
 		when S2 =>
-			if(x='0') then
+			if(x='1') then
 				next_state<=S3;
+			elsif(reset='0') then
+				next_state<=S0;
+			else -- stay on game mode if no inputs
+				next_state<=S2;
 			end if;
+			
 		when others =>
 			next_state <= S0;
 	end case;

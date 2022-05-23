@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun May 22 17:27:58 2022
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Mon May 23 12:32:24 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : miniproject
 Top-level Entity Name : FSMandBackground
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 342 / 15,408 ( 2 % )
-    Total combinational functions : 328 / 15,408 ( 2 % )
-    Dedicated logic registers : 51 / 15,408 ( < 1 % )
-Total registers : 51
+Total logic elements : 332 / 15,408 ( 2 % )
+    Total combinational functions : 326 / 15,408 ( 2 % )
+    Dedicated logic registers : 52 / 15,408 ( < 1 % )
+Total registers : 52
 Total pins : 9 / 347 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 4,096 / 516,096 ( < 1 % )

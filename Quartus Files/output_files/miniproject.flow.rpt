@@ -1,6 +1,6 @@
 Flow report for miniproject
-Sun May 22 17:28:04 2022
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon May 23 12:32:34 2022
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Flow Summary                                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun May 22 17:28:01 2022           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; miniproject                                     ;
-; Top-level Entity Name              ; FSMandBackground                                ;
-; Family                             ; Cyclone III                                     ;
-; Device                             ; EP3C16F484C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 342 / 15,408 ( 2 % )                            ;
-;     Total combinational functions  ; 328 / 15,408 ( 2 % )                            ;
-;     Dedicated logic registers      ; 51 / 15,408 ( < 1 % )                           ;
-; Total registers                    ; 51                                              ;
-; Total pins                         ; 9 / 347 ( 3 % )                                 ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Mon May 23 12:32:29 2022       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; miniproject                                 ;
+; Top-level Entity Name              ; FSMandBackground                            ;
+; Family                             ; Cyclone III                                 ;
+; Device                             ; EP3C16F484C6                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 332 / 15,408 ( 2 % )                        ;
+;     Total combinational functions  ; 326 / 15,408 ( 2 % )                        ;
+;     Dedicated logic registers      ; 52 / 15,408 ( < 1 % )                       ;
+; Total registers                    ; 52                                          ;
+; Total pins                         ; 9 / 347 ( 3 % )                             ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                   ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/22/2022 17:27:34 ;
+; Start date & time ; 05/23/2022 12:32:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; miniproject         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+------------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name      ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180782522483117.165319725427292 ; --            ; --               ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053328739407.165326592104868 ; --            ; --               ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --               ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --               ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --               ; --         ;
@@ -96,24 +96,24 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4656 MB             ; 00:00:11                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 4911 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4585 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4706 MB             ; 00:00:09                           ;
+; Fitter                    ; 00:00:10     ; 3.3                     ; 5639 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 3.3                     ; 4657 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+-------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname  ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+-------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; REN-MSIPrestige14 ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; REN-MSIPrestige14 ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; REN-MSIPrestige14 ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; REN-MSIPrestige14 ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+-------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; EN399270         ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; EN399270         ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; EN399270         ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EN399270         ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
