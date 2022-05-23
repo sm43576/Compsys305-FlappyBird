@@ -1,5 +1,5 @@
 Flow report for miniproject
-Mon May 23 13:27:01 2022
+Mon May 23 15:29:44 2022
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 23 13:26:56 2022       ;
+; Flow Status                        ; Successful - Mon May 23 15:29:39 2022       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; miniproject                                 ;
 ; Top-level Entity Name              ; FSMandBackground                            ;
 ; Family                             ; Cyclone III                                 ;
 ; Device                             ; EP3C16F484C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 346 / 15,408 ( 2 % )                        ;
-;     Total combinational functions  ; 337 / 15,408 ( 2 % )                        ;
-;     Dedicated logic registers      ; 54 / 15,408 ( < 1 % )                       ;
-; Total registers                    ; 54                                          ;
+; Total logic elements               ; 343 / 15,408 ( 2 % )                        ;
+;     Total combinational functions  ; 338 / 15,408 ( 2 % )                        ;
+;     Dedicated logic registers      ; 53 / 15,408 ( < 1 % )                       ;
+; Total registers                    ; 53                                          ;
 ; Total pins                         ; 9 / 347 ( 3 % )                             ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                   ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/23/2022 13:26:29 ;
+; Start date & time ; 05/23/2022 15:29:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; miniproject         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+------------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name      ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053327268177.165326918815148 ; --            ; --               ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053327268177.165327655006648 ; --            ; --               ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --               ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --               ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --               ; --         ;
@@ -96,11 +96,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4681 MB             ; 00:00:08                           ;
-; Fitter                    ; 00:00:11     ; 3.7                     ; 5474 MB             ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4669 MB             ; 00:00:08                           ;
+; Fitter                    ; 00:00:12     ; 3.5                     ; 5492 MB             ; 00:00:12                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4642 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:23                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4643 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

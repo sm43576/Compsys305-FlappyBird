@@ -46,7 +46,7 @@ begin
 		-- Flappy Bird Title
 		for i in 0 to 11 loop
 			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
-				textOn <='1';
+				textOn <= '1';
 				value <= sig_title(i);
 				character_address <= value ; -- L
 				font_row <= pix_row(4 downto 2);
@@ -96,11 +96,11 @@ begin
 			font_col <= pix_col(4 downto 2);
 		end if;
 	
-	--elsif(mode = "010'") then
+	--elsif(mode = "011") then
 		--textOn <='1';
 	 -- game over text
 	 
-	--elsif (mode = "011") then
+	--elsif (mode = "100") then
 		--textOn <='1';
 	 -- game finished text
 	end if;

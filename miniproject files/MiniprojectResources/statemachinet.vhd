@@ -1,12 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 entity fsm is
-    Port (reset : in  STD_LOGIC;
+    Port (reset : in  STD_LOGIC; -- connected to pb2
+			 pb0_in: in STD_LOGIC;
 			 pb1_in: in STD_LOGIC;
-			 pb2_in: in STD_LOGIC;
 			 input : in  STD_LOGIC;
-			 x		 : in STD_LOGIC;
-			 parity: out STD_LOGIC;
+			 x		 : in STD_LOGIC; -- to change for on pipe hit or smth
+			 parity: out STD_LOGIC; -- score?
 			 mode_out : out  STD_LOGIC_VECTOR (2 downto 0);
 			 clk : in  STD_LOGIC);
 end fsm;
@@ -19,9 +19,9 @@ type state_type is (S0,S1,S2,S3,S4,S5);
 -- S0 mainmenu
 --	S1 trainingmode
 --	S2 actualmode
--- S3 gameover
--- S4 (maybe different background harder difficulyt
---
+-- S3 gameover (u died screen)
+-- S4 game finished (in training mode after 20 pipes or smth)
+-- S5 (maybe different background harder difficulyt
 signal state,next_state: state_type;
 signal pb1,pb2: std_logic;
 
@@ -39,7 +39,7 @@ begin
 
 end process;
 
-OUTPUT_DECODE : process(state,pb1_in,pb2_in,x)
+OUTPUT_DECODE : process(state,pb0_in,pb1_in,x)
 begin
 		case(state) is
 			--Mainmenu
@@ -61,14 +61,14 @@ begin
 			--S2 does not have a finish, endless
 		end case;
 end process OUTPUT_DECODE;		
-NEXT_STATE_DECODE: process(state,pb1_in,pb2_in,x)
+NEXT_STATE_DECODE: process(state,pb0_in,pb1_in,x)
 begin
 
 	case (state) is
 		when S0 =>
-			if(pb1_in='0') then
+			if(pb0_in='0') then
 				next_state<=S1;	--trainingmode
-			elsif(pb2_in='0') then
+			elsif(pb1_in='0') then
 				next_state<=S2;	--actualmode
 			else -- Stay on main menu if nothing happens
 				next_state<=S0;

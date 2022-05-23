@@ -28,18 +28,18 @@ backgroundOn <= '1';
 	elsif(mode = "001") then
 	--- Training mode
 		
-		red_out <= '1';
-		green_out <= '0';
-		blue_out <= '0';
+		red_out <= '0';
+		green_out <= '1';
+		blue_out <= '1';
 
 	elsif(mode = "010") then
 	--- Game mode
-		red_out <= '0';
+		red_out <= '1';
 		green_out <= '1';
-		blue_out <= '0';
+		blue_out <= '1';
 	
 		
-	elsif(mode = "011") then
+	elsif(mode = "011" or mode = "100") then
 	--- Game Over
 
 		red_out <= '0';
@@ -47,7 +47,7 @@ backgroundOn <= '1';
 		blue_out <= '0';
 
 		
-	elsif(mode = "100") then
+	elsif(mode = "101") then
 	--- Last difficulty in game mode
 		
 		red_out <= '1';

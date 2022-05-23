@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Mon May 23 13:26:38 2022
+Mon May 23 15:29:20 2022
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -52,15 +52,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 23 13:26:38 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 23 15:29:20 2022       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; miniproject                                 ;
 ; Top-level Entity Name              ; FSMandBackground                            ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 358                                         ;
-;     Total combinational functions  ; 337                                         ;
-;     Dedicated logic registers      ; 54                                          ;
-; Total registers                    ; 54                                          ;
+; Total logic elements               ; 360                                         ;
+;     Total combinational functions  ; 338                                         ;
+;     Dedicated logic registers      ; 53                                          ;
+; Total registers                    ; 53                                          ;
 ; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -165,11 +165,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -209,20 +210,20 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 358                            ;
+; Estimated Total logic elements              ; 360                            ;
 ;                                             ;                                ;
-; Total combinational functions               ; 337                            ;
+; Total combinational functions               ; 338                            ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 234                            ;
-;     -- 3 input functions                    ; 64                             ;
-;     -- <=2 input functions                  ; 39                             ;
+;     -- 4 input functions                    ; 235                            ;
+;     -- 3 input functions                    ; 69                             ;
+;     -- <=2 input functions                  ; 34                             ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 319                            ;
+;     -- normal mode                          ; 320                            ;
 ;     -- arithmetic mode                      ; 18                             ;
 ;                                             ;                                ;
-; Total registers                             ; 54                             ;
-;     -- Dedicated logic registers            ; 54                             ;
+; Total registers                             ; 53                             ;
+;     -- Dedicated logic registers            ; 53                             ;
 ;     -- I/O registers                        ; 0                              ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 9                              ;
@@ -232,9 +233,9 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1                              ;
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst8|pixel_column[4] ;
-; Maximum fan-out                             ; 64                             ;
-; Total fan-out                               ; 1429                           ;
-; Average fan-out                             ; 3.42                           ;
+; Maximum fan-out                             ; 65                             ;
+; Total fan-out                               ; 1436                           ;
+; Average fan-out                             ; 3.44                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -243,9 +244,9 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
-; |FSMandBackground                         ; 337 (0)           ; 54 (0)       ; 4096        ; 0            ; 0       ; 0         ; 9    ; 0            ; |FSMandBackground                                                                              ;              ;
-;    |Priority:inst5|                       ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|Priority:inst5                                                               ;              ;
-;    |VGA_SYNC:inst8|                       ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|VGA_SYNC:inst8                                                               ;              ;
+; |FSMandBackground                         ; 338 (0)           ; 53 (0)       ; 4096        ; 0            ; 0       ; 0         ; 9    ; 0            ; |FSMandBackground                                                                              ;              ;
+;    |Priority:inst5|                       ; 4 (4)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|Priority:inst5                                                               ;              ;
+;    |VGA_SYNC:inst8|                       ; 56 (56)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|VGA_SYNC:inst8                                                               ;              ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1                                                                ;              ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1|altpll:altpll_component                                        ;              ;
 ;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated          ;              ;
@@ -253,7 +254,7 @@ applicable agreement for further details.
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst|altsyncram:altsyncram_component                                ;              ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
 ;    |fsm:inst7|                            ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|fsm:inst7                                                                    ;              ;
-;    |textToDisplay:inst3|                  ; 266 (266)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|textToDisplay:inst3                                                          ;              ;
+;    |textToDisplay:inst3|                  ; 268 (268)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSMandBackground|textToDisplay:inst3                                                          ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -328,7 +329,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; fsm:inst7|state.S3                    ; Lost fanout                            ;
 ; fsm:inst7|state.S4                    ; Lost fanout                            ;
 ; fsm:inst7|state.S5                    ; Lost fanout                            ;
-; Total Number of Removed Registers = 4 ;                                        ;
+; Priority:inst5|tempGreenOut           ; Merged with Priority:inst5|tempBlueOut ;
+; Total Number of Removed Registers = 5 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -337,7 +339,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 54    ;
+; Total registers                              ; 53    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -352,10 +354,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FSMandBackground|VGA_SYNC:inst8|v_count[3]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FSMandBackground|Priority:inst5|tempRedOut                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |FSMandBackground|Priority:inst5|tempBlueOut               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FSMandBackground|VGA_SYNC:inst8|v_count[2]                ;
 ; 27:1               ; 6 bits    ; 108 LEs       ; 6 LEs                ; 102 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|font_col[2]          ;
-; 50:1               ; 4 bits    ; 132 LEs       ; 8 LEs                ; 124 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|character_address[3] ;
+; 50:1               ; 4 bits    ; 132 LEs       ; 8 LEs                ; 124 LEs                ; No         ; |FSMandBackground|textToDisplay:inst3|character_address[2] ;
 ; 50:1               ; 2 bits    ; 66 LEs        ; 4 LEs                ; 62 LEs                 ; No         ; |FSMandBackground|textToDisplay:inst3|character_address[0] ;
 ; 59:1               ; 2 bits    ; 78 LEs        ; 76 LEs               ; 2 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[0]             ;
 ; 60:1               ; 2 bits    ; 80 LEs        ; 76 LEs               ; 4 LEs                  ; No         ; |FSMandBackground|textToDisplay:inst3|value[1]             ;
@@ -858,7 +860,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Mon May 23 13:26:28 2022
+    Info: Processing started: Mon May 23 15:29:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
@@ -907,7 +909,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file //files
 Info (12021): Found 1 design units, including 1 entities, in source file fsmandbackground.bdf
     Info (12023): Found entity 1: FSMandBackground
 Info (12127): Elaborating entity "FSMandBackground" for the top level hierarchy
-Warning (275011): Block or symbol "GND" of instance "inst22" overlaps another block or symbol
 Warning (275011): Block or symbol "GND" of instance "inst33" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst8"
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst1"
@@ -988,27 +989,6 @@ Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst7"
 Warning (10541): VHDL Signal Declaration warning at statemachinet.vhd(9): used implicit default value for signal "parity" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10492): VHDL Process Statement warning at statemachinet.vhd(79): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at statemachinet.vhd(87): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "char_rom:inst|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "char_rom:inst|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "tcgrom.mif"
-    Info (12134): Parameter "intended_device_family" = "Cyclone III"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "512"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "widthad_a" = "9"
-    Info (12134): Parameter "width_a" = "8"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
-    Info (12023): Found entity 1: altsyncram_kt91
-Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
 Info (12128): Elaborating entity "textToDisplay" for hierarchy "textToDisplay:inst3"
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(20): used explicit default value for signal "sig_title" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(24): used explicit default value for signal "sig_trainT" because signal was never assigned a value
@@ -1038,6 +1018,27 @@ Info (10041): Inferred latch for "value[2]" at textToDisplay.vhd(40)
 Info (10041): Inferred latch for "value[3]" at textToDisplay.vhd(40)
 Info (10041): Inferred latch for "value[4]" at textToDisplay.vhd(40)
 Info (10041): Inferred latch for "value[5]" at textToDisplay.vhd(40)
+Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "char_rom:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "char_rom:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "tcgrom.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
+    Info (12023): Found entity 1: altsyncram_kt91
+Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
 Warning (13012): Latch textToDisplay:inst3|font_col[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[2]
 Warning (13012): Latch textToDisplay:inst3|font_col[0] has unsafe behavior
@@ -1078,16 +1079,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 378 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 382 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 360 logic cells
+    Info (21061): Implemented 364 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Mon May 23 13:26:38 2022
-    Info: Elapsed time: 00:00:10
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 4669 megabytes
+    Info: Processing ended: Mon May 23 15:29:20 2022
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:08
 
 
