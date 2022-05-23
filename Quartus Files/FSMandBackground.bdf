@@ -1375,12 +1375,12 @@ applicable agreement for further details.
 	(pt 736 456)
 )
 (connector
-	(text "rBack" (rect 683 528 711 540)(font "Arial" ))
+	(text "rBack" (rect 635 528 663 540)(font "Arial" ))
 	(pt 888 544)
 	(pt 664 544)
 )
 (connector
-	(text "gBack" (rect 659 544 689 556)(font "Arial" ))
+	(text "gBack" (rect 619 544 649 556)(font "Arial" ))
 	(pt 888 560)
 	(pt 592 560)
 )
@@ -1390,7 +1390,7 @@ applicable agreement for further details.
 	(pt 888 576)
 )
 (connector
-	(text "gBack" (rect 1225 200 1255 212)(font "Arial" ))
+	(text "gBack" (rect 1273 200 1303 212)(font "Arial" ))
 	(pt 1240 216)
 	(pt 1296 216)
 )
@@ -1400,7 +1400,7 @@ applicable agreement for further details.
 	(pt 1288 200)
 )
 (connector
-	(text "bBack" (rect 1234 216 1264 228)(font "Arial" ))
+	(text "bBack" (rect 1306 216 1336 228)(font "Arial" ))
 	(pt 1240 232)
 	(pt 1304 232)
 )

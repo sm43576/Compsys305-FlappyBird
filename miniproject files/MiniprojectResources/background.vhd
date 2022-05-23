@@ -21,43 +21,38 @@ p_col <= conv_integer(unsigned(pix_col));
 backgroundOn <= '1';
 	if(mode = "000") then
 	-- Main menu colour (white)
-		if ((p_row >= 0 and p_row <639) and (p_col >=0 and p_col<479)) then
-			red_out <= '1';
-			green_out <= '1';
-			blue_out <= '1';
-		end if;
+		red_out <= '1';
+		green_out <= '1';
+		blue_out <= '1';
 	
 	elsif(mode = "001") then
 	--- Training mode
-		if ((p_row >= 0 and p_row <639) and (p_col >=0 and p_col<479)) then
-			red_out <= '1';
-			green_out <= '0';
-			blue_out <= '0';
-		end if;
-	
+		
+		red_out <= '1';
+		green_out <= '0';
+		blue_out <= '0';
+
 	elsif(mode = "010") then
 	--- Game mode
-		if ((p_row >= 0 and p_row <639) and (p_col >=0 and p_col<479)) then
-			red_out <= '0';
-			green_out <= '1';
-			blue_out <= '0';
-		end if;
+		red_out <= '0';
+		green_out <= '1';
+		blue_out <= '0';
+	
 		
 	elsif(mode = "011") then
 	--- Game Over
-		if ((p_row >= 0 and p_row <639) and (p_col >=0 and p_col<479)) then
-			red_out <= '0';
-			green_out <= '0';
-			blue_out <= '0';
-		end if;
+
+		red_out <= '0';
+		green_out <= '0';
+		blue_out <= '0';
+
 		
 	elsif(mode = "100") then
 	--- Last difficulty in game mode
-		if ((p_row >= 0 and p_row <639) and (p_col >=0 and p_col<479)) then
-			red_out <= '1';
-			green_out <= '1';
-			blue_out <= '0';
-		end if;
+		
+		red_out <= '1';
+		green_out <= '1';
+		blue_out <= '0';
 	end if;
 	end process modeColours;
 end a;

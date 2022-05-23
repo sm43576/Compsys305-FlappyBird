@@ -17,6 +17,9 @@ architecture a OF Priority IS
 	signal tempRedOut, tempGreenOut, tempBlueOut: std_logic;
 	
 begin
+red_out <= tempRedOut;
+green_out <= tempGreenOut;
+blue_out <= tempBlueOut;
 prioritise: process (clock_25Mhz)  	
 begin
 -- Assume first if is in foreground and last elsif is in background
@@ -41,14 +44,11 @@ begin
 			tempGreenOut<= greenText;
 			tempBlueOut <= blueText;
 		
-		elsif(bgnOn ='1') then
-			tempRedOut <= redBgn;
-			tempGreenOut <= greenBgn;
-			tempBlueOut <= blueBgn;
+		else -- background
+			tempRedOut <= '1';
+			tempGreenOut <= '0';
+			tempBlueOut <= '0';
 		end if;
-	red_out <= tempRedOut;
-	green_out <= tempGreenOut;
-	blue_out <= tempBlueOut;
 	end if;
 end process prioritise;
 end a;
