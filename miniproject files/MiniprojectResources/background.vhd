@@ -11,7 +11,7 @@ ENTITY Background IS
 end Background;
 
 architecture a OF Background IS
-	signal tempRedOut, tempGreenOut, tempBlueOut: std_logic;
+
 	signal p_row,p_col: integer;
 begin
 modeColours:process(clock_25Mhz,mode)

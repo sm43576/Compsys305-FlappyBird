@@ -43,11 +43,11 @@ begin
 			tempRedOut <= redText;
 			tempGreenOut<= greenText;
 			tempBlueOut <= blueText;
-		
-		else -- background
-			tempRedOut <= '1';
-			tempGreenOut <= '0';
-			tempBlueOut <= '0';
+			
+		elsif(bgnOn = '1') then -- background
+			tempRedOut <= redBgn;
+			tempGreenOut <= greenBgn;
+			tempBlueOut <= blueBgn;
 		end if;
 	end if;
 end process prioritise;

@@ -8,7 +8,8 @@ ENTITY textToDisplay IS
 		mode: IN STD_LOGIC_VECTOR(2 downto 0); --- main menu texts,score, game over text, game finished text
 		pix_row, pix_col: IN STD_LOGIC_VECTOR(9 downto 0);
 		character_address	:	OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
-		font_row, font_col	:	OUT STD_LOGIC_VECTOR (2 DOWNTO 0));
+		font_row, font_col	:	OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
+		textOn: OUT  STD_LOGIC);
 end textToDisplay;
 
 architecture a OF textToDisplay IS
@@ -40,13 +41,12 @@ process(clock_25Mhz,p_row,p_col,pix_row,pix_col,		mode,sig_title,sig_trainT,sig_
 begin
 	p_row <= conv_integer(unsigned(pix_row));
 	p_col <= conv_integer(unsigned(pix_col));
-	
+	textOn <= '0';
 	if(mode = "000") then
-	
 		-- Flappy Bird Title
 		for i in 0 to 11 loop
-		
 			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
+				textOn <='1';
 				value <= sig_title(i);
 				character_address <= value ; -- L
 				font_row <= pix_row(4 downto 2);
@@ -58,8 +58,9 @@ begin
 		
 		-- train start instructions
 		for i in 0 to 24 loop
-		
+			
 			if(320<p_row and p_row<336) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
+				textOn <='1';
 				value <= sig_trainT(i);
 				character_address <= value ; 
 				font_row <= pix_row(3 downto 1);
@@ -70,29 +71,37 @@ begin
 		-- Normal game mode start instruction
 		for i in 0 to 23 loop
 			if(336<p_row and p_row<352) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
+				textOn <='1';
 				value <= sig_normT(i);
 				character_address <= value ; 
 				font_row <= pix_row(3 downto 1);
 				font_col <= pix_col(3 downto 1);
 			end if;
 		end loop;
+	
+	
 	elsif (mode = "001") then -- training mode
 		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
+			textOn <='1';
 			character_address <= "000001" ;
 			font_row <= pix_row(4 downto 2);
 			font_col <= pix_col(4 downto 2);
 		end if;
+	
 	elsif (mode = "010") then -- game mode
 		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
+			textOn <='1';
 			character_address <= "000010" ;
 			font_row <= pix_row(4 downto 2);
 			font_col <= pix_col(4 downto 2);
 		end if;
 	
 	--elsif(mode = "010'") then
+		--textOn <='1';
 	 -- game over text
 	 
 	--elsif (mode = "011") then
+		--textOn <='1';
 	 -- game finished text
 	end if;
 end process;	 
