@@ -101,7 +101,6 @@ set_global_assignment -name BDF_FILE output_files/ballWMouse.bdf
 set_global_assignment -name VHDL_FILE "../miniproject files/MiniprojectResources/priority.vhd"
 set_global_assignment -name VHDL_FILE "../miniproject files/MiniprojectResources/background.vhd"
 set_global_assignment -name BDF_FILE FSMandBackground.bdf
-set_global_assignment -name VHDL_FILE "../miniproject files/MiniprojectResources/pipes.vhd"
 set_global_assignment -name BDF_FILE flappyBirdFinal.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

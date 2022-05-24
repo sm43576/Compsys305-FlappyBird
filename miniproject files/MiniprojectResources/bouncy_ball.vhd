@@ -18,7 +18,7 @@ architecture behavior of bouncy_ball is
 SIGNAL temp_ball_on					: std_logic;
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
-SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0); --change to match mouse movement.
+SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0); --changed from 10 to 9
 SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 
 
@@ -27,7 +27,7 @@ BEGIN
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
-ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
+-- <= CONV_STD_LOGIC_VECTOR(590,11);
 --ball_y_pos <= CONV_STD_LOGIC_VECTOR(10,10);
 
 						-- and here is adding 0 to ball_x_pos making it unsigned
@@ -48,20 +48,26 @@ Blue <=  not temp_ball_on;
 Move_Ball: process (vert_sync)  	
 begin
 	-- Move ball once every vertical sync
+	--if powerup
+		--gravity warp change, click reverses gravity
+	
+	
+	--else
 	if (rising_edge(vert_sync)) then			
-		if (pb1='1' and   ball_y_pos > CONV_STD_LOGIC_VECTOR(0,10))then
-			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10); -- ball goes up 
+		if (pb1='1' and   ball_y_pos > CONV_STD_LOGIC_VECTOR(1,10)+size)then
+			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(8,10); -- ball goes up and stops it from going too high
 			
-		elsif (ball_y_pos < CONV_STD_LOGIC_VECTOR(479,10)) then 
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10); -- stops ball at height
+	elsif (ball_y_pos < CONV_STD_LOGIC_VECTOR(475,10)-size)  then 
+			ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10); -- gravity
 	
 		
-	elsif ( ball_y_pos > CONV_STD_LOGIC_VECTOR(479,10)) then
-			ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10); 
+	else 
+			ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10); --stops it from falling past ground
 			
 		end if;
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
+		ball_x_pos <= '0'& mouse_col;
 	end if;
 end process Move_Ball;
 
