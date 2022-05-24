@@ -8,6 +8,7 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+			 mode : IN std_logic_vector(2 downto 0);
 		  red, green, blue, ball_on 			: OUT std_logic);		
 END bouncy_ball;
 
@@ -46,7 +47,7 @@ Blue <=  not temp_ball_on;
 Move_Ball: process (vert_sync)  	
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then			
+	if (rising_edge(vert_sync) and (mode = "001" or mode = "010")) then			
 		if (pb1='1' and   ball_y_pos > CONV_STD_LOGIC_VECTOR(0,10))then
 			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10); -- ball goes up 
 			

@@ -6,7 +6,6 @@ use  IEEE.STD_LOGIC_UNSIGNED.all;
 ENTITY Background IS
 	PORT(	clock_25Mhz: IN	STD_LOGIC;
 			mode: IN STD_LOGIC_VECTOR (2 downto 0); --- main menu, training mode, game mode, game over, last difficulty background
-			pix_row, pix_col: IN STD_LOGIC_VECTOR(9 downto 0);
 			red_out, green_out, blue_out, backgroundOn	: OUT	STD_LOGIC);
 end Background;
 
@@ -16,8 +15,6 @@ architecture a OF Background IS
 begin
 modeColours:process(clock_25Mhz,mode)
 begin
-p_row <= conv_integer(unsigned(pix_row));
-p_col <= conv_integer(unsigned(pix_col));
 backgroundOn <= '1';
 	if(mode = "000") then
 	-- Main menu colour (white)
