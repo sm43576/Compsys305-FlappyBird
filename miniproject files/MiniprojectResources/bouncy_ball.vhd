@@ -7,6 +7,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 ENTITY bouncy_ball IS
 	PORT
 		( pb1, clk, vert_sync	: IN std_logic;
+			mouse_col: IN std_logic_vector(9 downto 0);
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			 mode : IN std_logic_vector(2 downto 0);
 		  red, green, blue, ball_on 			: OUT std_logic);		
@@ -31,7 +32,7 @@ ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
 
 						-- and here is adding 0 to ball_x_pos making it unsigned
 temp_ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 --checks if pixel is in the ball boundary 
 ball_on <= temp_ball_on;
@@ -47,7 +48,7 @@ Blue <=  not temp_ball_on;
 Move_Ball: process (vert_sync)  	
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync) and (mode = "001" or mode = "010")) then			
+	if (rising_edge(vert_sync)) then			
 		if (pb1='1' and   ball_y_pos > CONV_STD_LOGIC_VECTOR(0,10))then
 			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10); -- ball goes up 
 			
