@@ -32,6 +32,19 @@ architecture a OF textToDisplay IS
 												"010000","010010","000101","010011","010011","100000", -- PRESS[SPACE]
 												"000010","010101","010100","010100","001111","001110", "100000", -- BUTTON[SPACE]
 												"110001"); -- 1
+	type livesTitle is array(0 to 23) of std_logic_vector(5 downto 0);
+   signal sig_lifeT : livesTitle := ("000111","000001","001101","000101", "100000", -- GAME[space]
+												"001101","001111","000100","000101", "100000", -- MODE[SPACE]
+												"010000","010010","000101","010011","010011","100000", -- PRESS[SPACE]
+												"000010","010101","010100","010100","001111","001110", "100000", -- BUTTON[SPACE]
+												"110001"); -- 1
+	type scoreTitle is array(0 to 23) of std_logic_vector(5 downto 0);
+   signal sig_scoreT : scoreTitle := ("000111","000001","001101","000101", "100000", -- GAME[space]
+												"001101","001111","000100","000101", "100000", -- MODE[SPACE]
+												"010000","010010","000101","010011","010011","100000", -- PRESS[SPACE]
+												"000010","010101","010100","010100","001111","001110", "100000", -- BUTTON[SPACE]
+												"110001"); -- 1											
+	
 	
 
 	
@@ -82,18 +95,27 @@ begin
 	
 	elsif (mode = "001") then -- training mode
 		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
-			textOn <='1';
-			character_address <= "000001" ;
-			font_row <= pix_row(4 downto 2);
-			font_col <= pix_col(4 downto 2);
+			for i in 0 to 11 loop
+			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
+				textOn <= '1';
+				value <= sig_title(i);
+				character_address <= value ; -- L
+				font_row <= pix_row(4 downto 2);
+				font_col <= pix_col(4 downto 2);
+			elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
+				character_address <= "100000";
 		end if;
 	
 	elsif (mode = "010") then -- game mode
-		if((96<p_row and p_row<128) and (96<p_col and p_col<128)) then
-			textOn <='1';
-			character_address <= "000010" ;
-			font_row <= pix_row(4 downto 2);
-			font_col <= pix_col(4 downto 2);
+		for i in 0 to 11 loop
+			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
+				textOn <= '1';
+				value <= sig_title(i);
+				character_address <= value ; -- L
+				font_row <= pix_row(4 downto 2);
+				font_col <= pix_col(4 downto 2);
+			elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
+				character_address <= "100000";
 		end if;
 	
 	--elsif(mode = "011") then
