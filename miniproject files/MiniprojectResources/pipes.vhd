@@ -58,20 +58,31 @@ begin
 -- change x1 and x2 accordingly and set it
 --then move
 	if (rising_edge(vert_sync)) then			
-		if (pipe1_y_pos > CONV_STD_LOGIC_VECTOR(630,10)+sizey)then
-			ball_y_motion <= -CONV_STD_LOGIC_VECTOR(8,10); -- ball goes up and stops it from going too high
-			
-	elsif (ball_y_pos < CONV_STD_LOGIC_VECTOR(475,10)-size)  then 
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10); -- gravity
-	
-		
-	else 
-			ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10); --stops it from falling past ground
+		if (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,10))  then 
+			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(4,10); -- move left to right
+		else
+			newLength <= 25; --length of first pipe?
+			gap <= 50;
+			y2<= newLength+gap;  --329
+			sizex <= CONV_STD_LOGIC_VECTOR(20,10); -- 20 pixels in width
+			sizey <= CONV_STD_LOGIC_VECTOR(newLength,10); -- height may change depending on random numeber
+			-- ball_x_pos and ball_y_pos show the (x,y) for the centre of pipe
+
+			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(600,11);
+			pipe1_y_pos <= CONV_STD_LOGIC_VECTOR(0,10);
+			pipe2_y_pos <= CONV_STD_LOGIC_VECTOR(y2,10);
+
+						-- and here is adding 0 to ball_x_pos making it unsigned
+			temp_pipe1_on <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + sizex) and ('0' & pixel_column <= '0' & pipe_x_pos + sizex) 	-- x_pos - size <= pixel_column <= x_pos + size
+							and ('0' & pixel_row >= 0) and ('0' & pixel_row <= sizey) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
+							'0';
+			temp_pipe2_on <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + sizex) and ('0' & pixel_column <= '0' & pipe_x_pos + sizex) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & pipe2_y_pos <= pixel_row) and ('0' & pixel_row <= 479) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
+					'0';
 			
 		end if;
 		-- Compute next ball Y position
-		ball_y_pos <= ball_y_pos + ball_y_motion;
-		ball_x_pos <= '0'& mouse_col;
+		pipe_x_pos <= ball_x_pos + ball_x_motion;
 	end if;
 
 end process Spawn_Move_pipe;
