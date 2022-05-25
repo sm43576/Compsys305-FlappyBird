@@ -140,7 +140,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 856 352 1032 368)
+	(rect 1008 352 1184 368)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "horiz_sync_out" (rect 90 0 164 12)(font "Arial" ))
 	(pt 0 8)
@@ -153,7 +153,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1040 360 1096 376))
+	(annotation_block (location)(rect 1192 360 1248 376))
 )
 (pin
 	(output)
@@ -904,56 +904,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -160 16 40 160)
-	(text "pipes" (rect 5 0 30 12)(font "Arial" ))
-	(text "inst32" (rect 8 128 37 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
-		(text "vert_sync" (rect 21 43 71 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "mode[2..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "mode[2..0]" (rect 21 59 74 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "pixel_row[9..0]" (rect 21 75 91 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
-		(text "pixel_column[9..0]" (rect 21 91 110 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 200 32)
-		(output)
-		(text "pipe_on" (rect 0 0 37 12)(font "Arial" ))
-		(text "pipe_on" (rect 148 27 185 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 184 128))
-	)
-)
-(symbol
 	(rect 256 368 456 544)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst7" (rect 8 160 31 172)(font "Arial" ))
@@ -1038,6 +988,56 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 184 160))
 	)
 )
+(symbol
+	(rect -160 16 40 160)
+	(text "pipes" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst32" (rect 8 128 37 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
+		(text "vert_sync" (rect 21 43 71 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "mode[2..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "mode[2..0]" (rect 21 59 74 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 75 91 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 21 91 110 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "pipe_on" (rect 0 0 37 12)(font "Arial" ))
+		(text "pipe_on" (rect 148 27 179 39)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 128))
+	)
+)
 (connector
 	(pt 800 304)
 	(pt 824 304)
@@ -1061,14 +1061,6 @@ applicable agreement for further details.
 (connector
 	(pt 824 352)
 	(pt 800 352)
-)
-(connector
-	(pt 824 352)
-	(pt 824 360)
-)
-(connector
-	(pt 824 360)
-	(pt 856 360)
 )
 (connector
 	(pt 800 368)
@@ -1645,6 +1637,14 @@ applicable agreement for further details.
 	(pt 200 496)
 	(pt 256 496)
 	(bus)
+)
+(connector
+	(pt 824 352)
+	(pt 824 360)
+)
+(connector
+	(pt 824 360)
+	(pt 1008 360)
 )
 (junction (pt 816 472))
 (junction (pt 832 520))

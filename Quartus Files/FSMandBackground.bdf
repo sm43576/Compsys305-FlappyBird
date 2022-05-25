@@ -119,7 +119,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2488 280 2544 296))
+	(annotation_block (location)(rect 2472 248 2528 264))
 )
 (pin
 	(output)
@@ -136,11 +136,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2496 320 2552 336))
+	(annotation_block (location)(rect 2480 288 2536 304))
 )
 (pin
 	(output)
-	(rect 2072 312 2248 328)
+	(rect 2240 312 2416 328)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "horiz_sync_out" (rect 90 0 164 12)(font "Arial" ))
 	(pt 0 8)
@@ -153,7 +153,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2512 352 2568 368))
+	(annotation_block (location)(rect 2680 352 2736 368))
 )
 (pin
 	(output)
@@ -792,28 +792,28 @@ applicable agreement for further details.
 		(pt 208 32)
 		(output)
 		(text "red_out" (rect 0 0 36 12)(font "Arial" ))
-		(text "red_out" (rect 157 27 187 39)(font "Arial" ))
+		(text "red_out" (rect 157 27 193 39)(font "Arial" ))
 		(line (pt 208 32)(pt 192 32))
 	)
 	(port
 		(pt 208 48)
 		(output)
 		(text "green_out" (rect 0 0 48 12)(font "Arial" ))
-		(text "green_out" (rect 147 43 187 55)(font "Arial" ))
+		(text "green_out" (rect 147 43 195 55)(font "Arial" ))
 		(line (pt 208 48)(pt 192 48))
 	)
 	(port
 		(pt 208 64)
 		(output)
 		(text "blue_out" (rect 0 0 41 12)(font "Arial" ))
-		(text "blue_out" (rect 153 59 187 71)(font "Arial" ))
+		(text "blue_out" (rect 153 59 194 71)(font "Arial" ))
 		(line (pt 208 64)(pt 192 64))
 	)
 	(port
 		(pt 208 80)
 		(output)
 		(text "backgroundOn" (rect 0 0 70 12)(font "Arial" ))
-		(text "backgroundOn" (rect 128 75 187 87)(font "Arial" ))
+		(text "backgroundOn" (rect 128 75 198 87)(font "Arial" ))
 		(line (pt 208 80)(pt 192 80))
 	)
 	(drawing
@@ -835,18 +835,6 @@ applicable agreement for further details.
 (connector
 	(pt 2016 296)
 	(pt 2072 296)
-)
-(connector
-	(pt 2040 312)
-	(pt 2016 312)
-)
-(connector
-	(pt 2040 312)
-	(pt 2040 320)
-)
-(connector
-	(pt 2040 320)
-	(pt 2072 320)
 )
 (connector
 	(pt 2016 328)
@@ -1248,6 +1236,18 @@ applicable agreement for further details.
 (connector
 	(pt 976 136)
 	(pt 1432 136)
+)
+(connector
+	(pt 2232 312)
+	(pt 2232 320)
+)
+(connector
+	(pt 2016 312)
+	(pt 2232 312)
+)
+(connector
+	(pt 2232 320)
+	(pt 2240 320)
 )
 (junction (pt 2064 368))
 (junction (pt 1432 264))

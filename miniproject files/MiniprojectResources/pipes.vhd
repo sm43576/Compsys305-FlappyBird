@@ -21,7 +21,7 @@ signal sizey 					: std_logic_vector(9 downto 0);
 SIGNAL pipe1_y_pos			: std_logic_vector(9 DOWNTO 0);
 signal pipe2_y_pos			: std_logic_vector(9 downto 0);
 SiGNAL pipe_x_pos				: std_logic_vector(10 DOWNTO 0);
-SIGNAL pipe_x_motion			: std_logic_vector(9 DOWNTO 0);
+SIGNAL pipe_x_motion			: std_logic_vector(10 DOWNTO 0);
 signal newLength :integer;
 signal gap : integer;
 signal y1:integer;
@@ -53,18 +53,24 @@ BEGIN
 --checks if pixel is in the ball boundary 
 pipe_on <= temp_pipe1_on or temp_pipe2_on;
 
-Spawn_Move_pipe: process (clk)  	
+Spawn_Move_pipe: process (vert_sync)  	
+variable resetPipe: std_logic := '1';
 begin
 -- change x1 and x2 accordingly and set it
 --then move
-	if (rising_edge(clk)) then			
-					
-		if (pipe_x_pos = CONV_STD_LOGIC_VECTOR(0,10))  then 
-			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(638,11); -- move left to right
+	if (rising_edge(vert_sync)) then
+		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0,11)) then
+			resetPipe := '1';
+		end if;
 		
-		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,10))  then 
-			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(1,10); -- move left to right
+		if (resetPipe = '1')  then 
 			
+			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(295,11);
+			resetPipe := '0';
+			
+		
+		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(630,11))  then 
+			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(2,11); -- move left to right
 		
 		end if;
 	
