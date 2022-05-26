@@ -1,0 +1,33 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+
+
+ENTITY collision IS
+	PORT
+		( clk, vert_sync	: IN std_logic;
+			mode		: IN std_logic_vector(2 downto 0);
+          ball_row, ball_column	: IN std_logic_vector(9 DOWNTO 0);
+			 pipe1_row, pipe1Top_Maxcol, pipe1Bottom_Mincol	: IN std_logic_vector(9 downto 0); -- top pipe ranges from 0 to A, bottom pipe ranges from B to 479 
+			 pipe2_row, pipe2Top_Maxcol, pipe2Bottom_Mincol	: IN std_logic_vector(9 downto 0);
+			 mode : IN std_logic_vector(2 downto 0);
+		  lives, score			: OUT Integer);		
+END collision;
+
+architecture behavior of collision is
+
+SIGNAL isCollision					: std_logic;
+
+
+
+BEGIN
+checkCollison: process(clk)
+BEGIN
+	if((ball_row = pipe1_row and ((ball_column > 0 and ball_column <= pipe1Top_Maxcol) or (ball_column >= pipe1Bottom_Mincol and ball_column <= 479)) )) then
+		lives = lives - 1;
+	elsif(ball_row = )
+	
+	
+end process checkCollison;
+end behavior;
