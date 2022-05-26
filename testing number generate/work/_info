@@ -1,160 +1,144 @@
 m255
-K4
-z2
-!s11e vcom 2020.2 2020.04, Apr 19 2020
+K3
 13
-!s112 1.1
-!i10d 8192
-!i10e 25
-!i10f 100
 cModel Technology
-Z0 d//files.auckland.ac.nz/myhome/Desktop/New folder
-T_opt
-!s110 1653537146
-V1F>Sh0g1I<_VeXo]LM[aM2
-04 10 7 work test_bench my_test 1
-=10-e454e87a7c99-628ef979-1b0-1ac8
-Z1 o-quiet -auto_acc_if_foreign -work work
-Z2 tCvgOpt 0
-n@_opt
-Z3 OE;O;2020.2;71
-R0
-T_opt1
-!s110 1653537966
-VTUD`e6>8P>L;BH5_T`_8e1
-04 14 7 work test_bench_rng my_test 1
-=4-e454e87a7c99-628efcad-33e-409c
-R1
-R2
-n@_opt1
-R3
-R0
+Z0 dC:\Users\shoum\Documents\GitHub\Compsys305-Mini-Project\testing number generate
 Erandomnum
-Z4 w1653538154
-Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 66
-R0
-Z8 8//files.auckland.ac.nz/myhome/Desktop/New folder/randomNums.vhd
-Z9 F//files.auckland.ac.nz/myhome/Desktop/New folder/randomNums.vhd
+Z1 w1653564573
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z7 dC:\Users\shoum\Documents\GitHub\Compsys305-Mini-Project\testing number generate
+Z8 8C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/randomNums.vhd
+Z9 FC:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/randomNums.vhd
 l0
-L8 1
-VJXkYkk^FW3PNO_^eUY03C3
-!s100 PKi]ZG@M<Ta8l46@>PKBS1
-Z10 OE;C;2020.2;71
+L10
+V>WJbUNzV0C9aRc6lDh<[72
+Z10 OV;C;10.1d;51
 32
-Z11 !s110 1653538158
+Z11 !s108 1653564651.861000
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/randomNums.vhd|
+Z13 !s107 C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/randomNums.vhd|
+Z14 o-work work -O0
+Z15 tExplicit 1
+!s100 ZHJ@;9Lo4EMa@54aRk<2C0
 !i10b 1
-Z12 !s108 1653538158.000000
-Z13 !s90 -reportprogress|300|-work|work|//files.auckland.ac.nz/myhome/Desktop/New folder/randomNums.vhd|
-Z14 !s107 //files.auckland.ac.nz/myhome/Desktop/New folder/randomNums.vhd|
-!i113 0
-Z15 o-work work
-Z16 tExplicit 1 CvgOpt 0
-Agenerator
+Abehaviour
+R2
+R3
+R4
 R5
 R6
-R7
-Z17 DEx4 work 9 randomnum 0 22 JXkYkk^FW3PNO_^eUY03C3
-!i122 66
-l19
-Z18 L14 34
-V:AVfi`[Z_5S_<=bm^_^4j3
-!s100 MC?RMYeIAf^]S6OFo4^BV1
+DEx4 work 9 randomnum 0 22 >WJbUNzV0C9aRc6lDh<[72
+l21
+L16
+VMhI_]Gb;^@bSL`[0kzz573
 R10
 32
 R11
-!i10b 1
 R12
 R13
 R14
-!i113 0
 R15
-R16
-Etest_bench
-Z19 w1653537075
+!s100 d_TIeiMoh:5`NdaaQjJ1Y0
+!i10b 1
+Agenerator
+R2
+R3
+R4
+R5
+R6
+DEx4 work 9 randomnum 0 22 7^11[n[i@G74LiO:;a8@41
+l23
+L17
+Vj1`lEThW5GoSg]133=JNU1
+R10
+32
+R12
+R14
+R15
+w1653562576
+R13
+!s108 1653562579.376000
+!s100 CDG5BQ7>8]`I<C<oa3]@?0
+!i10b 1
+Erandomnums
+Z16 w1653564880
+R2
+R3
+R4
 R5
 R6
 R7
-!i122 39
-R0
-Z20 8//files.auckland.ac.nz/myhome/Desktop/New folder/testbench_rng.vhd
-Z21 F//files.auckland.ac.nz/myhome/Desktop/New folder/testbench_rng.vhd
+R8
+R9
 l0
-L6 1
-VhSda;g_;Y?ZNWGi^male]2
-!s100 ^GI8RWSYVGd][k@0A`VP;1
+L10
+V[l1<<fRc>Pk;dbPAgOH2T3
 R10
 32
-Z22 !s110 1653537136
-!i10b 1
-Z23 !s108 1653537136.000000
-Z24 !s90 -reportprogress|300|-work|work|//files.auckland.ac.nz/myhome/Desktop/New folder/testbench_rng.vhd|
-Z25 !s107 //files.auckland.ac.nz/myhome/Desktop/New folder/testbench_rng.vhd|
-!i113 0
+Z17 !s108 1653564980.467000
+R12
+R13
+R14
 R15
-R16
-Amy_test
+!s100 O9Dk9<Qc>2d^Yz@O8Y42a3
+!i10b 1
+Abehaviour
+R2
+R3
+R4
 R5
 R6
-R7
-DEx4 work 10 test_bench 0 22 hSda;g_;Y?ZNWGi^male]2
-!i122 39
-l17
-L9 28
-V?``f3_=4?F45ac3PaijCE0
-!s100 NkHCX1RRn_an9@G00BS=53
+DEx4 work 10 randomnums 0 22 [l1<<fRc>Pk;dbPAgOH2T3
+l21
+L16
+VkNTV>@Pf]5d`:b0l9D6d80
+!s100 eXMKfMHWi8>zOAlKHSZ3A1
 R10
 32
-R22
-!i10b 1
-R23
-R24
-R25
-!i113 0
+R17
+R12
+R13
+R14
 R15
-R16
+!i10b 1
 Etest_bench_rng
-Z26 w1653537955
+Z18 w1653564975
+R2
+R4
 R5
-R6
 R7
-!i122 65
-R0
-R20
-R21
+Z19 8C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/testbench_rng.vhd
+Z20 FC:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/testbench_rng.vhd
 l0
-L6 1
-V]Sfk[<mN5]SH@]QF<PZEK2
-!s100 eHW5T:``GMQ6A`>nAR`LV0
+L6
+Vf]4]mF^790d_f?Wn3Z@;J2
+!s100 zIKDZm=z4hOY7omzDPge80
 R10
 32
-Z27 !s110 1653538131
 !i10b 1
-Z28 !s108 1653538131.000000
-R24
-R25
-!i113 0
+Z21 !s108 1653564981.149000
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/testbench_rng.vhd|
+Z23 !s107 C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/testing number generate/testbench_rng.vhd|
+R14
 R15
-R16
 Amy_test
+R2
+R4
 R5
-R6
-R7
-DEx4 work 14 test_bench_rng 0 22 ]Sfk[<mN5]SH@]QF<PZEK2
-!i122 65
-l17
-L9 27
-VC<]?ca`91_KAj2c<Lh24Z0
-!s100 ]?EdVT2<dT?cKN6iHBVaW2
+Z24 DEx4 work 14 test_bench_rng 0 22 f]4]mF^790d_f?Wn3Z@;J2
+l18
+L9
+V]mBmK:8eCil`T]^HEDi1K3
+!s100 zMG1VFHLXZTAH>SKBl`Qc3
 R10
 32
-R27
 !i10b 1
-R28
-R24
-R25
-!i113 0
+R21
+R22
+R23
+R14
 R15
-R16

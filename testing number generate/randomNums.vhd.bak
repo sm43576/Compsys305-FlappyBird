@@ -1,34 +1,35 @@
 
 -- Modified from https://surf-vhdl.com/how-to-implement-galois-multiplier-in-vhdl/
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+library IEEE; 
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
 
-ENTITY randomNum IS
-  PORT (Clk, Rst: IN std_logic;
-        output: OUT std_logic_vector (7 DOWNTO 0));
+
+entity randomNums IS
+  PORT (Clk, Rst: in std_logic;
+        output: out std_logic_vector (7 DOWNTO 0));
 	
-END randomNum;
+end entity randomNums;
 
-ARCHITECTURE generator OF randomNum IS
-  	signal holder         : std_logic;
-	signal bitVector: integer := 8;  
-	signal randVector: std_logic_vector(7 downto 0):=  (others =>('0'));
+architecture behaviour OF randomNums IS
+ 	signal holder         : std_logic:='1'; 
+	signal randVector: std_logic_vector(7 downto 0):="10101010";
+
 
 begin
-process(clk,Rst)
+  process (Clk,Rst)
 
   begin
+if (rising_edge(Clk))then 
+  if (Rst ='1') then
+    randVector <= "00000000";
   
-	--randVector <= (others<='0');
-   if(rising_edge(Clk)) then
-	if(Rst = '1') then
-		randVector <= "0001110";
-	end if;
-	for i in 0 to bitVector-1 loop
+  elsif (Rst = '0') then
+	for i in 0 to 7 loop
 	
-		holder <= randVector(7);
+		holder <= randVector(i);
 		randVector(7) <= randVector(6);
 		randVector(6) <= randVector(5);
 		randVector(5) <= randVector(4);
@@ -37,11 +38,15 @@ process(clk,Rst)
 		randVector(2) <= randVector(1) xor holder;
 		randVector(1) <= randVector(0);
 		randVector(0) <= holder;
+		
 	end loop;
-	  output <= randVector;
-	
-	end if;
-  END PROCESS;
+	 end if;
+end if;
+
+	for j in 0 to 7 loop
+	  output(j)<=randVector(j);
+	 end loop;
+  end process;
   
 
-END generator;
+end architecture behaviour;

@@ -1,43 +1,53 @@
 
 -- Modified from https://surf-vhdl.com/how-to-implement-galois-multiplier-in-vhdl/
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+library IEEE; 
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
 
-ENTITY randomNum IS
-  PORT (Clk, Rst: IN std_logic;
-        output: OUT std_logic_vector (7 DOWNTO 0));
-END randomNum;
 
-ARCHITECTURE generator OF randomNum IS
-  	signal holder         : std_logic;
+entity randomNums IS
+  PORT (Clk, Rst: in std_logic;
+        output: out std_logic_vector (7 DOWNTO 0));
 	
-	signal bitVector: integer := 8;  
+end entity randomNums;
+
+architecture behaviour OF randomNums IS
+ 	signal holder         : std_logic:='1'; 
+	signal randVector: std_logic_vector(7 downto 0):="10101010";
+
 
 begin
-process(clk,Rst)
-variable randVector: std_logic_vector(7 downto 0):= ('0','0','0','1','1','1','1','0');
+  process (Clk,Rst)
+
   begin
+if (rising_edge(Clk))then 
+  if (Rst ='1') then
+    randVector <= "10101010";
   
-	--randVector <= (others<='0');
-   if(Rst = '1') then
-	for i in 0 to bitVector-1 loop
+  elsif (Rst = '0') then
+	for i in 0 to 7 loop
 	
-		holder <= randVector(7);
-		randVector(7) := randVector(6);
-		randVector(6) := randVector(5);
-		randVector(5) := randVector(4);
-		randVector(4) := randVector(3) xor holder;
-		randVector(3) := randVector(2) xor holder;
-		randVector(2) := randVector(1) xor holder;
-		randVector(1) := randVector(0);
-		randVector(0) := holder;
-	
-	  output <= randVector;
+		holder <= randVector(i);
+		randVector(7) <= randVector(6);
+		randVector(6) <= randVector(5);
+		randVector(5) <= randVector(4);
+		randVector(4) <= randVector(3) xor holder;
+		randVector(3) <= randVector(2) xor holder;
+		randVector(2) <= randVector(1) xor holder;
+		randVector(1) <= randVector(0);
+		randVector(0) <= holder;
+		
 	end loop;
-	end if;
-  END PROCESS;
+	 end if;
+end if;
+
+	for j in 0 to 7 loop
+	  output(j)<=randVector(j);
+	 end loop;
+  end process;
   
 
-END generator;
+end architecture behaviour;
+
