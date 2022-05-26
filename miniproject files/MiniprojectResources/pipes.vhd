@@ -2,13 +2,15 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
-
+use IEEE.numeric_std.all;
 
 ENTITY pipes IS
 	PORT
 		( clk, vert_sync	: IN std_logic;
 			mode: IN std_logic_vector(2 downto 0);
+			randomNumber: IN std_logic_vector(7 downto 0);
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  resetNumGen: 	out std_logic;
 		  pipe_on 			: OUT std_logic);		
 END pipes;
 
@@ -23,6 +25,7 @@ signal pipe2_y_pos			: std_logic_vector(9 downto 0);
 SiGNAL pipe_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(10 DOWNTO 0);
 signal newLength :integer;
+Signal resetPipe: std_logic := '1';
 signal gap : integer;
 signal y1:integer;
 signal y2:integer;
@@ -31,10 +34,7 @@ signal y2:integer;
 BEGIN     
 --dimension 639x479
 		-- random number generator for new length and gap where length 25<=x<=450, gap 50<=x<=200
-		newLength <= 25; --length of first pipe?
-		gap <= 50; --gap
-
-		y2<= newLength+gap;  --329
+		
 		sizex <= CONV_STD_LOGIC_VECTOR(20,10); -- 20 pixels in width
 		sizey <= CONV_STD_LOGIC_VECTOR(newLength,10); -- height may change depending on random numeber
 		-- ball_x_pos and ball_y_pos show the (x,y) for the centre of pipe
@@ -54,20 +54,23 @@ BEGIN
 pipe_on <= temp_pipe1_on or temp_pipe2_on;
 
 Spawn_Move_pipe: process (vert_sync)  	
-variable resetPipe: std_logic := '1';
+
 begin
 -- change x1 and x2 accordingly and set it
 --then move
 	if (rising_edge(vert_sync)) then
 		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0,11) or mode = "000") then
-			resetPipe := '1';
+			resetPipe <= '1';
+			gap <=100; --gap
+			newLength <= (CONV_INTEGER(randomNumber)+299)/2; --length of first pipe?
+			y2<= newLength+gap;  --329
+
 		end if;
 		
 		if (resetPipe = '1')  then 
 			
 			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(638,11);
-			resetPipe := '0';
-			
+			resetPipe <= '0';
 		
 		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then 
 			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(2,11); -- move left to right
@@ -76,7 +79,7 @@ begin
 		end if;
 	
 		-- Compute next ball Y position
-		
+		resetNumGen <= resetPipe;
 	end if;
 
 end process Spawn_Move_pipe;

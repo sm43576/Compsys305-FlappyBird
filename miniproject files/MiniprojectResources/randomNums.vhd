@@ -1,7 +1,9 @@
 
 -- Modified from https://surf-vhdl.com/how-to-implement-galois-multiplier-in-vhdl/
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 ENTITY randomNum IS
   PORT (Clk, Rst: IN std_logic;
@@ -19,7 +21,7 @@ variable randVector: std_logic_vector(7 downto 0):= ('0','0','0','1','1','1','1'
   begin
   
 	--randVector <= (others<='0');
-   
+   if(Rst = '1') then
 	for i in 0 to bitVector-1 loop
 	
 		holder <= randVector(7);
@@ -34,6 +36,7 @@ variable randVector: std_logic_vector(7 downto 0):= ('0','0','0','1','1','1','1'
 	
 	  output <= randVector;
 	end loop;
+	end if;
   END PROCESS;
   
 
