@@ -1,5 +1,5 @@
 
--- Modified from https://www.engineersgarage.com/feed-back-register-in-vhdl/
+-- Modified from https://surf-vhdl.com/how-to-implement-galois-multiplier-in-vhdl/
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
@@ -8,22 +8,33 @@ ENTITY randomNum IS
         output: OUT std_logic_vector (7 DOWNTO 0));
 END randomNum;
 
-ARCHITECTURE LFSR8_beh OF randomNum IS
-  SIGNAL Currstate, Nextstate: std_logic_vector (7 DOWNTO 0);
-  SIGNAL feedback: std_logic;
-BEGIN
+ARCHITECTURE generator OF randomNum IS
+  	signal holder         : std_logic;
+	
+	signal bitVector: integer := 8;  
 
-  StateReg: PROCESS (Clk,Rst)
-  BEGIN
-    IF (Rst = '1') THEN
-      Currstate <= (0 => '1', OTHERS =>'0');
-    ELSIF (Clk = '1' AND Clk'EVENT) THEN
-      Currstate <= Nextstate;
-    END IF;
+begin
+process(clk,Rst)
+variable randVector: std_logic_vector(7 downto 0):= ('0','0','0','1','1','1','1','0');
+  begin
+  
+	--randVector <= (others<='0');
+   
+	for i in 0 to bitVector-1 loop
+	
+		holder <= randVector(7);
+		randVector(7) := randVector(6);
+		randVector(6) := randVector(5);
+		randVector(5) := randVector(4);
+		randVector(4) := randVector(3) xor holder;
+		randVector(3) := randVector(2) xor holder;
+		randVector(2) := randVector(1) xor holder;
+		randVector(1) := randVector(0);
+		randVector(0) := holder;
+	
+	  output <= randVector;
+	end loop;
   END PROCESS;
   
-  feedback <= Currstate(4) XOR Currstate(3) XOR Currstate(2) XOR Currstate(0);
-  Nextstate <= feedback & Currstate(7 DOWNTO 1);
-  output <= Currstate;
 
-END LFSR8_beh;
+END generator;
