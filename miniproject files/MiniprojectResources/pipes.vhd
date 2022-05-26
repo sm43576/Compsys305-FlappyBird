@@ -63,7 +63,7 @@ begin
 			resetPipe <= '1';
 			gap <=100; --gap
 			newLength <= (CONV_INTEGER(randomNumber)+299)/2; --length of first pipe?
-			y2<= newLength+gap;  --329
+			y2<= newLength+gap;
 
 		end if;
 		
