@@ -59,23 +59,24 @@ begin
 -- change x1 and x2 accordingly and set it
 --then move
 	if (rising_edge(vert_sync)) then
-		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0,11)) then
+		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0,11) or mode = "000") then
 			resetPipe := '1';
 		end if;
 		
 		if (resetPipe = '1')  then 
 			
-			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(295,11);
+			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(638,11);
 			resetPipe := '0';
 			
 		
-		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(630,11))  then 
+		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then 
 			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(2,11); -- move left to right
+			pipe_x_pos <= pipe_x_pos + pipe_x_motion;
 		
 		end if;
 	
 		-- Compute next ball Y position
-		pipe_x_pos <= pipe_x_pos + pipe_x_motion;
+		
 	end if;
 
 end process Spawn_Move_pipe;
