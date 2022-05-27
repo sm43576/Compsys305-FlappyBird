@@ -24,7 +24,7 @@ begin
   begin
 if (rising_edge(Clk))then 
   if (Rst ='1') then
-    randVector <= "00000000";
+    randVector <= "10101010";
   
   elsif (Rst = '0') then
 	for i in 0 to 7 loop
@@ -43,9 +43,8 @@ if (rising_edge(Clk))then
 	 end if;
 end if;
 
-	for j in 0 to 7 loop
-	  output(j)<=randVector(j);
-	 end loop;
+	output<= CONV_INTEGER(randVector)
+
   end process;
   
 

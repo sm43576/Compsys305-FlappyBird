@@ -15,18 +15,18 @@ end entity randomNums;
 
 architecture behaviour OF randomNums IS
  	signal holder         : std_logic:='1'; 
-	signal randVector: std_logic_vector(7 downto 0):="10101010";
+	signal randVector: std_logic_vector(7 downto 0):="01111011";
 
 
 begin
-  process (Clk,Rst)
+  process (Clk,Rst,randVector)
 
   begin
 if (rising_edge(Clk))then 
   if (Rst ='1') then
-    randVector <= "10101010";
+    --randVector <= "10101010";
   
-  elsif (Rst = '0') then
+  --elsif (Rst = '') then
 	for i in 0 to 7 loop
 	
 		holder <= randVector(i);

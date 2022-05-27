@@ -1,9 +1,8 @@
 LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
-use IEEE.numeric_std.all;
-
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 ENTITY pipes IS
 	PORT
 		( clk, vert_sync	: IN std_logic;
@@ -24,9 +23,9 @@ SIGNAL pipe1_y_pos			: std_logic_vector(9 DOWNTO 0);
 signal pipe2_y_pos			: std_logic_vector(9 downto 0);
 SiGNAL pipe_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(10 DOWNTO 0);
-signal newLength :integer;
-Signal resetPipe: std_logic := '1';
-signal gap : integer;
+signal newLength :integer:=100;
+signal gap : integer:= 50;
+signal reset: std_logic:='1';
 signal y1:integer;
 signal y2:integer;
 
@@ -45,7 +44,7 @@ BEGIN
 
 								-- and here is adding 0 to ball_x_pos making it unsigned
 		temp_pipe1_on <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + sizex) and ('0' & pixel_column <= '0' & pipe_x_pos + sizex) 	-- x_pos - size <= pixel_column <= x_pos + size
-							and ('0' & pixel_row >= 0) and ('0' & pixel_row <= sizey) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
+							and ('0' & pixel_row >= pipe1_y_pos) and ('0' & pixel_row <= sizey) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
 					'0';
 		temp_pipe2_on <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + sizex) and ('0' & pixel_column <= '0' & pipe_x_pos + sizex) 	-- x_pos - size <= pixel_column <= x_pos + size
 							and ('0' & pipe2_y_pos <= pixel_row) and ('0' & pixel_row <= 479) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -53,33 +52,36 @@ BEGIN
 --checks if pixel is in the ball boundary 
 pipe_on <= temp_pipe1_on or temp_pipe2_on;
 
-Spawn_Move_pipe: process (vert_sync)  	
-
+Spawn_Move_pipe: process (vert_sync,newLength,y2)  	
+variable holdLength:integer;
 begin
 -- change x1 and x2 accordingly and set it
 --then move
 	if (rising_edge(vert_sync)) then
 		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0,11) or mode = "000") then
-			resetPipe <= '1';
-			gap <=100; --gap
-			newLength <= (CONV_INTEGER(randomNumber)+299)/2; --length of first pipe?
-			y2<= newLength+gap;
 
-		end if;
-		
-		if (resetPipe = '1')  then 
+			holdLength := CONV_INTEGER(randomNumber);
+			holdLength:= holdLength; --length of first pipe? 0-255 -479+
 			
-			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(638,11);
-			resetPipe <= '0';
+			if (holdLength < 100) then
+				holdLength:= holdLength +100;
+			
+			elsif (holdLength > 300) then
+				holdLength:= holdLength-200;
+			end if;
+			
+			newLength<=holdLength;
+			y2<= newLength+gap;  -- determiens y2 pos
+			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(638,11);	
 		
-		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then 
-			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(2,11); -- move left to right
+		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then
+			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(12,11); -- move left to right
 			pipe_x_pos <= pipe_x_pos + pipe_x_motion;
 		
 		end if;
-	
+		resetNumGen<='1';
 		-- Compute next ball Y position
-		resetNumGen <= resetPipe;
+		
 	end if;
 
 end process Spawn_Move_pipe;

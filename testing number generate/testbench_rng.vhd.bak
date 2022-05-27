@@ -12,7 +12,7 @@ architecture my_test of test_bench_rng is
   
   component randomNums is
     PORT (Clk, Rst: IN std_logic;
-        output: OUT std_logic_vector (7 DOWNTO 0));
+        output: OUT integer);
   end component;
   
 begin
@@ -28,9 +28,9 @@ begin
   clk_gen: process
   begin
     t_clk <= '1'; 
-    wait for 50 ns; -- should be 500 ms but it'll take too long
+    wait for 10 ns; -- should be 500 ms but it'll take too long
     t_clk <= '0';
-    wait for 50 ns;
+    wait for 10 ns;
   end process clk_gen;
   
 end architecture my_test; 

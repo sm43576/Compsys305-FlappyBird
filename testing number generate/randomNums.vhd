@@ -9,7 +9,7 @@ use ieee.std_logic_1164.all;
 
 entity randomNums IS
   PORT (Clk, Rst: in std_logic;
-        output: out std_logic_vector (7 DOWNTO 0));
+        output: out integer );
 	
 end entity randomNums;
 
@@ -43,9 +43,8 @@ if (rising_edge(Clk))then
 	 end if;
 end if;
 
-	for j in 0 to 7 loop
-	  output(j)<=randVector(j);
-	 end loop;
+	output<= CONV_INTEGER(randVector);
+
   end process;
   
 

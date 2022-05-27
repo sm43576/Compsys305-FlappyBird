@@ -8,11 +8,11 @@ end entity test_bench_rng;
 
 architecture my_test of test_bench_rng is
   signal t_clk, t_reset: std_logic;
-  signal t_output: std_logic_vector(7 downto 0);
+  signal t_output: integer;
   
   component randomNums is
     PORT (Clk, Rst: IN std_logic;
-        output: OUT std_logic_vector (7 DOWNTO 0));
+        output: OUT integer);
   end component;
   
 begin
