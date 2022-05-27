@@ -41,11 +41,12 @@ if (rising_edge(Clk))then
 		
 	end loop;
 	 end if;
-end if;
-
-	for j in 0 to 7 loop
+	 for j in 0 to 7 loop
 	  output(j)<=randVector(j);
 	 end loop;
+end if;
+
+	
   end process;
   
 
