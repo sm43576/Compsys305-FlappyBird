@@ -8,6 +8,7 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, clk, vert_sync	: IN std_logic;
 			mouse_col: IN std_logic_vector(9 downto 0);
+			ball_x : out std_logic_vector(10 downto 0);
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			 mode : IN std_logic_vector(2 downto 0);
 		  red, green, blue, ball_on 			: OUT std_logic);		
@@ -68,6 +69,7 @@ begin
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
 		ball_x_pos <= '0'& mouse_col;
+		ball_x <= ball_x_pos;
 	end if;
 end process Move_Ball;
 

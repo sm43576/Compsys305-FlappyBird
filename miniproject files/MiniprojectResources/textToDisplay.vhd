@@ -2,11 +2,14 @@ library IEEE;
 use  IEEE.STD_LOGIC_1164.all;
 use  IEEE.STD_LOGIC_ARITH.all;
 use  IEEE.STD_LOGIC_UNSIGNED.all;
+use ieee.numeric_std.all;
 
 ENTITY textToDisplay IS
 	PORT(	clock_25Mhz: IN	STD_LOGIC;
 		mode: IN STD_LOGIC_VECTOR(2 downto 0); --- main menu texts,score, game over text, game finished text
 		pix_row, pix_col: IN STD_LOGIC_VECTOR(9 downto 0);
+		score: IN integer;
+		lives: IN integer;
 		character_address	:	OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
 		font_row, font_col	:	OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
 		textOn: OUT  STD_LOGIC);
@@ -35,8 +38,14 @@ architecture a OF textToDisplay IS
 	type livesTitle is array(0 to 15) of std_logic_vector(5 downto 0);
    signal sig_lifeT : livesTitle := ("001100","001001","010110","000101","010011",
 												"100000","101010","100000","101010","100000","101010","100000","101010","100000","101010","100000"); --lives
-	type scoreTitle is array(0 to 8) of std_logic_vector(5 downto 0);
-   signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000","100000","110000","100000") ; -- Score X0											
+	type scoreTitle is array(0 to 9) of std_logic_vector(5 downto 0);
+   signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000","100000", "100000","110000","100000") ; -- Score XX0
+	
+	type numberScore is array(0 to 8) of std_logic_vector(5 downto 0);
+	signal sigNumScore: numberScore:= ("110000","110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001");
+	-- numbers from 0 to 10
+	
+	signal tensOn, onesOn, hundredsOn: std_logic := '0';
 	
 	
 
@@ -44,9 +53,10 @@ architecture a OF textToDisplay IS
 	
 begin
 process(clock_25Mhz,p_row,p_col,pix_row,pix_col,		mode,sig_title,sig_trainT,sig_normT)
+variable tens, ones, hundereds: integer := 0;
 begin
-	p_row <= conv_integer(unsigned(pix_row));
-	p_col <= conv_integer(unsigned(pix_col));
+	p_row <= conv_integer(pix_row);
+	p_col <= conv_integer(pix_col);
 	textOn <= '0';
 	------------------------------------------------ Flappy Bird Title
 	if(mode = "000") then
@@ -130,10 +140,36 @@ begin
 					end if;
 				end loop;
 				
-				for i in 0 to 8 loop
+				-- Check score
+				if (score < 10) then
+					onesOn <= '1';
+					ones := score;
+				elsif(score > 9) then
+					tensOn <= '1';
+					ones := score mod 10;
+					tens := score/10;
+				elsif(score >99) then
+					hundredsOn <='1';
+					ones := score mod 100;
+					tens := score mod 10;
+					hundereds := score/100;
+				end if;
+				
+				for i in 0 to 9 loop
+				
 				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
 					textOn <= '1';
-					value <= sig_scoreT(i);
+					if(OnesOn = '1' and i = 9) then
+						value <=sigNumScore(ones);
+					
+					elsif(TensOn = '1' and i = 8) then
+						value <= sigNumScore(tens);
+					elsif(TensOn = '1' and i = 9) then
+						value <= sigNumScore(ones);
+					
+					else
+						value <= sig_scoreT(i);
+					end if;
 					character_address <= value ; -- L
 					font_row <= pix_row(4 downto 2);
 					font_col <= pix_col(4 downto 2);

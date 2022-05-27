@@ -5,7 +5,9 @@ entity fsm is
 			 pb0_in: in STD_LOGIC;
 			 pb1_in: in STD_LOGIC;
 			 input : in  STD_LOGIC;
-			 x		 : in STD_LOGIC; -- to change for on pipe hit or smth
+			 x: 	in std_logic;
+			 resetGameMode		 : out STD_LOGIC; -- to change for on pipe hit or smth
+			 resetTrainingMode : out std_logic;
 			 parity: out STD_LOGIC; -- score?
 			 mode_out : out  STD_LOGIC_VECTOR (2 downto 0);
 			 clk : in  STD_LOGIC);
@@ -48,8 +50,10 @@ begin
 				
 			--S1 in training mode
 			when S1 =>
+				resetTrainingMode <= '0';
 				mode_out<="001";
-			when S2 => -- S2 in actual game mode		
+			when S2 => -- S2 in actual game mode
+				resetGameMode <= '0';
 				mode_out <="010";
 			when others =>
 				mode_out <= "000";
@@ -67,8 +71,10 @@ begin
 	case (state) is
 		when S0 =>
 			if(pb0_in='0') then
+				resetTrainingMode <= '1';
 				next_state<=S1;	--trainingmode
 			elsif(pb1_in='0') then
+				resetGameMode <= '1';
 				next_state<=S2;	--actualmode
 			else -- Stay on main menu if nothing happens
 				next_state<=S0;

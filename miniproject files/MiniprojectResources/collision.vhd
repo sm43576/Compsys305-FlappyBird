@@ -7,46 +7,39 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 ENTITY collision IS
 	PORT
 		( clk, vert_sync	: IN std_logic;
-			resetTrainMode, resetGameMode		: IN std_logic_;
+			resetTrainMode, resetGMode		: IN std_logic;
 			 ball_x, pipe1_x, pipe2_x : IN std_logic_vector(10 downto 0);
-          ball_y	: IN std_logic_vector(9 DOWNTO 0);
-			 pipe1Top_Maxy, pipe1Bottom_Miny	: IN std_logic_vector(9 downto 0); -- top pipe ranges from 0 to A, bottom pipe ranges from B to 479 
-			 pipe2Top_Maxy, pipe2Bottom_Miny	: IN std_logic_vector(9 downto 0);
-			 pUp_row, pUp_col : std_logic_vector(9 downto 0);
+			 ballOn, Pipe1On,  Pipe2On	: IN std_logic; --  to check y position of ball with y position of pipe
+			 pUp_x, pUp_y: std_logic_vector(9 downto 0);
 			 mode : IN std_logic_vector(2 downto 0);
 		  lives, score			: OUT Integer);		
 END collision;
 
 architecture behavior of collision is
 
-SIGNAL isCollision					: std_logic;
+SIGNAL temp_lives	: integer;
+signal temp_score: integer;
 
 
 
 BEGIN
-checkCollison: process(clk)
+checkCollison: process(vert_sync)
 BEGIN
 	if(resetTrainMode = '1') then
-		lives = 5;
-		score = 0;
-	elsif(mode = '0') then
-		lives = 3;
-		score = 0;
+		temp_lives <= 5;
+		temp_score <= 0;
+	elsif(resetGMode = '1') then
+		temp_lives <= 3;
+		temp_score <= 0;
 	end if;
 		
 	-- Checks if ball has been hit
-	if((ball_x = pipe1_x and ((ball_y >= 0 and ball_y <= pipe1Top_Maxy)  -- Ball in range of top pipe 0 <=y<= Top pipe max
-											or (ball_y >= pipe1Bottom_Miny and ball_y <= 479)) )) then -- ball in range of bottom pipe: min bottom pipe <=y <= 479
-		lives = lives -1;
+	if((ballOn = '1' and pipe1On = '1') or (ballOn = '1' and pipe2On = '1')) then
+		lives <= temp_lives -1;
 	
-	elsif(ball_x = pipe2_x and (ball_y >= 0 and ball_y<= pipe2Top_Maxy) 
-											or(ball_y >= pipe2Bottom_Miny and ball_y <= 479))) then
-		lives = lives -1;
 		
-	elsif(ball_x = pipe1_x and ((ball_y > pipe1Top_Maxy and ball_y < pipe1Bottom_Miny) 
-												or(ball_y > pipe2Top_Maxy and ball_y < pipe2Bottom_Miny))) then -- if ball is between the gap
-		score = score +1;
-		
+	elsif((ball_x >= pipe1_x) and (ballOn /= pipe1On) ) then -- if ball is between the gap
+		score <= temp_score +1;
 	end if;
 	
 	
