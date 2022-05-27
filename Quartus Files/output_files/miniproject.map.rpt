@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Fri May 27 15:42:48 2022
+Fri May 27 16:46:48 2022
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -55,15 +55,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 27 15:42:48 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 27 16:46:48 2022       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; miniproject                                 ;
 ; Top-level Entity Name              ; flappyBirdFinal                             ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 802                                         ;
-;     Total combinational functions  ; 735                                         ;
-;     Dedicated logic registers      ; 202                                         ;
-; Total registers                    ; 202                                         ;
+; Total logic elements               ; 799                                         ;
+;     Total combinational functions  ; 731                                         ;
+;     Dedicated logic registers      ; 195                                         ;
+; Total registers                    ; 195                                         ;
 ; Total pins                         ; 11                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -168,11 +168,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -216,20 +217,20 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 802                            ;
+; Estimated Total logic elements              ; 799                            ;
 ;                                             ;                                ;
-; Total combinational functions               ; 735                            ;
+; Total combinational functions               ; 731                            ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 378                            ;
-;     -- 3 input functions                    ; 198                            ;
-;     -- <=2 input functions                  ; 159                            ;
+;     -- 4 input functions                    ; 381                            ;
+;     -- 3 input functions                    ; 192                            ;
+;     -- <=2 input functions                  ; 158                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 568                            ;
+;     -- normal mode                          ; 564                            ;
 ;     -- arithmetic mode                      ; 167                            ;
 ;                                             ;                                ;
-; Total registers                             ; 202                            ;
-;     -- Dedicated logic registers            ; 202                            ;
+; Total registers                             ; 195                            ;
+;     -- Dedicated logic registers            ; 195                            ;
 ;     -- I/O registers                        ; 0                              ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 11                             ;
@@ -240,7 +241,7 @@ applicable agreement for further details.
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst8|pixel_column[7] ;
 ; Maximum fan-out                             ; 102                            ;
-; Total fan-out                               ; 3055                           ;
+; Total fan-out                               ; 3022                           ;
 ; Average fan-out                             ; 3.15                           ;
 +---------------------------------------------+--------------------------------+
 
@@ -250,9 +251,9 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |flappyBirdFinal                          ; 735 (1)           ; 202 (0)      ; 4096        ; 0            ; 0       ; 0         ; 11   ; 0            ; |flappyBirdFinal                                                                              ;              ;
+; |flappyBirdFinal                          ; 731 (1)           ; 195 (0)      ; 4096        ; 0            ; 0       ; 0         ; 11   ; 0            ; |flappyBirdFinal                                                                              ;              ;
 ;    |MOUSE:inst2|                          ; 83 (83)           ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|MOUSE:inst2                                                                  ;              ;
-;    |Priority:inst5|                       ; 12 (12)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                               ;              ;
+;    |Priority:inst5|                       ; 11 (11)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                               ;              ;
 ;    |VGA_SYNC:inst8|                       ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|VGA_SYNC:inst8                                                               ;              ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1                                                                ;              ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1|altpll:altpll_component                                        ;              ;
@@ -262,9 +263,9 @@ applicable agreement for further details.
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component                                ;              ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
 ;    |fsm:inst24|                           ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|fsm:inst24                                                                   ;              ;
-;    |pipes:inst32|                         ; 111 (111)         ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|pipes:inst32                                                                 ;              ;
-;    |randomNums:inst6|                     ; 5 (5)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|randomNums:inst6                                                             ;              ;
-;    |textToDisplay:inst3|                  ; 377 (377)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                          ;              ;
+;    |pipes:inst32|                         ; 107 (107)         ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|pipes:inst32                                                                 ;              ;
+;    |randomNums:inst6|                     ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|randomNums:inst6                                                             ;              ;
+;    |textToDisplay:inst3|                  ; 376 (376)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                          ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -351,29 +352,34 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                          ; Reason for Removal                             ;
 +----------------------------------------+------------------------------------------------+
 ; pipes:inst32|resetNumGen               ; Stuck at VCC due to stuck port data_in         ;
+; pipes:inst32|newLength[9]              ; Stuck at GND due to stuck port data_in         ;
 ; bouncy_ball:inst7|ball_x_pos[10]       ; Stuck at GND due to stuck port data_in         ;
 ; bouncy_ball:inst7|ball_y_motion[0,1]   ; Stuck at GND due to stuck port data_in         ;
-; pipes:inst32|pipe_x_motion[4..10]      ; Stuck at VCC due to stuck port data_in         ;
+; pipes:inst32|pipe_x_motion[4,5]        ; Stuck at VCC due to stuck port data_in         ;
 ; pipes:inst32|pipe_x_motion[3]          ; Stuck at GND due to stuck port data_in         ;
 ; pipes:inst32|pipe_x_motion[2]          ; Stuck at VCC due to stuck port data_in         ;
 ; pipes:inst32|pipe_x_motion[0,1]        ; Stuck at GND due to stuck port data_in         ;
+; pipes:inst32|pipe_x_motion[6..10]      ; Stuck at VCC due to stuck port data_in         ;
 ; MOUSE:inst2|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in         ;
 ; MOUSE:inst2|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in         ;
 ; MOUSE:inst2|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in         ;
 ; MOUSE:inst2|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in         ;
 ; MOUSE:inst2|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in         ;
-; pipes:inst32|newLength[10..31]         ; Lost fanout                                    ;
+; randomNums:inst6|output[0]             ; Merged with randomNums:inst6|randVector[1]     ;
+; randomNums:inst6|holder                ; Merged with randomNums:inst6|output[7]         ;
+; randomNums:inst6|randVector[7]         ; Merged with randomNums:inst6|output[6]         ;
+; randomNums:inst6|randVector[6]         ; Merged with randomNums:inst6|output[5]         ;
+; randomNums:inst6|randVector[5]         ; Merged with randomNums:inst6|output[4]         ;
 ; bouncy_ball:inst7|ball_y_pos[0]        ; Merged with bouncy_ball:inst7|ball_y_pos[1]    ;
 ; bouncy_ball:inst7|ball_y_motion[4..9]  ; Merged with bouncy_ball:inst7|ball_y_motion[3] ;
-; pipes:inst32|pipe_x_pos[1]             ; Stuck at VCC due to stuck port data_in         ;
 ; pipes:inst32|pipe_x_pos[0]             ; Stuck at GND due to stuck port data_in         ;
+; pipes:inst32|pipe_x_pos[1]             ; Stuck at VCC due to stuck port data_in         ;
 ; bouncy_ball:inst7|ball_y_pos[1]        ; Stuck at GND due to stuck port data_in         ;
 ; VGA_SYNC:inst8|pixel_row[9]            ; Stuck at GND due to stuck port data_in         ;
 ; fsm:inst24|state.S3                    ; Lost fanout                                    ;
 ; fsm:inst24|state.S4                    ; Lost fanout                                    ;
 ; fsm:inst24|state.S5                    ; Lost fanout                                    ;
-; pipes:inst32|newLength[9]              ; Merged with pipes:inst32|newLength[8]          ;
-; Total Number of Removed Registers = 61 ;                                                ;
+; Total Number of Removed Registers = 44 ;                                                ;
 +----------------------------------------+------------------------------------------------+
 
 
@@ -392,12 +398,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 202   ;
+; Total registers                              ; 195   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 10    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 119   ;
+; Number of registers using Clock Enable       ; 109   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -407,24 +413,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; pipes:inst32|y2[0]                      ; 1       ;
-; pipes:inst32|newLength[6]               ; 2       ;
-; pipes:inst32|newLength[5]               ; 2       ;
-; pipes:inst32|newLength[2]               ; 2       ;
-; randomNums:inst6|randVector[6]          ; 7       ;
-; randomNums:inst6|randVector[5]          ; 3       ;
-; randomNums:inst6|randVector[4]          ; 4       ;
-; randomNums:inst6|randVector[3]          ; 4       ;
-; randomNums:inst6|randVector[1]          ; 2       ;
-; randomNums:inst6|randVector[0]          ; 2       ;
+; randomNums:inst6|output[7]              ; 13      ;
+; randomNums:inst6|output[5]              ; 4       ;
+; randomNums:inst6|output[4]              ; 4       ;
+; randomNums:inst6|randVector[1]          ; 4       ;
 ; MOUSE:inst2|send_char                   ; 3       ;
-; randomNums:inst6|holder                 ; 4       ;
+; randomNums:inst6|randVector[4]          ; 1       ;
+; randomNums:inst6|randVector[3]          ; 2       ;
+; randomNums:inst6|randVector[0]          ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[3]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[5]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[6]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                 ; 1       ;
-; Total number of inverted registers = 17 ;         ;
+; Total number of inverted registers = 13 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -433,14 +435,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[8]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[9]                ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |flappyBirdFinal|pipes:inst32|pipe_x_pos[6]               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[0]         ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappyBirdFinal|Priority:inst5|tempGreenOut              ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[1]             ;
-; 27:1               ; 6 bits    ; 108 LEs       ; 6 LEs                ; 102 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|font_row[2]          ;
-; 50:1               ; 6 bits    ; 198 LEs       ; 6 LEs                ; 192 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|character_address[4] ;
-; 83:1               ; 2 bits    ; 110 LEs       ; 108 LEs              ; 2 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|value[0]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[4]         ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappyBirdFinal|Priority:inst5|tempBlueOut               ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[5]             ;
+; 27:1               ; 6 bits    ; 108 LEs       ; 6 LEs                ; 102 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|font_row[0]          ;
+; 50:1               ; 6 bits    ; 198 LEs       ; 6 LEs                ; 192 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|character_address[5] ;
+; 83:1               ; 2 bits    ; 110 LEs       ; 108 LEs              ; 2 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|value[2]             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -940,7 +942,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri May 27 15:42:33 2022
+    Info: Processing started: Fri May 27 16:46:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
@@ -1182,20 +1184,20 @@ Warning (13012): Latch textToDisplay:inst3|value[5] has unsafe behavior
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 25 registers lost all their fanouts during netlist optimizations.
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 827 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 824 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 807 logic cells
+    Info (21061): Implemented 804 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4706 megabytes
-    Info: Processing ended: Fri May 27 15:42:49 2022
-    Info: Elapsed time: 00:00:16
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Fri May 27 16:46:48 2022
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:12
 
 
