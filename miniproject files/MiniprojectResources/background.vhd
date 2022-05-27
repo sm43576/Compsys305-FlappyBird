@@ -32,8 +32,8 @@ backgroundOn <= '1';
 
 	elsif(mode = "010") then
 	--- Game mode
-		red_out <= "1111";
-		green_out <= "0000";
+		red_out <= "1000";
+		green_out <= "1111";
 		blue_out <= "1111";
 		
 	elsif(mode = "011" or mode = "100") then
