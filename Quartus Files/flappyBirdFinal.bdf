@@ -1226,14 +1226,6 @@ applicable agreement for further details.
 	(pt -616 200)
 )
 (connector
-	(pt -48 360)
-	(pt -48 616)
-)
-(connector
-	(pt -48 616)
-	(pt -104 616)
-)
-(connector
 	(pt -104 816)
 	(pt -72 816)
 )
@@ -1272,14 +1264,6 @@ applicable agreement for further details.
 (connector
 	(pt 848 368)
 	(pt 848 408)
-)
-(connector
-	(pt -456 360)
-	(pt -48 360)
-)
-(connector
-	(pt -48 360)
-	(pt 32 360)
 )
 (connector
 	(pt 32 360)
@@ -1666,39 +1650,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "r_out[3..0]" (rect -126 408 -76 420)(font "Arial" ))
-	(pt -128 424)
-	(pt -88 424)
-	(bus)
-)
-(connector
-	(pt -88 424)
-	(pt -64 424)
-	(bus)
-)
-(connector
-	(text "g_out[3..0]" (rect -126 424 -59 439)(font "Arial" (font_size 9)))
-	(pt -128 440)
-	(pt -88 440)
-	(bus)
-)
-(connector
-	(pt -88 440)
-	(pt -64 440)
-	(bus)
-)
-(connector
-	(text "b_out[3..0]" (rect -126 440 -59 455)(font "Arial" (font_size 9)))
-	(pt -128 456)
-	(pt -88 456)
-	(bus)
-)
-(connector
-	(pt -88 456)
-	(pt -64 456)
-	(bus)
-)
-(connector
 	(pt 104 672)
 	(pt 112 672)
 )
@@ -1777,13 +1728,61 @@ applicable agreement for further details.
 	(pt -328 552)
 	(bus)
 )
+(connector
+	(pt 8 360)
+	(pt 8 616)
+)
+(connector
+	(pt -104 616)
+	(pt 8 616)
+)
+(connector
+	(pt -456 360)
+	(pt 8 360)
+)
+(connector
+	(pt 8 360)
+	(pt 32 360)
+)
+(connector
+	(text "g_out[3..0]" (rect -78 424 -11 439)(font "Arial" (font_size 9)))
+	(pt -88 440)
+	(pt -56 440)
+	(bus)
+)
+(connector
+	(text "r_out[3..0]" (rect -78 392 -28 404)(font "Arial" ))
+	(pt -40 424)
+	(pt -88 424)
+	(bus)
+)
+(connector
+	(pt -40 424)
+	(pt -40 408)
+	(bus)
+)
+(connector
+	(pt -80 456)
+	(pt -80 472)
+	(bus)
+)
+(connector
+	(pt -88 456)
+	(pt -80 456)
+	(bus)
+)
+(connector
+	(text "b_out[3..0]" (rect -62 456 5 471)(font "Arial" (font_size 9)))
+	(pt -80 472)
+	(pt -40 472)
+	(bus)
+)
 (junction (pt 816 472))
 (junction (pt 832 520))
 (junction (pt 72 360))
 (junction (pt 848 408))
 (junction (pt 848 480))
 (junction (pt 216 304))
-(junction (pt -48 360))
 (junction (pt 32 360))
 (junction (pt 216 176))
 (junction (pt -208 176))
@@ -1793,6 +1792,4 @@ applicable agreement for further details.
 (junction (pt 112 672))
 (junction (pt 104 688))
 (junction (pt 120 704))
-(junction (pt -88 440))
-(junction (pt -88 456))
-(junction (pt -88 424))
+(junction (pt 8 360))
