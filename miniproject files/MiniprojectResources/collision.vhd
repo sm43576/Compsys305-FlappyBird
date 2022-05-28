@@ -32,8 +32,8 @@ BEGIN
 		score <= temp_score;
 	end if;
 		
-	if (temp_lives=0)then
-		temp_lives<=temp_lives;
+	if (temp_lives<=0)then
+		temp_lives<=0;
 		
 	--Checks if ball has been hit
 	elsif((ballOn = '1' and pipe1On = '1') or (ballOn = '1' and pipe2On = '1')) then
