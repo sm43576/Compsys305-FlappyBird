@@ -35,9 +35,8 @@ architecture a OF textToDisplay IS
 												"010000","010010","000101","010011","010011","100000", -- PRESS[SPACE]
 												"000010","010101","010100","010100","001111","001110", "100000", -- BUTTON[SPACE]
 												"110001"); -- 1
-	type livesTitle is array(0 to 15) of std_logic_vector(5 downto 0);
-   signal sig_lifeT : livesTitle := ("001100","001001","010110","000101","010011",
-												"100000","101010","100000","101010","100000","101010","100000","101010","100000","101010","100000"); --lives[space]*[]*[]*[]*[]*[]
+	type livesTitle is array(0 to 5) of std_logic_vector(5 downto 0);
+   signal sig_lifeT : livesTitle := ("001100","001001","010110","000101","010011","100000"); --lives[space]
 	type scoreTitle is array(0 to 9) of std_logic_vector(5 downto 0);
    signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000","100000", "100000","110000","100000") ; -- Score XX0
 	
@@ -133,13 +132,17 @@ begin
 	
 	elsif (mode = "010") then 
 	
-				for i in 0 to 15 loop
-				if(32<p_row and p_row<64) and (((i-1)*32)+32<p_col and p_col<32+(i*32))	 then
+				for i in 0 to 6 loop
+				if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 					textOn <= '1';
-					value <= sig_lifeT(i);
+					if(i = 6) then
+						value <= sigNumScore(lives);
+					else
+						value <= sig_lifeT(i);
+					end if;
 					character_address <= value ; -- L
-					font_row <= pix_row(4 downto 2);
-					font_col <= pix_col(4 downto 2);
+					font_row <= pix_row(3 downto 1);
+					font_col <= pix_col(3 downto 1);
 					end if;
 				end loop;
 				
