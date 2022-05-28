@@ -27,6 +27,8 @@ BEGIN
 	if(mode = "000") then
 		temp_lives <= 3;
 		temp_score <= 0;
+		lives <= temp_lives;
+		score <= temp_score;
 	end if;
 		
 	-- Checks if ball has been hit

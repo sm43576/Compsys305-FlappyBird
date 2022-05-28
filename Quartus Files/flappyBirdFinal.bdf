@@ -1076,14 +1076,14 @@ applicable agreement for further details.
 		(pt 200 32)
 		(output)
 		(text "lives[31..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "lives[31..0]" (rect 133 27 179 39)(font "Arial" ))
+		(text "lives[31..0]" (rect 133 27 188 39)(font "Arial" ))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
 	(port
 		(pt 200 48)
 		(output)
 		(text "score[31..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "score[31..0]" (rect 130 43 179 55)(font "Arial" ))
+		(text "score[31..0]" (rect 130 43 189 55)(font "Arial" ))
 		(line (pt 200 48)(pt 184 48)(line_width 3))
 	)
 	(drawing
@@ -1157,21 +1157,21 @@ applicable agreement for further details.
 		(pt 240 32)
 		(output)
 		(text "resetNumGen" (rect 0 0 68 12)(font "Arial" ))
-		(text "resetNumGen" (rect 162 27 219 39)(font "Arial" ))
+		(text "resetNumGen" (rect 162 27 230 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32))
 	)
 	(port
 		(pt 240 48)
 		(output)
 		(text "pipe_on" (rect 0 0 37 12)(font "Arial" ))
-		(text "pipe_on" (rect 188 43 219 55)(font "Arial" ))
+		(text "pipe_on" (rect 188 43 225 55)(font "Arial" ))
 		(line (pt 240 48)(pt 224 48))
 	)
 	(port
 		(pt 240 64)
 		(output)
 		(text "pipe_x[10..0]" (rect 0 0 63 12)(font "Arial" ))
-		(text "pipe_x[10..0]" (rect 166 59 219 71)(font "Arial" ))
+		(text "pipe_x[10..0]" (rect 166 59 229 71)(font "Arial" ))
 		(line (pt 240 64)(pt 224 64)(line_width 3))
 	)
 	(drawing
@@ -1179,7 +1179,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 144 640 344 784)
+	(rect 184 640 384 784)
 	(text "fsm" (rect 5 0 25 12)(font "Arial" ))
 	(text "inst24" (rect 8 128 37 140)(font "Arial" ))
 	(port
@@ -1221,7 +1221,7 @@ applicable agreement for further details.
 		(pt 200 32)
 		(output)
 		(text "mode_out[2..0]" (rect 0 0 74 12)(font "Arial" ))
-		(text "mode_out[2..0]" (rect 117 27 179 39)(font "Arial" ))
+		(text "mode_out[2..0]" (rect 117 27 191 39)(font "Arial" ))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
 	(drawing
@@ -1980,18 +1980,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 112 672)
-	(pt 144 672)
-)
-(connector
-	(pt 104 688)
-	(pt 144 688)
-)
-(connector
-	(pt 120 704)
-	(pt 144 704)
-)
-(connector
 	(text "pipeOn" (rect 243 -248 277 -236)(font "Arial" ))
 	(pt 184 -232)
 	(pt 264 -232)
@@ -2009,44 +1997,6 @@ applicable agreement for further details.
 (connector
 	(pt 328 -248)
 	(pt 184 -248)
-)
-(connector
-	(text "mode_out[2..0]" (rect 372 688 446 700)(font "Arial" ))
-	(pt 376 680)
-	(pt 456 680)
-	(bus)
-)
-(connector
-	(pt 344 672)
-	(pt 376 672)
-	(bus)
-)
-(connector
-	(pt 376 672)
-	(pt 376 680)
-	(bus)
-)
-(connector
-	(pt -104 736)
-	(pt 144 736)
-)
-(connector
-	(pt -104 704)
-	(pt -104 736)
-)
-(connector
-	(pt -104 736)
-	(pt -104 816)
-)
-(connector
-	(pt 136 720)
-	(pt 136 728)
-	(bus)
-)
-(connector
-	(pt 144 720)
-	(pt 136 720)
-	(bus)
 )
 (connector
 	(text "lives[31..0]" (rect 22 712 77 724)(font "Arial" ))
@@ -2079,6 +2029,46 @@ applicable agreement for further details.
 (connector
 	(pt -264 880)
 	(pt -264 768)
+	(bus)
+)
+(connector
+	(pt 136 728)
+	(pt 136 720)
+	(bus)
+)
+(connector
+	(pt -104 704)
+	(pt -104 736)
+)
+(connector
+	(pt -104 736)
+	(pt -104 816)
+)
+(connector
+	(pt 112 672)
+	(pt 184 672)
+)
+(connector
+	(pt 104 688)
+	(pt 184 688)
+)
+(connector
+	(pt 120 704)
+	(pt 184 704)
+)
+(connector
+	(pt 136 720)
+	(pt 184 720)
+	(bus)
+)
+(connector
+	(pt -104 736)
+	(pt 184 736)
+)
+(connector
+	(text "mode_out[2..0]" (rect 412 680 486 692)(font "Arial" ))
+	(pt 384 672)
+	(pt 496 672)
 	(bus)
 )
 (junction (pt 816 472))

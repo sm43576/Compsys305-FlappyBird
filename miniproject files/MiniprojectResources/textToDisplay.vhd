@@ -37,7 +37,7 @@ architecture a OF textToDisplay IS
 												"110001"); -- 1
 	type livesTitle is array(0 to 15) of std_logic_vector(5 downto 0);
    signal sig_lifeT : livesTitle := ("001100","001001","010110","000101","010011",
-												"100000","101010","100000","101010","100000","101010","100000","101010","100000","101010","100000"); --lives
+												"100000","101010","100000","101010","100000","101010","100000","101010","100000","101010","100000"); --lives[space]*[]*[]*[]*[]*[]
 	type scoreTitle is array(0 to 9) of std_logic_vector(5 downto 0);
    signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000","100000", "100000","110000","100000") ; -- Score XX0
 	
