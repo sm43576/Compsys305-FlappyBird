@@ -1,4 +1,4 @@
--- put the power up so that pipe is infront of the powerup
+-- put the power up so that pipe is infront of the poweru
 LIBRARY IEEE;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
@@ -9,10 +9,11 @@ ENTITY powerup IS
 		( clk, vert_sync	: IN std_logic;
 		  mode: IN std_logic_vector(2 downto 0);
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  red, green, blue,powerup 			: OUT std_logic;	
 		  powerup_on 			: OUT std_logic);		
 END powerup;
 
-architecture behavior of pipes is
+architecture behavior of powerup is
 
 SIGNAL temp_powerup_on					: std_logic;
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
@@ -27,9 +28,6 @@ BEGIN
 size <= CONV_STD_LOGIC_VECTOR(6,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
--- <= CONV_STD_LOGIC_VECTOR(590,11);
---ball_y_pos <= CONV_STD_LOGIC_VECTOR(10,10);
-
 						-- and here is adding 0 to ball_x_pos making it unsigned
 temp_powerup_on <= '1' when ( ('0' & powerup_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & powerup_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & powerup_y_pos <= pixel_row + size) and ('0' & pixel_row <= powerup_y_pos + size) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -43,31 +41,37 @@ Red <=  not temp_powerup_on;
 Green <= not temp_powerup_on;
 Blue <=  '1';
 
-Spawn_Powerup: process ()  
+Spawn_Powerup: process (vert_sync)  
 variable counter :integer:=0;	
 begin
 -- change x1 and x2 accordingly and set it
 --then move
 	if (rising_edge(vert_sync)) then
-		-- how many seconds per vert_sync
+		-- how many seconds per vert_sync ,640 by 480
 		
-		if (counter = 0)
-		--2Clockfrequency 25mhz / 640*480
-			--spawnpipe
-			--poweruponscreen = 1
-	--elsif (poweruponscreen=0 & counter = 60)
+		if (powerup_x_pos <= CONV_STD_LOGIC_VECTOR(0,11) or mode = "000")then
+			counter := 0;
+			
+		elsif (counter < 3000) then--81.38 frames per second so for 4
+			counter := counter+1;
+			
+		elsif(counter = 3000) then
+			powerup_x_pos <= CONV_STD_LOGIC_VECTOR(638,11);	
+			
+		end if;
 		
-		elsif (powerup_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and powerup_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then
+		
+		if (powerup_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and powerup_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then
 			powerup_x_motion <= -CONV_STD_LOGIC_VECTOR(6,11); -- move left to right
 			powerup_x_pos <= powerup_x_pos + powerup_x_motion	;
 			
 			
-	    
+	   end if;
 		
 end if;
 
-end process Spawn_Move_pipe;
+end process Spawn_Powerup;
 
 
 
-end Spawn_Powerup;   
+end behavior;    
