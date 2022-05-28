@@ -45,6 +45,9 @@ architecture a OF textToDisplay IS
 	signal sigNumScore: numberScore:= ("110000","110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001");
 	-- numbers from 0 to 9
 	
+	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(9 downto 0);
+	signal siggameOver: numberScore:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
+	
 	signal tensOn, onesOn, hundredsOn: std_logic := '0';
 	
 	
@@ -178,9 +181,16 @@ begin
 				
 	 
 	
-	--elsif(mode = "011") then
-		--textOn <='1';
-	 -- game over text
+	elsif(mode = "011") then
+		for i in 0 to 9 loop
+				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
+					textOn <= '1';
+					value <= siggameOver(i);
+					character_address <= value ; -- L
+					font_row <= pix_row(4 downto 2);
+					font_col <= pix_col(4 downto 2);
+				end if;
+				end loop;
 	 
 	--elsif (mode = "100") then
 		--textOn <='1';

@@ -36,7 +36,7 @@ backgroundOn <= '1';
 		green_out <= "1111";
 		blue_out <= "1111";
 		
-	elsif(mode = "011" or mode = "100") then
+	elsif(mode = "011") then
 	--- Game Over
 
 		red_out <= "0000";
