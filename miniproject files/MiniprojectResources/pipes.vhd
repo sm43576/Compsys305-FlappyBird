@@ -10,7 +10,8 @@ ENTITY pipes IS
 			randomNumber: IN std_logic_vector(7 downto 0);
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  resetNumGen: 	out std_logic;
-		  pipe_on 			: OUT std_logic);		
+		  pipe_on 			: OUT std_logic;
+		  pipe_x : out std_logic_vector(10 downto 0));		
 END pipes;
 
 architecture behavior of pipes is
@@ -74,6 +75,7 @@ begin
 		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then
 			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(12,11); -- move left to right
 			pipe_x_pos <= pipe_x_pos + pipe_x_motion;
+			pipe_x  <= pipe_x_pos;
 		
 		end if;
 		resetNumGen<='1';

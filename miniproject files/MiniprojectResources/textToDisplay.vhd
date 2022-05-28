@@ -41,9 +41,9 @@ architecture a OF textToDisplay IS
 	type scoreTitle is array(0 to 9) of std_logic_vector(5 downto 0);
    signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000","100000", "100000","110000","100000") ; -- Score XX0
 	
-	type numberScore is array(0 to 8) of std_logic_vector(5 downto 0);
+	type numberScore is array(0 to 9) of std_logic_vector(5 downto 0);
 	signal sigNumScore: numberScore:= ("110000","110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001");
-	-- numbers from 0 to 10
+	-- numbers from 0 to 9
 	
 	signal tensOn, onesOn, hundredsOn: std_logic := '0';
 	
@@ -140,7 +140,7 @@ begin
 					end if;
 				end loop;
 				
-				-- Check score
+				--------------------------------- Check score
 				if (score < 10) then
 					onesOn <= '1';
 					ones := score;
