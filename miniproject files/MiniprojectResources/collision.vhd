@@ -18,12 +18,12 @@ architecture behavior of collision is
 
 SIGNAL temp_lives	: integer;
 signal temp_score: integer;
+signal counter:integer:=0;
 
 
 
 BEGIN
 checkCollison: process(vert_sync)
-
 BEGIN
 	if(mode = "000") then
 		temp_lives <= 3;
@@ -37,15 +37,21 @@ BEGIN
 		
 	--Checks if ball has been hit
 	elsif((ballOn = '1' and pipe1On = '1') or (ballOn = '1' and pipe2On = '1')) then
-		temp_lives<=temp_lives-1;
-		lives <= temp_lives -1;
-	--	counter:=0;
+	
+		if (counter >20) then
+			temp_lives<=temp_lives-1;
+			counter<=0;
+		end if;
 	
 		
 	elsif((ball_x >= pipe1_x) and (ballOn /= pipe1On) ) then -- if ball is between the gap
-		score <= temp_score +1;
+		temp_score<=temp_score+1;
+		
 	end if;
-		--counter:= counter+1;
+	
+	lives <= temp_lives;
+	score <= temp_score;
+	counter<= counter+1;
 	
 end process checkCollison;
 end behavior;

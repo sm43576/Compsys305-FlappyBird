@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="miniproject">
-		<CBX_INST_ENTRY INSTANCE_NAME="|flappyBirdFinal|altpll0:inst1|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kt91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_gvo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappyBirdFinal|altpll0:inst1|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
