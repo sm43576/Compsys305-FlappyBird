@@ -44,8 +44,8 @@ architecture a OF textToDisplay IS
 	signal sigNumScore: numberScore:= ("110000","110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001");
 	-- numbers from 0 to 9
 	
-	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(9 downto 0);
-	signal siggameOver: numberScore:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
+	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(5 downto 0);
+	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
 	
 	signal tensOn, onesOn, hundredsOn: std_logic := '0';
 	
@@ -102,15 +102,19 @@ begin
 	--------------------------------------------------------------TrainingMode (639x479)
 	elsif (mode = "001") then 
 	
-				for i in 0 to 15 loop
-				if(32<p_row and p_row<64) and (((i-1)*32)+32<p_col and p_col<32+(i*32))	 then
+			for i in 0 to 6 loop
+				if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 					textOn <= '1';
-					value <= sig_lifeT(i);
+					if(i = 6) then
+						value <= sigNumScore(lives);
+					else
+						value <= sig_lifeT(i);
+					end if;
 					character_address <= value ; -- L
-					font_row <= pix_row(4 downto 2);
-					font_col <= pix_col(4 downto 2);
-				end if;
-				end loop;
+					font_row <= pix_row(3 downto 1);
+					font_col <= pix_col(3 downto 1);
+					end if;
+			end loop;
 				
 				for i in 0 to 8 loop
 				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
