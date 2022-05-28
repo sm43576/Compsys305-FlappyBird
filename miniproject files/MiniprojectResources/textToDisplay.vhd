@@ -18,7 +18,7 @@ end textToDisplay;
 architecture a OF textToDisplay IS
 	signal p_row: integer;
 	signal p_col: integer;
-	signal value: std_logic_vector(5 downto 0);
+	signal charvalue: std_logic_vector(5 downto 0);
 	type title is array(0 to 11) of std_logic_vector(5 downto 0);
    signal sig_title : title := ("000110","001100","000001","010000",
 											"010000","011001","100000", "000010", 
@@ -37,8 +37,8 @@ architecture a OF textToDisplay IS
 												"110001"); -- 1
 	type livesTitle is array(0 to 5) of std_logic_vector(5 downto 0);
    signal sig_lifeT : livesTitle := ("001100","001001","010110","000101","010011","100000"); --lives[space]
-	type scoreTitle is array(0 to 9) of std_logic_vector(5 downto 0);
-   signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000","100000", "100000","110000","100000") ; -- Score XX0
+	type scoreTitle is array(0 to 5) of std_logic_vector(5 downto 0);
+   signal sig_scoreT : scoreTitle := ("010011","000011","001111","010010","000101","100000") ; -- Score[space]
 	
 	type numberScore is array(0 to 9) of std_logic_vector(5 downto 0);
 	signal sigNumScore: numberScore:= ("110000","110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001");
@@ -47,14 +47,13 @@ architecture a OF textToDisplay IS
 	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(5 downto 0);
 	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
 	
-	signal tensOn, onesOn, hundredsOn: std_logic := '0';
 	
 	
 
 	
 	
 begin
-process(clock_25Mhz,p_row,p_col,pix_row,pix_col,		mode,sig_title,sig_trainT,sig_normT)
+process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, lives, sig_scoreT)
 variable tens, ones, hundereds: integer := 0;
 begin
 	p_row <= conv_integer(pix_row);
@@ -66,8 +65,8 @@ begin
 		for i in 0 to 11 loop
 			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
 				textOn <= '1';
-				value <= sig_title(i);
-				character_address <= value ; -- L
+				charvalue <= sig_title(i);
+				character_address <= charvalue ; -- L
 				font_row <= pix_row(4 downto 2);
 				font_col <= pix_col(4 downto 2);
 			elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
@@ -80,8 +79,8 @@ begin
 			
 			if(320<p_row and p_row<336) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
 				textOn <='1';
-				value <= sig_trainT(i);
-				character_address <= value ; 
+				charvalue <= sig_trainT(i);
+				character_address <= charvalue ; 
 				font_row <= pix_row(3 downto 1);
 				font_col <= pix_col(3 downto 1);
 			end if;
@@ -91,8 +90,8 @@ begin
 		for i in 0 to 23 loop
 			if(336<p_row and p_row<352) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
 				textOn <='1';
-				value <= sig_normT(i);
-				character_address <= value ; 
+				charvalue <= sig_normT(i);
+				character_address <= charvalue ; 
 				font_row <= pix_row(3 downto 1);
 				font_col <= pix_col(3 downto 1);
 			end if;
@@ -106,23 +105,51 @@ begin
 				if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 					textOn <= '1';
 					if(i = 6) then
-						value <= sigNumScore(lives);
+						charvalue <= sigNumScore(lives);
 					else
-						value <= sig_lifeT(i);
+						charvalue <= sig_lifeT(i);
 					end if;
-					character_address <= value ; -- L
+					character_address <= charvalue ; -- L
 					font_row <= pix_row(3 downto 1);
 					font_col <= pix_col(3 downto 1);
 					end if;
 			end loop;
 				
-				for i in 0 to 8 loop
+			--------------------------------- Check score
+			if (score < 10) then
+				ones := score;
+				tens:= 0;
+				hundereds := 0;
+			elsif(score > 9) then
+				ones := score mod 10;
+				tens := score/10;
+				hundereds := 0;
+			elsif(score >99) then
+				ones := score mod 100;
+				tens := score mod 10;
+				hundereds := score/100;
+			end if;	
+				
+			for i in 0 to 8 loop
 				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
 					textOn <= '1';
-					value <= sig_scoreT(i);
-					character_address <= value ; -- L
-					font_row <= pix_row(4 downto 2);
-					font_col <= pix_col(4 downto 2);
+					
+					-- display numbers 
+						if (i = 6) then
+							charvalue <=sigNumScore(hundereds);
+						elsif(i = 7) then
+							charvalue <= sigNumScore(tens);
+						elsif(i = 8) then
+							charvalue <=sigNumScore(ones);
+						
+						-- display SCORE[space]
+						else
+							charvalue <= sig_scoreT(i);
+						end if;
+			
+						character_address <= charvalue ; -- L
+						font_row <= pix_row(4 downto 2);
+						font_col <= pix_col(4 downto 2);
 					end if;
 				end loop;
 
@@ -140,11 +167,11 @@ begin
 				if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 					textOn <= '1';
 					if(i = 6) then
-						value <= sigNumScore(lives);
+						charvalue <= sigNumScore(lives);
 					else
-						value <= sig_lifeT(i);
+						charvalue <= sig_lifeT(i);
 					end if;
-					character_address <= value ; -- L
+					character_address <= charvalue ; -- L
 					font_row <= pix_row(3 downto 1);
 					font_col <= pix_col(3 downto 1);
 					end if;
@@ -152,38 +179,40 @@ begin
 				
 				--------------------------------- Check score
 				if (score < 10) then
-					onesOn <= '1';
 					ones := score;
+					tens:= 0;
+					hundereds := 0;
 				elsif(score > 9) then
-					tensOn <= '1';
 					ones := score mod 10;
 					tens := score/10;
+					hundereds := 0;
 				elsif(score >99) then
-					hundredsOn <='1';
 					ones := score mod 100;
 					tens := score mod 10;
 					hundereds := score/100;
 				end if;
 				
-				for i in 0 to 9 loop
-				
-				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
-					textOn <= '1';
-					if(OnesOn = '1' and i = 9) then
-						value <=sigNumScore(ones);
+				for i in 0 to 8 loop
+	
+					if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
+						textOn <= '1';
+						-- display numbers 
+						if (i = 6) then
+							charvalue <=sigNumScore(hundereds);
+						elsif(i = 7) then
+							charvalue <= sigNumScore(tens);
+						elsif(i = 8) then
+							charvalue <=sigNumScore(ones);
+						
+						-- display SCORE[space]
+						else
+							charvalue <= sig_scoreT(i);
+						end if;
 					
-					elsif(TensOn = '1' and i = 8) then
-						value <= sigNumScore(tens);
-					elsif(TensOn = '1' and i = 9) then
-						value <= sigNumScore(ones);
-					
-					else
-						value <= sig_scoreT(i);
+						character_address <= charvalue ; -- L
+						font_row <= pix_row(4 downto 2);
+						font_col <= pix_col(4 downto 2);
 					end if;
-					character_address <= value ; -- L
-					font_row <= pix_row(4 downto 2);
-					font_col <= pix_col(4 downto 2);
-				end if;
 				end loop;
 				
 	 
@@ -192,8 +221,8 @@ begin
 		for i in 0 to 9 loop
 				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
 					textOn <= '1';
-					value <= siggameOver(i);
-					character_address <= value ; -- L
+					charvalue <= siggameOver(i);
+					character_address <= charvalue ; -- L
 					font_row <= pix_row(4 downto 2);
 					font_col <= pix_col(4 downto 2);
 				end if;

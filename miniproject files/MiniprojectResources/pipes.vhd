@@ -11,7 +11,8 @@ ENTITY pipes IS
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  resetNumGen: 	out std_logic;
 		  pipe_on 			: OUT std_logic;
-		  pipe_x : out std_logic_vector(10 downto 0));		
+		  pipe_x : out std_logic_vector(10 downto 0);
+		  pipetop_y, pipeBtm_y : out std_logic_vector(9 downto 0));		
 END pipes;
 
 architecture behavior of pipes is
@@ -38,10 +39,13 @@ BEGIN
 		sizex <= CONV_STD_LOGIC_VECTOR(20,10); -- 20 pixels in width
 		sizey <= newLength; -- height may change depending on random numeber
 		-- ball_x_pos and ball_y_pos show the (x,y) for the centre of pipe
-		y2<= newLength+gap;  -- determiens y2 pos
-		--pipe_x_pos <= CONV_STD_LOGIC_VECTOR(600,11);
+		
+		y2<= newLength+gap;  -- determines bottom pipe start position
 		pipe1_y_pos <= CONV_STD_LOGIC_VECTOR(0,10);
 		pipe2_y_pos <= y2;
+		
+		pipeTop_y <= pipe1_y_pos;
+		pipeBtm_y <= pipe2_y_pos;
 
 								-- and here is adding 0 to ball_x_pos making it unsigned
 		temp_pipe1_on <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + sizex) and ('0' & pixel_column <= '0' & pipe_x_pos + sizex) 	-- x_pos - size <= pixel_column <= x_pos + size

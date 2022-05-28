@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sat May 28 21:21:15 2022
+Sat May 28 23:43:39 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,18 +18,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. State Machine - |flappyBirdFinal|fsm:inst24|state
  11. State Machine - |flappyBirdFinal|MOUSE:inst2|mouse_state
  12. User-Specified and Inferred Latches
- 13. Logic Cells Representing Combinational Loops
- 14. Registers Removed During Synthesis
- 15. Removed Registers Triggering Further Register Optimizations
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
- 20. Parameter Settings for User Entity Instance: altpll0:inst1|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: char_rom:inst|altsyncram:altsyncram_component
- 22. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Mod1
- 23. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Mod0
- 24. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Div0
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
+ 19. Parameter Settings for User Entity Instance: altpll0:inst1|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: char_rom:inst|altsyncram:altsyncram_component
+ 21. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Mod1
+ 22. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Mod0
+ 23. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Div1
  25. altpll Parameter Settings by Entity Instance
  26. altsyncram Parameter Settings by Entity Instance
  27. Elapsed Time Per Partition
@@ -59,15 +59,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 28 21:21:14 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 28 23:43:39 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; flappyBirdFinal                                 ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 3,213                                           ;
-;     Total combinational functions  ; 3,121                                           ;
-;     Dedicated logic registers      ; 224                                             ;
-; Total registers                    ; 224                                             ;
+; Total logic elements               ; 3,244                                           ;
+;     Total combinational functions  ; 3,143                                           ;
+;     Dedicated logic registers      ; 361                                             ;
+; Total registers                    ; 361                                             ;
 ; Total pins                         ; 20                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,096                                           ;
@@ -169,7 +169,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -179,25 +179,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                     ; Library ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; ../miniproject files/MiniprojectResources/collision.vhd     ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/collision.vhd     ;         ;
-; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
-; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
-; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
-; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
-; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
-; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
-; flappyBirdFinal.bdf                                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/flappyBirdFinal.bdf                        ;         ;
-; ../miniproject files/MiniprojectResources/pipes.vhd         ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/pipes.vhd         ;         ;
-; ../miniproject files/MiniprojectResources/randomNums.vhd    ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/randomNums.vhd    ;         ;
+; ../miniproject files/MiniprojectResources/collision.vhd     ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/collision.vhd     ;         ;
+; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
+; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
+; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
+; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
+; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
+; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
+; flappyBirdFinal.bdf                                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/flappyBirdFinal.bdf                        ;         ;
+; ../miniproject files/MiniprojectResources/pipes.vhd         ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/pipes.vhd         ;         ;
+; ../miniproject files/MiniprojectResources/randomNums.vhd    ; yes             ; User VHDL File                     ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/randomNums.vhd    ;         ;
 ; altpll.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
 ; aglobal130.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
 ; stratix_pll.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
 ; stratixii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                              ;         ;
 ; cycloneii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                              ;         ;
-; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
+; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
 ; altsyncram.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
 ; stratix_ram_block.inc                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
 ; lpm_mux.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
@@ -206,55 +206,59 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
 ; altram.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
 ; altdpram.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
-; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
+; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
 ; lpm_divide.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                                 ;         ;
 ; abs_divider.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                                ;         ;
 ; sign_div_unsign.inc                                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                            ;         ;
-; db/lpm_divide_3po.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_3po.tdf                      ;         ;
-; db/abs_divider_4dg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_4dg.tdf                     ;         ;
-; db/alt_u_div_t8f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t8f.tdf                       ;         ;
-; db/add_sub_unc.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_unc.tdf                         ;         ;
-; db/add_sub_vnc.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_vnc.tdf                         ;         ;
-; db/lpm_abs_9v9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_9v9.tdf                         ;         ;
-; db/lpm_divide_gvo.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_gvo.tdf                      ;         ;
-; db/abs_divider_kbg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_kbg.tdf                     ;         ;
-; db/alt_u_div_t5f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t5f.tdf                       ;         ;
-; db/lpm_abs_pt9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_pt9.tdf                         ;         ;
+; db/lpm_divide_3po.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_3po.tdf                      ;         ;
+; db/abs_divider_4dg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_4dg.tdf                     ;         ;
+; db/alt_u_div_t8f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t8f.tdf                       ;         ;
+; db/add_sub_unc.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_unc.tdf                         ;         ;
+; db/add_sub_vnc.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_vnc.tdf                         ;         ;
+; db/lpm_abs_9v9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_9v9.tdf                         ;         ;
+; db/lpm_divide_gvo.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_gvo.tdf                      ;         ;
+; db/abs_divider_kbg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_kbg.tdf                     ;         ;
+; db/alt_u_div_t5f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t5f.tdf                       ;         ;
+; db/lpm_abs_pt9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_pt9.tdf                         ;         ;
+; db/lpm_divide_jvo.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_jvo.tdf                      ;         ;
+; db/abs_divider_nbg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_nbg.tdf                     ;         ;
+; db/alt_u_div_36f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_36f.tdf                       ;         ;
+; db/lpm_abs_st9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_st9.tdf                         ;         ;
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                  ;
-+---------------------------------------------+--------------------------------+
-; Resource                                    ; Usage                          ;
-+---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 3,213                          ;
-;                                             ;                                ;
-; Total combinational functions               ; 3121                           ;
-; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 1109                           ;
-;     -- 3 input functions                    ; 950                            ;
-;     -- <=2 input functions                  ; 1062                           ;
-;                                             ;                                ;
-; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 2185                           ;
-;     -- arithmetic mode                      ; 936                            ;
-;                                             ;                                ;
-; Total registers                             ; 224                            ;
-;     -- Dedicated logic registers            ; 224                            ;
-;     -- I/O registers                        ; 0                              ;
-;                                             ;                                ;
-; I/O pins                                    ; 20                             ;
-; Total memory bits                           ; 4096                           ;
-; Embedded Multiplier 9-bit elements          ; 0                              ;
-; Total PLLs                                  ; 1                              ;
-;     -- PLLs                                 ; 1                              ;
-;                                             ;                                ;
-; Maximum fan-out node                        ; collision:inst6|temp_score[31] ;
-; Maximum fan-out                             ; 170                            ;
-; Total fan-out                               ; 9978                           ;
-; Average fan-out                             ; 2.94                           ;
-+---------------------------------------------+--------------------------------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 3,244                    ;
+;                                             ;                          ;
+; Total combinational functions               ; 3143                     ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 1117                     ;
+;     -- 3 input functions                    ; 951                      ;
+;     -- <=2 input functions                  ; 1075                     ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 2234                     ;
+;     -- arithmetic mode                      ; 909                      ;
+;                                             ;                          ;
+; Total registers                             ; 361                      ;
+;     -- Dedicated logic registers            ; 361                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 20                       ;
+; Total memory bits                           ; 4096                     ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+; Total PLLs                                  ; 1                        ;
+;     -- PLLs                                 ; 1                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; collision:inst6|Equal1~0 ;
+; Maximum fan-out                             ; 274                      ;
+; Total fan-out                               ; 10537                    ;
+; Average fan-out                             ; 2.96                     ;
++---------------------------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -262,36 +266,36 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |flappyBirdFinal                          ; 3121 (1)          ; 224 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |flappyBirdFinal                                                                                                                  ; work         ;
-;    |MOUSE:inst2|                          ; 85 (85)           ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|MOUSE:inst2                                                                                                      ; work         ;
-;    |Priority:inst5|                       ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                                                                   ; work         ;
+; |flappyBirdFinal                          ; 3143 (1)          ; 361 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |flappyBirdFinal                                                                                                                  ; work         ;
+;    |MOUSE:inst2|                          ; 84 (84)           ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|MOUSE:inst2                                                                                                      ; work         ;
+;    |Priority:inst5|                       ; 18 (18)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                                                                   ; work         ;
 ;    |VGA_SYNC:inst8|                       ; 59 (59)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|VGA_SYNC:inst8                                                                                                   ; work         ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1                                                                                                    ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1|altpll:altpll_component                                                                            ; work         ;
 ;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated                                              ; work         ;
-;    |bouncy_ball:inst7|                    ; 80 (80)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|bouncy_ball:inst7                                                                                                ; work         ;
+;    |bouncy_ball:inst7|                    ; 79 (79)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|bouncy_ball:inst7                                                                                                ; work         ;
 ;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst                                                                                                    ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component                                                                    ; work         ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated                                     ; work         ;
-;    |collision:inst6|                      ; 254 (254)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|collision:inst6                                                                                                  ; work         ;
-;    |fsm:inst24|                           ; 20 (20)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|fsm:inst24                                                                                                       ; work         ;
-;    |pipes:inst32|                         ; 108 (108)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|pipes:inst32                                                                                                     ; work         ;
+;    |collision:inst6|                      ; 323 (323)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|collision:inst6                                                                                                  ; work         ;
+;    |fsm:inst24|                           ; 19 (19)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|fsm:inst24                                                                                                       ; work         ;
+;    |pipes:inst32|                         ; 112 (112)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|pipes:inst32                                                                                                     ; work         ;
 ;    |randomNums:inst10|                    ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|randomNums:inst10                                                                                                ; work         ;
-;    |textToDisplay:inst3|                  ; 2496 (471)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                                                              ; work         ;
-;       |lpm_divide:Div0|                   ; 487 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0                                                                              ; work         ;
-;          |lpm_divide_gvo:auto_generated|  ; 487 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated                                                ; work         ;
-;             |abs_divider_kbg:divider|     ; 487 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ; work         ;
+;    |textToDisplay:inst3|                  ; 2437 (404)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                                                              ; work         ;
+;       |lpm_divide:Div0|                   ; 481 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0                                                                              ; work         ;
+;          |lpm_divide_gvo:auto_generated|  ; 481 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated                                                ; work         ;
+;             |abs_divider_kbg:divider|     ; 481 (4)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ; work         ;
 ;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ; work         ;
-;                |lpm_abs_9v9:my_abs_num|   ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
-;       |lpm_divide:Mod0|                   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0                                                                              ; work         ;
-;          |lpm_divide_3po:auto_generated|  ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                ; work         ;
-;             |abs_divider_4dg:divider|     ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
-;                |lpm_abs_9v9:my_abs_num|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num ; work         ;
-;       |lpm_divide:Mod1|                   ; 1536 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1                                                                              ; work         ;
-;          |lpm_divide_3po:auto_generated|  ; 1536 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                ; work         ;
-;             |abs_divider_4dg:divider|     ; 1536 (8)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
+;                |lpm_abs_9v9:my_abs_num|   ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
+;       |lpm_divide:Div1|                   ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1                                                                              ; work         ;
+;          |lpm_divide_jvo:auto_generated|  ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated                                                ; work         ;
+;             |abs_divider_nbg:divider|     ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ; work         ;
+;                |lpm_abs_9v9:my_abs_num|   ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
+;       |lpm_divide:Mod1|                   ; 1533 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1                                                                              ; work         ;
+;          |lpm_divide_3po:auto_generated|  ; 1533 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                ; work         ;
+;             |abs_divider_4dg:divider|     ; 1533 (8)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
 ;                |alt_u_div_t8f:divider|    ; 1510 (1510)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider  ; work         ;
-;                |lpm_abs_9v9:my_abs_num|   ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num ; work         ;
+;                |lpm_abs_9v9:my_abs_num|   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -310,7 +314,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                                                   ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |flappyBirdFinal|altpll0:inst1 ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |flappyBirdFinal|altpll0:inst1 ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------------------------+
 
 
@@ -352,38 +356,6 @@ Encoding Type:  One-Hot
 ; textToDisplay:inst3|font_col[1]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
 ; textToDisplay:inst3|font_col[0]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
 ; textToDisplay:inst3|font_col[2]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; collision:inst6|temp_lives[0]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[1]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[2]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[3]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[4]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[5]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[6]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[7]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[8]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[9]                       ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[10]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[11]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[12]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[13]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[14]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[15]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[16]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[17]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[18]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[19]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[20]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[21]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[22]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[23]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[24]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[25]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[26]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[27]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[28]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[29]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[30]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
-; collision:inst6|temp_lives[31]                      ; collision:inst6|temp_lives[31]           ; yes                    ;
 ; textToDisplay:inst3|font_row[0]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
 ; textToDisplay:inst3|font_row[1]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
 ; textToDisplay:inst3|font_row[2]                     ; textToDisplay:inst3|font_row[2]          ; yes                    ;
@@ -393,97 +365,27 @@ Encoding Type:  One-Hot
 ; textToDisplay:inst3|character_address[3]            ; textToDisplay:inst3|character_address[4] ; yes                    ;
 ; textToDisplay:inst3|character_address[4]            ; textToDisplay:inst3|character_address[4] ; yes                    ;
 ; textToDisplay:inst3|character_address[5]            ; textToDisplay:inst3|character_address[5] ; yes                    ;
-; textToDisplay:inst3|value[0]                        ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; textToDisplay:inst3|value[1]                        ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; textToDisplay:inst3|value[2]                        ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; textToDisplay:inst3|value[3]                        ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; textToDisplay:inst3|value[4]                        ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; textToDisplay:inst3|value[5]                        ; textToDisplay:inst3|font_row[2]          ; yes                    ;
-; collision:inst6|temp_score[0]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[31]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; textToDisplay:inst3|ones[0]                         ; textToDisplay:inst3|ones[0]              ; yes                    ;
-; collision:inst6|temp_score[25]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[24]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[23]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[22]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[21]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[20]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[19]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[18]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[17]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[16]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[15]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[14]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[13]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[12]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[11]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[10]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[9]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[8]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[7]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[27]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[26]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[28]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[29]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[30]                      ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[6]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[5]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[4]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[3]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[2]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; collision:inst6|temp_score[1]                       ; collision:inst6|temp_score[31]           ; yes                    ;
-; textToDisplay:inst3|tens[0]                         ; textToDisplay:inst3|tens[3]              ; yes                    ;
-; textToDisplay:inst3|ones[1]                         ; textToDisplay:inst3|ones[0]              ; yes                    ;
-; textToDisplay:inst3|tens[1]                         ; textToDisplay:inst3|tens[3]              ; yes                    ;
-; textToDisplay:inst3|ones[2]                         ; textToDisplay:inst3|ones[0]              ; yes                    ;
-; textToDisplay:inst3|tens[2]                         ; textToDisplay:inst3|tens[3]              ; yes                    ;
-; textToDisplay:inst3|ones[3]                         ; textToDisplay:inst3|ones[0]              ; yes                    ;
-; textToDisplay:inst3|tens[3]                         ; textToDisplay:inst3|tens[3]              ; yes                    ;
-; Number of user-specified and inferred latches = 90  ;                                          ;                        ;
+; textToDisplay:inst3|charvalue[0]                    ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|charvalue[1]                    ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|charvalue[2]                    ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|charvalue[3]                    ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|charvalue[4]                    ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|charvalue[5]                    ; textToDisplay:inst3|font_row[2]          ; yes                    ;
+; textToDisplay:inst3|ones[0]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|tens[0]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|hundereds[0]                    ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|ones[1]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|tens[1]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|hundereds[1]                    ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|ones[2]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|tens[2]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|hundereds[2]                    ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|ones[3]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|tens[3]                         ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; textToDisplay:inst3|hundereds[3]                    ; textToDisplay:inst3|hundereds[2]         ; yes                    ;
+; Number of user-specified and inferred latches = 30  ;                                          ;                        ;
 +-----------------------------------------------------+------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                ;
-+--------------------------------------------------------+----+
-; Logic Cell Name                                        ;    ;
-+--------------------------------------------------------+----+
-; collision:inst6|LessThan1~0                            ;    ;
-; collision:inst6|LessThan1~1                            ;    ;
-; collision:inst6|LessThan1~2                            ;    ;
-; collision:inst6|LessThan1~3                            ;    ;
-; collision:inst6|LessThan1~4                            ;    ;
-; collision:inst6|LessThan1~5                            ;    ;
-; collision:inst6|LessThan1~6                            ;    ;
-; collision:inst6|LessThan1~7                            ;    ;
-; collision:inst6|LessThan1~8                            ;    ;
-; collision:inst6|LessThan1~9                            ;    ;
-; collision:inst6|LessThan1~10                           ;    ;
-; collision:inst6|LessThan1~11                           ;    ;
-; collision:inst6|LessThan1~12                           ;    ;
-; collision:inst6|LessThan1~13                           ;    ;
-; collision:inst6|LessThan1~14                           ;    ;
-; collision:inst6|LessThan1~15                           ;    ;
-; collision:inst6|LessThan1~16                           ;    ;
-; collision:inst6|LessThan1~17                           ;    ;
-; collision:inst6|LessThan1~18                           ;    ;
-; collision:inst6|LessThan1~19                           ;    ;
-; collision:inst6|LessThan1~20                           ;    ;
-; collision:inst6|LessThan1~21                           ;    ;
-; collision:inst6|LessThan1~22                           ;    ;
-; collision:inst6|LessThan1~23                           ;    ;
-; collision:inst6|LessThan1~24                           ;    ;
-; collision:inst6|LessThan1~25                           ;    ;
-; collision:inst6|LessThan1~26                           ;    ;
-; collision:inst6|LessThan1~27                           ;    ;
-; collision:inst6|LessThan1~28                           ;    ;
-; collision:inst6|LessThan1~29                           ;    ;
-; collision:inst6|LessThan1~30                           ;    ;
-; collision:inst6|LessThan1~31                           ;    ;
-; Number of logic cells representing combinational loops ; 32 ;
-+--------------------------------------------------------+----+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +-----------------------------------------------------------------------------------------+
@@ -510,14 +412,14 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; randomNums:inst10|randVector[7]        ; Merged with randomNums:inst10|output[6]        ;
 ; randomNums:inst10|randVector[6]        ; Merged with randomNums:inst10|output[5]        ;
 ; randomNums:inst10|randVector[5]        ; Merged with randomNums:inst10|output[4]        ;
-; bouncy_ball:inst7|ball_y_pos[1]        ; Merged with bouncy_ball:inst7|ball_y_pos[0]    ;
+; bouncy_ball:inst7|ball_y_pos[0,1]      ; Merged with bouncy_ball:inst7|ball_y[1]        ;
+; bouncy_ball:inst7|ball_y[0]            ; Merged with bouncy_ball:inst7|ball_y[1]        ;
 ; bouncy_ball:inst7|ball_y_motion[4..9]  ; Merged with bouncy_ball:inst7|ball_y_motion[3] ;
 ; pipes:inst32|pipe_x_pos[0]             ; Stuck at GND due to stuck port data_in         ;
 ; pipes:inst32|pipe_x_pos[1]             ; Stuck at VCC due to stuck port data_in         ;
-; bouncy_ball:inst7|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in         ;
+; bouncy_ball:inst7|ball_y[1]            ; Stuck at GND due to stuck port data_in         ;
 ; pipes:inst32|pipe_x[1]                 ; Stuck at VCC due to stuck port data_in         ;
 ; pipes:inst32|pipe_x[0]                 ; Stuck at GND due to stuck port data_in         ;
-; bouncy_ball:inst7|ball_x[0]            ; Lost fanout                                    ;
 ; VGA_SYNC:inst8|pixel_row[9]            ; Stuck at GND due to stuck port data_in         ;
 ; pipes:inst32|pipe_x[10]                ; Stuck at GND due to stuck port data_in         ;
 ; fsm:inst24|state.S4                    ; Lost fanout                                    ;
@@ -525,20 +427,18 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Priority:inst5|tempBlueOut[1,3]        ; Merged with Priority:inst5|tempBlueOut[0]      ;
 ; Priority:inst5|tempGreenOut[0..3]      ; Merged with Priority:inst5|tempBlueOut[2]      ;
 ; Priority:inst5|tempRedOut[1]           ; Merged with Priority:inst5|tempRedOut[0]       ;
-; Total Number of Removed Registers = 55 ;                                                ;
+; Total Number of Removed Registers = 56 ;                                                ;
 +----------------------------------------+------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                            ;
-+----------------------------------+---------------------------+-------------------------------------------------------------------------+
-; Register name                    ; Reason for Removal        ; Registers Removed due to This Register                                  ;
-+----------------------------------+---------------------------+-------------------------------------------------------------------------+
-; pipes:inst32|pipe_x_pos[0]       ; Stuck at GND              ; pipes:inst32|pipe_x[1], pipes:inst32|pipe_x[0], pipes:inst32|pipe_x[10] ;
-;                                  ; due to stuck port data_in ;                                                                         ;
-; bouncy_ball:inst7|ball_x_pos[10] ; Stuck at GND              ; bouncy_ball:inst7|ball_x[10]                                            ;
-;                                  ; due to stuck port data_in ;                                                                         ;
-+----------------------------------+---------------------------+-------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                      ;
++----------------------------+---------------------------+-------------------------------------------------------------------------+
+; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                  ;
++----------------------------+---------------------------+-------------------------------------------------------------------------+
+; pipes:inst32|pipe_x_pos[0] ; Stuck at GND              ; pipes:inst32|pipe_x[1], pipes:inst32|pipe_x[0], pipes:inst32|pipe_x[10] ;
+;                            ; due to stuck port data_in ;                                                                         ;
++----------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -546,12 +446,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 224   ;
+; Total registers                              ; 361   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 144   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 117   ;
+; Number of registers using Clock Enable       ; 213   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -566,6 +466,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; randomNums:inst10|output[4]             ; 4       ;
 ; randomNums:inst10|randVector[1]         ; 4       ;
 ; MOUSE:inst2|send_char                   ; 3       ;
+; collision:inst6|temp_lives[0]           ; 6       ;
+; collision:inst6|temp_lives[1]           ; 6       ;
 ; randomNums:inst10|randVector[4]         ; 1       ;
 ; randomNums:inst10|randVector[3]         ; 2       ;
 ; randomNums:inst10|randVector[0]         ; 1       ;
@@ -574,7 +476,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; MOUSE:inst2|SHIFTOUT[6]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                 ; 1       ;
-; Total number of inverted registers = 13 ;         ;
+; Total number of inverted registers = 15 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -583,17 +485,19 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |flappyBirdFinal|pipes:inst32|pipe_x_pos[5]               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[6]                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[9]         ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |flappyBirdFinal|Priority:inst5|tempGreenOut[2]           ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[3]             ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[23]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[0]                ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |flappyBirdFinal|pipes:inst32|pipe_x_pos[10]              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[3]         ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |flappyBirdFinal|Priority:inst5|tempRedOut[1]             ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[5]             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[1]            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |flappyBirdFinal|Background:inst23|red_out[2]             ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |flappyBirdFinal|collision:inst6|temp_lives[11]           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|ones[3]              ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |flappyBirdFinal|collision:inst6|temp_score[5]            ;
-; 50:1               ; 6 bits    ; 198 LEs       ; 6 LEs                ; 192 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|character_address[1] ;
-; 62:1               ; 6 bits    ; 246 LEs       ; 6 LEs                ; 240 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|font_row[2]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|hundereds[3]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|tens[1]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|ones[2]              ;
+; 50:1               ; 6 bits    ; 198 LEs       ; 6 LEs                ; 192 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|character_address[4] ;
+; 61:1               ; 6 bits    ; 240 LEs       ; 6 LEs                ; 234 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|font_row[2]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -1110,6 +1014,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textToDisplay:inst3|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                    ;
+; LPM_WIDTHD             ; 8              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_jvo ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                          ;
 +-------------------------------+---------------------------------------+
@@ -1152,7 +1079,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -1162,38 +1089,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 28 21:21:02 2022
+    Info: Processing started: Sat May 28 23:43:27 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/collision.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/collision.vhd
     Info (12022): Found design unit 1: collision-behavior
     Info (12023): Found entity 1: collision
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
     Info (12022): Found design unit 1: fsm-Mealy
     Info (12023): Found entity 1: fsm
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
     Info (12022): Found design unit 1: textToDisplay-a
     Info (12023): Found entity 1: textToDisplay
 Info (12021): Found 1 design units, including 1 entities, in source file mouseinterface.bdf
     Info (12023): Found entity 1: mouseInterface
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior
     Info (12023): Found entity 1: MOUSE
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
     Info (12022): Found design unit 1: char_rom-SYN
     Info (12023): Found entity 1: char_rom
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
     Info (12022): Found design unit 1: bouncy_ball-behavior
     Info (12023): Found entity 1: bouncy_ball
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior
     Info (12023): Found entity 1: ball
 Info (12021): Found 1 design units, including 1 entities, in source file textdisplay.bdf
     Info (12023): Found entity 1: TextDisplay
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-arc2
     Info (12023): Found entity 1: seven_seg
 Info (12021): Found 1 design units, including 1 entities, in source file movingball.bdf
@@ -1205,26 +1132,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file altpll0
     Info (12023): Found entity 1: altpll0
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/ballwmouse.bdf
     Info (12023): Found entity 1: ballWMouse
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
     Info (12022): Found design unit 1: Priority-a
     Info (12023): Found entity 1: Priority
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
     Info (12022): Found design unit 1: Background-a
     Info (12023): Found entity 1: Background
 Info (12021): Found 1 design units, including 1 entities, in source file fsmandbackground.bdf
     Info (12023): Found entity 1: FSMandBackground
 Info (12021): Found 1 design units, including 1 entities, in source file flappybirdfinal.bdf
     Info (12023): Found entity 1: flappyBirdFinal
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/pipes.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/pipes.vhd
     Info (12022): Found design unit 1: pipes-behavior
     Info (12023): Found entity 1: pipes
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/randomnums.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/randomnums.vhd
     Info (12022): Found design unit 1: randomNums-behaviour
     Info (12023): Found entity 1: randomNums
-Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/powerup.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/powerup.vhd
     Info (12022): Found design unit 1: powerup-behavior
     Info (12023): Found entity 1: powerup
 Info (12127): Elaborating entity "flappyBirdFinal" for the top level hierarchy
+Warning (275011): Block or symbol "GND" of instance "inst13" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst8"
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst1"
 Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst1|altpll:altpll_component"
@@ -1301,91 +1229,8 @@ Warning (10492): VHDL Process Statement warning at statemachinet.vhd(73): signal
 Warning (10492): VHDL Process Statement warning at statemachinet.vhd(82): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at statemachinet.vhd(89): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "collision" for hierarchy "collision:inst6"
-Warning (10492): VHDL Process Statement warning at collision.vhd(28): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(31): signal "temp_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(32): signal "temp_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(35): signal "temp_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(39): signal "ballOn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(39): signal "Pipe1On" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(39): signal "Pipe2On" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(41): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(42): signal "temp_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(47): signal "ball_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(47): signal "pipe1_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(47): signal "ballOn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(47): signal "Pipe1On" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(48): signal "temp_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(52): signal "temp_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(53): signal "temp_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(54): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at collision.vhd(26): inferring latch(es) for signal or variable "temp_lives", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at collision.vhd(26): inferring latch(es) for signal or variable "temp_score", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "temp_score[0]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[1]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[2]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[3]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[4]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[5]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[6]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[7]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[8]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[9]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[10]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[11]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[12]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[13]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[14]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[15]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[16]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[17]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[18]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[19]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[20]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[21]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[22]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[23]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[24]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[25]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[26]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[27]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[28]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[29]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[30]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_score[31]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[0]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[1]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[2]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[3]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[4]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[5]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[6]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[7]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[8]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[9]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[10]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[11]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[12]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[13]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[14]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[15]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[16]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[17]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[18]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[19]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[20]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[21]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[22]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[23]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[24]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[25]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[26]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[27]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[28]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[29]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[30]" at collision.vhd(26)
-Info (10041): Inferred latch for "temp_lives[31]" at collision.vhd(26)
 Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst32"
-Warning (10540): VHDL Signal Declaration warning at pipes.vhd(28): used explicit default value for signal "gap" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at pipes.vhd(29): used explicit default value for signal "gap" because signal was never assigned a value
 Info (12128): Elaborating entity "randomNums" for hierarchy "randomNums:inst10"
 Info (12128): Elaborating entity "Background" for hierarchy "Background:inst23"
 Warning (10631): VHDL Process Statement warning at background.vhd(17): inferring latch(es) for signal or variable "red_out", which holds its previous value in one or more paths through the process
@@ -1411,76 +1256,43 @@ Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(39): used 
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(41): used explicit default value for signal "sig_scoreT" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(44): used explicit default value for signal "sigNumScore" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at textToDisplay.vhd(48): used explicit default value for signal "siggameOver" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at textToDisplay.vhd(50): object "hundredsOn" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at textToDisplay.vhd(58): object "hundereds" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(70): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(84): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(95): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(111): signal "sig_lifeT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(113): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(109): signal "sigNumScore" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(109): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(122): signal "sig_scoreT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(123): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(145): signal "sig_lifeT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(147): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(143): signal "sigNumScore" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(143): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(154): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(156): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(157): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(159): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(160): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(161): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(163): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(164): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(165): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(172): signal "onesOn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(175): signal "tensOn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(177): signal "tensOn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(181): signal "sig_scoreT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(183): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(176): signal "sigNumScore" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(173): signal "sigNumScore" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(178): signal "sigNumScore" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(195): signal "siggameOver" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at textToDisplay.vhd(196): signal "value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "value", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "onesOn", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "ones", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "tensOn", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(57): inferring latch(es) for signal or variable "tens", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "tensOn" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "onesOn" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "font_col[0]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "font_col[1]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "font_col[2]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "font_row[0]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "font_row[1]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "font_row[2]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "character_address[0]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "character_address[1]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "character_address[2]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "character_address[3]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "character_address[4]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "character_address[5]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "value[0]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "value[1]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "value[2]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "value[3]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "value[4]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "value[5]" at textToDisplay.vhd(57)
-Info (10041): Inferred latch for "tens[0]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "tens[1]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "tens[2]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "tens[3]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "ones[0]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "ones[1]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "ones[2]" at textToDisplay.vhd(64)
-Info (10041): Inferred latch for "ones[3]" at textToDisplay.vhd(64)
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "charvalue", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "ones", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "tens", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at textToDisplay.vhd(56): inferring latch(es) for signal or variable "hundereds", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "font_col[0]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "font_col[1]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "font_col[2]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "font_row[0]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "font_row[1]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "font_row[2]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "character_address[0]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "character_address[1]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "character_address[2]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "character_address[3]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "character_address[4]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "character_address[5]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "charvalue[0]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "charvalue[1]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "charvalue[2]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "charvalue[3]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "charvalue[4]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "charvalue[5]" at textToDisplay.vhd(56)
+Info (10041): Inferred latch for "hundereds[0]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "hundereds[1]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "hundereds[2]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "hundereds[3]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "tens[0]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "tens[1]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "tens[2]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "tens[3]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "ones[0]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "ones[1]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "ones[2]" at textToDisplay.vhd(63)
+Info (10041): Inferred latch for "ones[3]" at textToDisplay.vhd(63)
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "char_rom:inst|altsyncram:altsyncram_component"
@@ -1502,10 +1314,11 @@ Info (12133): Instantiated megafunction "char_rom:inst|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
     Info (12023): Found entity 1: altsyncram_kt91
 Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
-Info (278001): Inferred 3 megafunctions from design logic
+Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textToDisplay:inst3|Mod1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textToDisplay:inst3|Mod0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textToDisplay:inst3|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textToDisplay:inst3|Div1"
 Info (12130): Elaborated megafunction instantiation "textToDisplay:inst3|lpm_divide:Mod1"
 Info (12133): Instantiated megafunction "textToDisplay:inst3|lpm_divide:Mod1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -1547,78 +1360,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_t5f
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_pt9.tdf
     Info (12023): Found entity 1: lpm_abs_pt9
-Info (13014): Ignored 93 buffer(s)
-    Info (13016): Ignored 93 CARRY_SUM buffer(s)
+Info (12130): Elaborated megafunction instantiation "textToDisplay:inst3|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "textToDisplay:inst3|lpm_divide:Div1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jvo.tdf
+    Info (12023): Found entity 1: lpm_divide_jvo
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
+    Info (12023): Found entity 1: abs_divider_nbg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_36f.tdf
+    Info (12023): Found entity 1: alt_u_div_36f
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_st9.tdf
+    Info (12023): Found entity 1: lpm_abs_st9
+Info (13014): Ignored 124 buffer(s)
+    Info (13016): Ignored 124 CARRY_SUM buffer(s)
 Warning (13012): Latch textToDisplay:inst3|font_col[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[2]
 Warning (13012): Latch textToDisplay:inst3|font_col[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[1]
 Warning (13012): Latch textToDisplay:inst3|font_col[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
-Warning (13012): Latch collision:inst6|temp_lives[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
-Warning (13012): Latch collision:inst6|temp_lives[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|LessThan1~0
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[3]
 Warning (13012): Latch textToDisplay:inst3|font_row[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_row[1]
 Warning (13012): Latch textToDisplay:inst3|font_row[1] has unsafe behavior
@@ -1637,115 +1401,129 @@ Warning (13012): Latch textToDisplay:inst3|character_address[4] has unsafe behav
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
 Warning (13012): Latch textToDisplay:inst3|character_address[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
-Warning (13012): Latch textToDisplay:inst3|value[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
-Warning (13012): Latch textToDisplay:inst3|value[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
-Warning (13012): Latch textToDisplay:inst3|value[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
-Warning (13012): Latch textToDisplay:inst3|value[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S1
-Warning (13012): Latch textToDisplay:inst3|value[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S2
-Warning (13012): Latch textToDisplay:inst3|value[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst24|state.S2
-Warning (13012): Latch collision:inst6|temp_score[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
+Warning (13012): Latch textToDisplay:inst3|charvalue[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|charvalue[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[5]
+Warning (13012): Latch textToDisplay:inst3|charvalue[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|charvalue[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[9]
+Warning (13012): Latch textToDisplay:inst3|charvalue[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[5]
+Warning (13012): Latch textToDisplay:inst3|charvalue[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst8|pixel_column[5]
 Warning (13012): Latch textToDisplay:inst3|ones[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[31]
-Warning (13012): Latch collision:inst6|temp_score[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
-Warning (13012): Latch collision:inst6|temp_score[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_lives[31]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Warning (13012): Latch textToDisplay:inst3|tens[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[31]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
+Warning (13012): Latch textToDisplay:inst3|hundereds[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Warning (13012): Latch textToDisplay:inst3|ones[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Warning (13012): Latch textToDisplay:inst3|tens[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[31]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
+Warning (13012): Latch textToDisplay:inst3|hundereds[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Warning (13012): Latch textToDisplay:inst3|ones[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[2]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[2]
 Warning (13012): Latch textToDisplay:inst3|tens[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[31]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
+Warning (13012): Latch textToDisplay:inst3|hundereds[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Warning (13012): Latch textToDisplay:inst3|ones[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[3]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[3]
 Warning (13012): Latch textToDisplay:inst3|tens[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|temp_score[31]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
+Warning (13012): Latch textToDisplay:inst3|hundereds[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "collision:inst6|lives[0]" is converted into an equivalent circuit using register "collision:inst6|lives[0]~_emulated" and latch "collision:inst6|lives[0]~1"
+    Warning (13310): Register "collision:inst6|lives[1]" is converted into an equivalent circuit using register "collision:inst6|lives[1]~_emulated" and latch "collision:inst6|lives[1]~5"
+    Warning (13310): Register "collision:inst6|lives[2]" is converted into an equivalent circuit using register "collision:inst6|lives[2]~_emulated" and latch "collision:inst6|lives[2]~9"
+    Warning (13310): Register "collision:inst6|lives[3]" is converted into an equivalent circuit using register "collision:inst6|lives[3]~_emulated" and latch "collision:inst6|lives[3]~13"
+    Warning (13310): Register "collision:inst6|lives[4]" is converted into an equivalent circuit using register "collision:inst6|lives[4]~_emulated" and latch "collision:inst6|lives[4]~17"
+    Warning (13310): Register "collision:inst6|lives[5]" is converted into an equivalent circuit using register "collision:inst6|lives[5]~_emulated" and latch "collision:inst6|lives[5]~21"
+    Warning (13310): Register "collision:inst6|lives[6]" is converted into an equivalent circuit using register "collision:inst6|lives[6]~_emulated" and latch "collision:inst6|lives[6]~25"
+    Warning (13310): Register "collision:inst6|lives[7]" is converted into an equivalent circuit using register "collision:inst6|lives[7]~_emulated" and latch "collision:inst6|lives[7]~29"
+    Warning (13310): Register "collision:inst6|lives[8]" is converted into an equivalent circuit using register "collision:inst6|lives[8]~_emulated" and latch "collision:inst6|lives[8]~33"
+    Warning (13310): Register "collision:inst6|lives[9]" is converted into an equivalent circuit using register "collision:inst6|lives[9]~_emulated" and latch "collision:inst6|lives[9]~37"
+    Warning (13310): Register "collision:inst6|lives[10]" is converted into an equivalent circuit using register "collision:inst6|lives[10]~_emulated" and latch "collision:inst6|lives[10]~41"
+    Warning (13310): Register "collision:inst6|lives[11]" is converted into an equivalent circuit using register "collision:inst6|lives[11]~_emulated" and latch "collision:inst6|lives[11]~45"
+    Warning (13310): Register "collision:inst6|lives[12]" is converted into an equivalent circuit using register "collision:inst6|lives[12]~_emulated" and latch "collision:inst6|lives[12]~49"
+    Warning (13310): Register "collision:inst6|lives[13]" is converted into an equivalent circuit using register "collision:inst6|lives[13]~_emulated" and latch "collision:inst6|lives[13]~53"
+    Warning (13310): Register "collision:inst6|lives[14]" is converted into an equivalent circuit using register "collision:inst6|lives[14]~_emulated" and latch "collision:inst6|lives[14]~57"
+    Warning (13310): Register "collision:inst6|lives[15]" is converted into an equivalent circuit using register "collision:inst6|lives[15]~_emulated" and latch "collision:inst6|lives[15]~61"
+    Warning (13310): Register "collision:inst6|lives[16]" is converted into an equivalent circuit using register "collision:inst6|lives[16]~_emulated" and latch "collision:inst6|lives[16]~65"
+    Warning (13310): Register "collision:inst6|lives[17]" is converted into an equivalent circuit using register "collision:inst6|lives[17]~_emulated" and latch "collision:inst6|lives[17]~69"
+    Warning (13310): Register "collision:inst6|lives[18]" is converted into an equivalent circuit using register "collision:inst6|lives[18]~_emulated" and latch "collision:inst6|lives[18]~73"
+    Warning (13310): Register "collision:inst6|lives[19]" is converted into an equivalent circuit using register "collision:inst6|lives[19]~_emulated" and latch "collision:inst6|lives[19]~77"
+    Warning (13310): Register "collision:inst6|lives[20]" is converted into an equivalent circuit using register "collision:inst6|lives[20]~_emulated" and latch "collision:inst6|lives[20]~81"
+    Warning (13310): Register "collision:inst6|lives[21]" is converted into an equivalent circuit using register "collision:inst6|lives[21]~_emulated" and latch "collision:inst6|lives[21]~85"
+    Warning (13310): Register "collision:inst6|lives[22]" is converted into an equivalent circuit using register "collision:inst6|lives[22]~_emulated" and latch "collision:inst6|lives[22]~89"
+    Warning (13310): Register "collision:inst6|lives[23]" is converted into an equivalent circuit using register "collision:inst6|lives[23]~_emulated" and latch "collision:inst6|lives[23]~93"
+    Warning (13310): Register "collision:inst6|lives[24]" is converted into an equivalent circuit using register "collision:inst6|lives[24]~_emulated" and latch "collision:inst6|lives[24]~97"
+    Warning (13310): Register "collision:inst6|lives[25]" is converted into an equivalent circuit using register "collision:inst6|lives[25]~_emulated" and latch "collision:inst6|lives[25]~101"
+    Warning (13310): Register "collision:inst6|lives[26]" is converted into an equivalent circuit using register "collision:inst6|lives[26]~_emulated" and latch "collision:inst6|lives[26]~105"
+    Warning (13310): Register "collision:inst6|lives[27]" is converted into an equivalent circuit using register "collision:inst6|lives[27]~_emulated" and latch "collision:inst6|lives[27]~109"
+    Warning (13310): Register "collision:inst6|lives[28]" is converted into an equivalent circuit using register "collision:inst6|lives[28]~_emulated" and latch "collision:inst6|lives[28]~113"
+    Warning (13310): Register "collision:inst6|lives[29]" is converted into an equivalent circuit using register "collision:inst6|lives[29]~_emulated" and latch "collision:inst6|lives[29]~117"
+    Warning (13310): Register "collision:inst6|lives[30]" is converted into an equivalent circuit using register "collision:inst6|lives[30]~_emulated" and latch "collision:inst6|lives[30]~121"
+    Warning (13310): Register "collision:inst6|lives[31]" is converted into an equivalent circuit using register "collision:inst6|lives[31]~_emulated" and latch "collision:inst6|lives[31]~125"
+    Warning (13310): Register "collision:inst6|score[0]" is converted into an equivalent circuit using register "collision:inst6|score[0]~_emulated" and latch "collision:inst6|score[0]~1"
+    Warning (13310): Register "collision:inst6|score[31]" is converted into an equivalent circuit using register "collision:inst6|score[31]~_emulated" and latch "collision:inst6|score[31]~5"
+    Warning (13310): Register "collision:inst6|score[8]" is converted into an equivalent circuit using register "collision:inst6|score[8]~_emulated" and latch "collision:inst6|score[8]~9"
+    Warning (13310): Register "collision:inst6|score[7]" is converted into an equivalent circuit using register "collision:inst6|score[7]~_emulated" and latch "collision:inst6|score[7]~13"
+    Warning (13310): Register "collision:inst6|score[9]" is converted into an equivalent circuit using register "collision:inst6|score[9]~_emulated" and latch "collision:inst6|score[9]~17"
+    Warning (13310): Register "collision:inst6|score[10]" is converted into an equivalent circuit using register "collision:inst6|score[10]~_emulated" and latch "collision:inst6|score[10]~21"
+    Warning (13310): Register "collision:inst6|score[11]" is converted into an equivalent circuit using register "collision:inst6|score[11]~_emulated" and latch "collision:inst6|score[11]~25"
+    Warning (13310): Register "collision:inst6|score[12]" is converted into an equivalent circuit using register "collision:inst6|score[12]~_emulated" and latch "collision:inst6|score[12]~29"
+    Warning (13310): Register "collision:inst6|score[13]" is converted into an equivalent circuit using register "collision:inst6|score[13]~_emulated" and latch "collision:inst6|score[13]~33"
+    Warning (13310): Register "collision:inst6|score[14]" is converted into an equivalent circuit using register "collision:inst6|score[14]~_emulated" and latch "collision:inst6|score[14]~37"
+    Warning (13310): Register "collision:inst6|score[15]" is converted into an equivalent circuit using register "collision:inst6|score[15]~_emulated" and latch "collision:inst6|score[15]~41"
+    Warning (13310): Register "collision:inst6|score[16]" is converted into an equivalent circuit using register "collision:inst6|score[16]~_emulated" and latch "collision:inst6|score[16]~45"
+    Warning (13310): Register "collision:inst6|score[17]" is converted into an equivalent circuit using register "collision:inst6|score[17]~_emulated" and latch "collision:inst6|score[17]~49"
+    Warning (13310): Register "collision:inst6|score[18]" is converted into an equivalent circuit using register "collision:inst6|score[18]~_emulated" and latch "collision:inst6|score[18]~53"
+    Warning (13310): Register "collision:inst6|score[19]" is converted into an equivalent circuit using register "collision:inst6|score[19]~_emulated" and latch "collision:inst6|score[19]~57"
+    Warning (13310): Register "collision:inst6|score[20]" is converted into an equivalent circuit using register "collision:inst6|score[20]~_emulated" and latch "collision:inst6|score[20]~61"
+    Warning (13310): Register "collision:inst6|score[21]" is converted into an equivalent circuit using register "collision:inst6|score[21]~_emulated" and latch "collision:inst6|score[21]~65"
+    Warning (13310): Register "collision:inst6|score[22]" is converted into an equivalent circuit using register "collision:inst6|score[22]~_emulated" and latch "collision:inst6|score[22]~69"
+    Warning (13310): Register "collision:inst6|score[23]" is converted into an equivalent circuit using register "collision:inst6|score[23]~_emulated" and latch "collision:inst6|score[23]~73"
+    Warning (13310): Register "collision:inst6|score[24]" is converted into an equivalent circuit using register "collision:inst6|score[24]~_emulated" and latch "collision:inst6|score[24]~77"
+    Warning (13310): Register "collision:inst6|score[25]" is converted into an equivalent circuit using register "collision:inst6|score[25]~_emulated" and latch "collision:inst6|score[25]~81"
+    Warning (13310): Register "collision:inst6|score[26]" is converted into an equivalent circuit using register "collision:inst6|score[26]~_emulated" and latch "collision:inst6|score[26]~85"
+    Warning (13310): Register "collision:inst6|score[27]" is converted into an equivalent circuit using register "collision:inst6|score[27]~_emulated" and latch "collision:inst6|score[27]~89"
+    Warning (13310): Register "collision:inst6|score[28]" is converted into an equivalent circuit using register "collision:inst6|score[28]~_emulated" and latch "collision:inst6|score[28]~93"
+    Warning (13310): Register "collision:inst6|score[29]" is converted into an equivalent circuit using register "collision:inst6|score[29]~_emulated" and latch "collision:inst6|score[29]~97"
+    Warning (13310): Register "collision:inst6|score[30]" is converted into an equivalent circuit using register "collision:inst6|score[30]~_emulated" and latch "collision:inst6|score[30]~101"
+    Warning (13310): Register "collision:inst6|score[6]" is converted into an equivalent circuit using register "collision:inst6|score[6]~_emulated" and latch "collision:inst6|score[6]~105"
+    Warning (13310): Register "collision:inst6|score[5]" is converted into an equivalent circuit using register "collision:inst6|score[5]~_emulated" and latch "collision:inst6|score[5]~109"
+    Warning (13310): Register "collision:inst6|score[4]" is converted into an equivalent circuit using register "collision:inst6|score[4]~_emulated" and latch "collision:inst6|score[4]~113"
+    Warning (13310): Register "collision:inst6|score[3]" is converted into an equivalent circuit using register "collision:inst6|score[3]~_emulated" and latch "collision:inst6|score[3]~117"
+    Warning (13310): Register "collision:inst6|score[2]" is converted into an equivalent circuit using register "collision:inst6|score[2]~_emulated" and latch "collision:inst6|score[2]~121"
+    Warning (13310): Register "collision:inst6|score[1]" is converted into an equivalent circuit using register "collision:inst6|score[1]~_emulated" and latch "collision:inst6|score[1]~125"
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register collision:inst6|temp_lives[1] will power up to High
+    Critical Warning (18010): Register collision:inst6|temp_lives[31] will power up to Low
+    Critical Warning (18010): Register collision:inst6|temp_score[31] will power up to Low
+    Critical Warning (18010): Register collision:inst6|temp_score[0] will power up to Low
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3250 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3281 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 3221 logic cells
+    Info (21061): Implemented 3252 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 261 warnings
-    Info: Peak virtual memory: 4691 megabytes
-    Info: Processing ended: Sat May 28 21:21:15 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 158 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Sat May 28 23:43:39 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 
