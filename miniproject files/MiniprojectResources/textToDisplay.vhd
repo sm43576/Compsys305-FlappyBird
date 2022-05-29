@@ -46,6 +46,7 @@ architecture a OF textToDisplay IS
 	
 	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(5 downto 0);
 	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
+	signal tempLives: integer :=6;
 	
 	
 	
@@ -53,7 +54,7 @@ architecture a OF textToDisplay IS
 	
 	
 begin
-process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT)
+process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, tempLives, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT)
 variable tens, ones, hundereds: integer := 0;
 begin
 
@@ -62,6 +63,27 @@ begin
 		p_row <= conv_integer(pix_row);
 		p_col <= conv_integer(pix_col);
 		textOn <= '0';
+		
+		if (score < 10) then
+					ones := score;
+					tens:= 0;
+					hundereds := 0;
+		elsif(score > 9) then
+					ones := score mod 10;
+					tens := score/10;
+					hundereds := 0;
+		elsif(score >99) then
+					ones := score mod 100;
+					tens := score mod 10;
+					hundereds := score/100;
+		end if;
+		
+		if(lives < tempLives)then
+			tempLives<=lives;
+		end if;
+		
+		 
+		
 		------------------------------------------------ Flappy Bird Title
 		if(mode = "000") then
 		
@@ -108,7 +130,7 @@ begin
 					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 						textOn <= '1';
 						if(i = 6) then
-							charvalue <= sigNumScore(lives);
+							charvalue <= sigNumScore(tempLives);
 						else
 							charvalue <= sig_lifeT(i);
 						end if;
@@ -119,19 +141,6 @@ begin
 				end loop;
 					
 				--------------------------------- Check score
-				if (score < 10) then
-					ones := score;
-					tens:= 0;
-					hundereds := 0;
-				elsif(score > 9) then
-					ones := score mod 10;
-					tens := score/10;
-					hundereds := 0;
-				elsif(score >99) then
-					ones := score mod 100;
-					tens := score mod 10;
-					hundereds := score/100;
-				end if;	
 					
 				for i in 0 to 8 loop
 					if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
@@ -170,7 +179,7 @@ begin
 					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 						textOn <= '1';
 						if(i = 6) then
-							charvalue <= sigNumScore(lives);
+							charvalue <= sigNumScore(tempLives);
 						else
 							charvalue <= sig_lifeT(i);
 						end if;
@@ -181,19 +190,7 @@ begin
 					end loop;
 					
 					--------------------------------- Check score
-					if (score < 10) then
-						ones := score;
-						tens:= 0;
-						hundereds := 0;
-					elsif(score > 9) then
-						ones := score mod 10;
-						tens := score/10;
-						hundereds := 0;
-					elsif(score >99) then
-						ones := score mod 100;
-						tens := score mod 10;
-						hundereds := score/100;
-					end if;
+				
 					
 					for i in 0 to 8 loop
 		
