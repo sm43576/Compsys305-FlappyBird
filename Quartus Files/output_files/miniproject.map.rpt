@@ -1,6 +1,10 @@
 Analysis & Synthesis report for miniproject
 <<<<<<< HEAD
+<<<<<<< HEAD
 Sun May 29 19:17:09 2022
+=======
+Sun May 29 18:07:11 2022
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 =======
 Sun May 29 18:07:11 2022
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
@@ -41,7 +45,11 @@ applicable agreement for further details.
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Sun May 29 19:17:09 2022           ;
+=======
+; Analysis & Synthesis Status        ; Failed - Sun May 29 18:07:11 2022               ;
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 =======
 ; Analysis & Synthesis Status        ; Failed - Sun May 29 18:07:11 2022               ;
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
@@ -49,6 +57,7 @@ applicable agreement for further details.
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; flappyBirdFinal                                 ;
 ; Family                             ; Cyclone III                                     ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ; Total logic elements               ; 4,859                                           ;
 ;     Total combinational functions  ; 4,739                                           ;
@@ -60,6 +69,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 1                                               ;
 =======
+=======
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 ; Total logic elements               ; N/A until Partition Merge                       ;
 ;     Total combinational functions  ; N/A until Partition Merge                       ;
 ;     Dedicated logic registers      ; N/A until Partition Merge                       ;
@@ -69,6 +80,9 @@ applicable agreement for further details.
 ; Total memory bits                  ; N/A until Partition Merge                       ;
 ; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
 ; Total PLLs                         ; N/A until Partition Merge                       ;
+<<<<<<< HEAD
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
+=======
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 +------------------------------------+-------------------------------------------------+
 
@@ -171,6 +185,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                                                                                              ;
@@ -1067,6 +1082,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 =======
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
+=======
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
@@ -1074,7 +1091,11 @@ Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 <<<<<<< HEAD
+<<<<<<< HEAD
     Info: Processing started: Sun May 29 19:16:59 2022
+=======
+    Info: Processing started: Sun May 29 18:07:10 2022
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 =======
     Info: Processing started: Sun May 29 18:07:10 2022
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
@@ -1087,9 +1108,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: fsm-Mealy
     Info (12023): Found entity 1: fsm
 <<<<<<< HEAD
+<<<<<<< HEAD
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
     Info (12022): Found design unit 1: textToDisplay-a
     Info (12023): Found entity 1: textToDisplay
+=======
+Error (10500): VHDL syntax error at textToDisplay.vhd(82) near text "tempLives";  expecting "then" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd Line: 82
+Error (10500): VHDL syntax error at textToDisplay.vhd(232) near text "if";  expecting "process" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd Line: 232
+Info (12021): Found 0 design units, including 0 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 =======
 Error (10500): VHDL syntax error at textToDisplay.vhd(82) near text "tempLives";  expecting "then" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd Line: 82
 Error (10500): VHDL syntax error at textToDisplay.vhd(232) near text "if";  expecting "process" File: C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd Line: 232
@@ -1145,6 +1172,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/powerup.vhd
     Info (12022): Found design unit 1: powerup-behavior
     Info (12023): Found entity 1: powerup
+<<<<<<< HEAD
 <<<<<<< HEAD
 Info (12127): Elaborating entity "flappyBirdFinal" for the top level hierarchy
 Warning (275011): Block or symbol "GND" of instance "inst13" overlaps another block or symbol
@@ -1428,11 +1456,16 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 95 warnin
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:10
 =======
+=======
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4611 megabytes
     Error: Processing ended: Sun May 29 18:07:11 2022
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
+<<<<<<< HEAD
+>>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
+=======
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 
 
