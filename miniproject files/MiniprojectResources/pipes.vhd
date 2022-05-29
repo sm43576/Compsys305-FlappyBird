@@ -77,7 +77,7 @@ begin
 			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(638,11);	
 		
 		elsif (pipe_x_pos > CONV_STD_LOGIC_VECTOR(0,11)and pipe_x_pos < CONV_STD_LOGIC_VECTOR(639,11))  then
-			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(12,11); -- move left to right
+			pipe_x_motion <= -CONV_STD_LOGIC_VECTOR(6,11); -- move left to right
 			pipe_x_pos <= pipe_x_pos + pipe_x_motion;
 			pipe_x  <= pipe_x_pos;
 		

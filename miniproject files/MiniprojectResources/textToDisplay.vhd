@@ -53,7 +53,7 @@ architecture a OF textToDisplay IS
 	
 	
 begin
-process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, lives, sig_scoreT)
+process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT)
 variable tens, ones, hundereds: integer := 0;
 begin
 	p_row <= conv_integer(pix_row);

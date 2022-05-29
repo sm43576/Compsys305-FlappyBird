@@ -12,11 +12,11 @@ ENTITY collision IS
 			 pipetop_y, pipebtm_y, ball_y : IN std_logic_vector(9 downto 0);
 			 pUp_x, pUp_y: IN std_logic_vector(9 downto 0);
 			 mode : IN std_logic_vector(2 downto 0);
-		  lives, score			: OUT Integer);		
+		    lives, score			: OUT Integer);		
 END collision;
 
 architecture behavior of collision is
-signal temp_lives	: integer ;
+signal temp_lives	: integer:=3 ;
 signal temp_score: integer;
 signal counter:integer:=0;
 signal isCollisionPipe: std_logic;
@@ -26,16 +26,18 @@ signal pipeBtmMax_y : std_logic_vector(9 downto 0);
 
 BEGIN
 	pipeTopMin_y <="0000000000"; -- 0
-	pipeBtmMax_y <="0111011111"; -- 0
+	pipeBtmMax_y <="0111011111"; -- 479
 	
-	isCollisionPipe <= '1' when ((ballOn = '1' and pipe1On = '1') and (ball_x = pipe1_x) and((ball_y >= pipeTopMin_y  and ball_y <= pipetop_y) -- ball is colliding with top pipe (0<=ball_y<=pipetop_y) 
-										or (ball_y >= pipebtm_y and ball_y<= pipeBtmMax_y))) else '0';			--- ball colliding with bottom pipe (pipebtm_y<= ball_y< 479)
-	
-checkCollison: process(vert_sync, clk, mode,temp_lives,temp_score)
+	isCollisionPipe <= '1' when ((ball_x = pipe1_x) and((ball_y >= pipeTopMin_y  and ball_y <= pipetop_y) -- ball is colliding with top pipe (0<=ball_y<=pipetop_y) 
+										or (ball_y >= pipebtm_y and ball_y<= pipeBtmMax_y))) else 	--- ball colliding with bottom pipe (pipebtm_y<= ball_y< 479)
+										'0' when ((ball_x >= pipe1_x) and (ball_y >pipetop_y) and (ball_y< pipebtm_y)); -- ball is between gap 
+	---isCollisionPipe <= '1' when (ballOn = '1' and pipe1On = '1') else '0';
+checkCollison: process(vert_sync, clk, mode)
 
 BEGIN
 	if(mode = "000") then
-		temp_lives <= 3;
+		temp_lives <= 2;
+		counter <= 0;
 		temp_score <= 0;
 		lives <= temp_lives;
 		score <= temp_score;
@@ -46,15 +48,19 @@ BEGIN
 			temp_lives<=0;
 		
 		--Checks if ball has been hit
-		elsif(isCollisionPipe = '1') then
+		elsif((isCollisionPipe = '1') and counter > 60000000) then
 			temp_lives<=temp_lives-1;
+			counter<=0;
 		
-		else -- if ball is between the gap
+		elsif(counter>60000000) then
+ -- if ball is between the gap
 			temp_score<=temp_score+1;
+			counter<=0;
 		end if;
 		-- Update lives and score outputs
 		lives <= temp_lives;
 		score <= temp_score;
+		counter <= counter+1;
 	end if;
 	
 end process checkCollison;
