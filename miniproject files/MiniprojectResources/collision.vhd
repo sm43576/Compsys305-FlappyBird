@@ -44,15 +44,18 @@ BEGIN
 	elsif(rising_edge(clk) and vert_sync = '1' and (mode = "001" or mode = "010")) then
 		
 		--Checks if ball has been hit
-		if((ballOn = '1' and Pipe1on = '1') and counter > 250000000) then
-			temp_lives<=temp_lives-1;
-			counter<=0;
-			
-		elsif (temp_lives <1)then
+		if (temp_lives <1)then
 			temp_lives<=0;
 		
 		
-		elsif(counter>250000000) then --betrween 250 - 800 million
+		elsif((ballOn = '1' and Pipe1on = '1') and counter > 100000000) then
+			temp_lives<=temp_lives-1;
+			counter<=0;
+			
+		
+		
+		
+		elsif(counter>100000000) then --betrween 250 - 800 million
  -- if ball is between the gap
 			temp_score<=temp_score+1;
 			counter<=0;
