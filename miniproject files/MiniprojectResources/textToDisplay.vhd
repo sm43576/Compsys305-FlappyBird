@@ -46,7 +46,7 @@ architecture a OF textToDisplay IS
 	
 	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(5 downto 0);
 	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
-	signal tempLives: integer :=6;
+	
 	
 	
 	
@@ -54,7 +54,7 @@ architecture a OF textToDisplay IS
 	
 	
 begin
-process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, tempLives, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT)
+process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT,lives)
 variable tens, ones, hundereds: integer := 0;
 begin
 
@@ -77,14 +77,6 @@ begin
 					tens := score mod 10;
 					hundereds := score/100;
 		end if;
-<<<<<<< HEAD
-=======
-		
-		if(lives < tempLives)then
-			tempLives<=lives;
-		end if;
-		
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 		 
 		
 		------------------------------------------------ Flappy Bird Title
@@ -129,21 +121,16 @@ begin
 		--------------------------------------------------------------TrainingMode (639x479)
 		elsif (mode = "001") then 
 		
-				for i in 0 to 6 loop
+				for i in 0 to 5 loop
 					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 						textOn <= '1';
-						if(i = 6) then
-							charvalue <= sigNumScore(tempLives);
-						else
-							charvalue <= sig_lifeT(i);
-						end if;
+						charvalue <= sig_lifeT(i);
 						character_address <= charvalue ; -- L
 						font_row <= pix_row(3 downto 1);
 						font_col <= pix_col(3 downto 1);
 						end if;
 				end loop;
 					
-<<<<<<< HEAD
 				if(32<p_row and p_row<48) and (96<p_col and p_col<112) then
 						textOn <= '1';
 						charvalue <= sigNumScore(lives);		-- display life
@@ -153,8 +140,6 @@ begin
 					textOn<='0';
 				end if;
 				
-=======
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 				--------------------------------- Check score
 					
 				for i in 0 to 8 loop
@@ -190,26 +175,15 @@ begin
 		
 		elsif (mode = "010") then 
 		
-<<<<<<< HEAD
 					for i in 0 to 5 loop
 						if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
-=======
-					for i in 0 to 6 loop
-					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 						textOn <= '1';
-						if(i = 6) then
-							charvalue <= sigNumScore(tempLives);
-						else
-							charvalue <= sig_lifeT(i);
-						end if;
 						character_address <= charvalue ; -- L
 						font_row <= pix_row(3 downto 1);
 						font_col <= pix_col(3 downto 1);
 						end if;
 					end loop;
 					
-<<<<<<< HEAD
 					
 					if(32<p_row and p_row<48) and (96<p_col and p_col<112)	then
 						textOn <= '1';
@@ -219,8 +193,6 @@ begin
 					else
 						textOn <= '0';
 					end if;
-=======
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 					--------------------------------- Check score
 				
 					
