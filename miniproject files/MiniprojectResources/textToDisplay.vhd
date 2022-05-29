@@ -56,6 +56,7 @@ architecture a OF textToDisplay IS
 begin
 process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT,lives)
 variable tens, ones, hundereds: integer := 0;
+variable tempLives: integer :=6;
 begin
 
 	
@@ -77,11 +78,16 @@ begin
 					tens := score mod 10;
 					hundereds := score/100;
 		end if;
+		
+		if(lives < tempLives)then
+			tempLives:=lives;
+		end if;
+		
 		 
 		
 		------------------------------------------------ Flappy Bird Title
 		if(mode = "000") then
-			
+		
 			for i in 0 to 11 loop
 				if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
 					textOn <= '1';
@@ -131,13 +137,11 @@ begin
 						end if;
 				end loop;
 					
-				if(32<p_row and p_row<48) and (96<p_col and p_col<112) then
+				if(32<p_row and p_row<48) and (((5)*16)+16<p_col and p_col<16+(6*16)) then
 						textOn <= '1';
 						charvalue <= sigNumScore(lives);		-- display life
 						font_row <= pix_row(3 downto 1);
 						font_col <= pix_col(3 downto 1);
-				else
-					textOn<='0';
 				end if;
 				
 				--------------------------------- Check score
@@ -176,7 +180,7 @@ begin
 		elsif (mode = "010") then 
 		
 					for i in 0 to 5 loop
-						if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
+					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 						textOn <= '1';
 						character_address <= charvalue ; -- L
 						font_row <= pix_row(3 downto 1);
@@ -185,13 +189,11 @@ begin
 					end loop;
 					
 					
-					if(32<p_row and p_row<48) and (96<p_col and p_col<112)	then
+					if(32<p_row and p_row<48) and (((5)*16)+16<p_col and p_col<16+(6*16))	then
 						textOn <= '1';
-						charvalue <= sigNumScore(lives);		-- display life
+						charvalue <= sigNumScore(tempLives);		-- display life
 						font_row <= pix_row(3 downto 1);
 						font_col <= pix_col(3 downto 1);
-					else
-						textOn <= '0';
 					end if;
 					--------------------------------- Check score
 				

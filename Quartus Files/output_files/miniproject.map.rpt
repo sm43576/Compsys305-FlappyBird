@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sun May 29 19:17:09 2022
+Sun May 29 18:52:28 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -58,15 +58,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 29 19:17:09 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 29 18:52:28 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; flappyBirdFinal                                 ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 4,859                                           ;
-;     Total combinational functions  ; 4,739                                           ;
-;     Dedicated logic registers      ; 434                                             ;
-; Total registers                    ; 434                                             ;
+; Total logic elements               ; 4,822                                           ;
+;     Total combinational functions  ; 4,672                                           ;
+;     Dedicated logic registers      ; 466                                             ;
+; Total registers                    ; 466                                             ;
 ; Total pins                         ; 20                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,096                                           ;
@@ -168,63 +168,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                              ;
-+-------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                            ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                     ; Library ;
-+-------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; ../miniproject files/MiniprojectResources/collision.vhd     ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/collision.vhd     ;         ;
-; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
-; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
-; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
-; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
-; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File             ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
-; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
-; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
-; flappyBirdFinal.bdf                                         ; yes             ; User Block Diagram/Schematic File      ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/flappyBirdFinal.bdf                        ;         ;
-; ../miniproject files/MiniprojectResources/pipes.vhd         ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/pipes.vhd         ;         ;
-; ../miniproject files/MiniprojectResources/randomNums.vhd    ; yes             ; User VHDL File                         ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/randomNums.vhd    ;         ;
-; altpll.tdf                                                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
-; aglobal130.inc                                              ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
-; stratix_pll.inc                                             ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
-; stratixii_pll.inc                                           ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                              ;         ;
-; cycloneii_pll.inc                                           ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                              ;         ;
-; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
-; altsyncram.tdf                                              ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
-; stratix_ram_block.inc                                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
-; lpm_mux.inc                                                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
-; lpm_decode.inc                                              ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                 ;         ;
-; a_rdenreg.inc                                               ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                  ;         ;
-; altrom.inc                                                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
-; altram.inc                                                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
-; altdpram.inc                                                ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
-; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
-; ../miniproject files/MiniprojectResources/tcgrom.mif        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/tcgrom.mif        ;         ;
-; lpm_divide.tdf                                              ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                                 ;         ;
-; abs_divider.inc                                             ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                                ;         ;
-; sign_div_unsign.inc                                         ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                            ;         ;
-; db/lpm_divide_jvo.tdf                                       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_jvo.tdf                      ;         ;
-; db/abs_divider_nbg.tdf                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_nbg.tdf                     ;         ;
-; db/alt_u_div_36f.tdf                                        ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_36f.tdf                       ;         ;
-; db/add_sub_unc.tdf                                          ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_unc.tdf                         ;         ;
-; db/add_sub_vnc.tdf                                          ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_vnc.tdf                         ;         ;
-; db/lpm_abs_st9.tdf                                          ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_st9.tdf                         ;         ;
-; db/lpm_abs_9v9.tdf                                          ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_9v9.tdf                         ;         ;
-; db/lpm_divide_gvo.tdf                                       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_gvo.tdf                      ;         ;
-; db/abs_divider_kbg.tdf                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_kbg.tdf                     ;         ;
-; db/alt_u_div_t5f.tdf                                        ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t5f.tdf                       ;         ;
-; db/lpm_abs_pt9.tdf                                          ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_pt9.tdf                         ;         ;
-; db/lpm_divide_3po.tdf                                       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_3po.tdf                      ;         ;
-; db/abs_divider_4dg.tdf                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_4dg.tdf                     ;         ;
-; db/alt_u_div_t8f.tdf                                        ; yes             ; Auto-Generated Megafunction            ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t8f.tdf                       ;         ;
-+-------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                          ;
++-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                     ; Library ;
++-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; ../miniproject files/MiniprojectResources/collision.vhd     ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/collision.vhd     ;         ;
+; ../miniproject files/MiniprojectResources/statemachinet.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/statemachinet.vhd ;         ;
+; ../miniproject files/MiniprojectResources/textToDisplay.vhd ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/textToDisplay.vhd ;         ;
+; ../miniproject files/MiniprojectResources/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/vga_sync.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/mouse.vhd         ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/mouse.vhd         ;         ;
+; ../miniproject files/MiniprojectResources/char_rom.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/char_rom.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/bouncy_ball.vhd   ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/bouncy_ball.vhd   ;         ;
+; altpll0.vhd                                                 ; yes             ; User Wizard-Generated File         ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd                                ;         ;
+; ../miniproject files/MiniprojectResources/priority.vhd      ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/priority.vhd      ;         ;
+; ../miniproject files/MiniprojectResources/background.vhd    ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/background.vhd    ;         ;
+; flappyBirdFinal.bdf                                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/flappyBirdFinal.bdf                        ;         ;
+; ../miniproject files/MiniprojectResources/pipes.vhd         ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/pipes.vhd         ;         ;
+; ../miniproject files/MiniprojectResources/randomNums.vhd    ; yes             ; User VHDL File                     ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/miniproject files/MiniprojectResources/randomNums.vhd    ;         ;
+; altpll.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
+; aglobal130.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
+; stratix_pll.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
+; stratixii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                              ;         ;
+; cycloneii_pll.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                              ;         ;
+; db/altpll0_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altpll0_altpll.v                        ;         ;
+; altsyncram.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
+; stratix_ram_block.inc                                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
+; lpm_mux.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
+; lpm_decode.inc                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                 ;         ;
+; a_rdenreg.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                  ;         ;
+; altrom.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
+; altram.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
+; altdpram.inc                                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
+; db/altsyncram_kt91.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/altsyncram_kt91.tdf                     ;         ;
+; lpm_divide.tdf                                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                                 ;         ;
+; abs_divider.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                                ;         ;
+; sign_div_unsign.inc                                         ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                            ;         ;
+; db/lpm_divide_jvo.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_jvo.tdf                      ;         ;
+; db/abs_divider_nbg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_nbg.tdf                     ;         ;
+; db/alt_u_div_36f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_36f.tdf                       ;         ;
+; db/add_sub_unc.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_unc.tdf                         ;         ;
+; db/add_sub_vnc.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/add_sub_vnc.tdf                         ;         ;
+; db/lpm_abs_st9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_st9.tdf                         ;         ;
+; db/lpm_abs_9v9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_9v9.tdf                         ;         ;
+; db/lpm_divide_gvo.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_gvo.tdf                      ;         ;
+; db/abs_divider_kbg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_kbg.tdf                     ;         ;
+; db/alt_u_div_t5f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t5f.tdf                       ;         ;
+; db/lpm_abs_pt9.tdf                                          ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_abs_pt9.tdf                         ;         ;
+; db/lpm_divide_3po.tdf                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/lpm_divide_3po.tdf                      ;         ;
+; db/abs_divider_4dg.tdf                                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/abs_divider_4dg.tdf                     ;         ;
+; db/alt_u_div_t8f.tdf                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/db/alt_u_div_t8f.tdf                       ;         ;
++-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -232,20 +231,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 4,859                                                                                ;
+; Estimated Total logic elements              ; 4,822                                                                                ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 4739                                                                                 ;
+; Total combinational functions               ; 4672                                                                                 ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 1664                                                                                 ;
-;     -- 3 input functions                    ; 1421                                                                                 ;
-;     -- <=2 input functions                  ; 1654                                                                                 ;
+;     -- 4 input functions                    ; 1606                                                                                 ;
+;     -- 3 input functions                    ; 1429                                                                                 ;
+;     -- <=2 input functions                  ; 1637                                                                                 ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 3317                                                                                 ;
-;     -- arithmetic mode                      ; 1422                                                                                 ;
+;     -- normal mode                          ; 3217                                                                                 ;
+;     -- arithmetic mode                      ; 1455                                                                                 ;
 ;                                             ;                                                                                      ;
-; Total registers                             ; 434                                                                                  ;
-;     -- Dedicated logic registers            ; 434                                                                                  ;
+; Total registers                             ; 466                                                                                  ;
+;     -- Dedicated logic registers            ; 466                                                                                  ;
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
 ; I/O pins                                    ; 20                                                                                   ;
@@ -255,9 +254,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 314                                                                                  ;
-; Total fan-out                               ; 15455                                                                                ;
-; Average fan-out                             ; 2.96                                                                                 ;
+; Maximum fan-out                             ; 346                                                                                  ;
+; Total fan-out                               ; 15270                                                                                ;
+; Average fan-out                             ; 2.94                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -266,7 +265,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |flappyBirdFinal                          ; 4739 (1)          ; 434 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |flappyBirdFinal                                                                                                                  ; work         ;
+; |flappyBirdFinal                          ; 4672 (1)          ; 466 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |flappyBirdFinal                                                                                                                  ; work         ;
 ;    |MOUSE:inst2|                          ; 84 (84)           ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|MOUSE:inst2                                                                                                      ; work         ;
 ;    |Priority:inst5|                       ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                                                                   ; work         ;
 ;    |VGA_SYNC:inst8|                       ; 59 (59)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|VGA_SYNC:inst8                                                                                                   ; work         ;
@@ -277,29 +276,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst                                                                                                    ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component                                                                    ; work         ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated                                     ; work         ;
-;    |collision:inst6|                      ; 395 (395)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|collision:inst6                                                                                                  ; work         ;
-;    |fsm:inst24|                           ; 19 (19)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|fsm:inst24                                                                                                       ; work         ;
+;    |collision:inst6|                      ; 301 (301)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|collision:inst6                                                                                                  ; work         ;
+;    |fsm:inst24|                           ; 18 (18)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|fsm:inst24                                                                                                       ; work         ;
 ;    |pipes:inst32|                         ; 115 (115)         ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|pipes:inst32                                                                                                     ; work         ;
 ;    |randomNums:inst10|                    ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|randomNums:inst10                                                                                                ; work         ;
-;    |textToDisplay:inst3|                  ; 3968 (489)        ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                                                              ; work         ;
-;       |lpm_divide:Div0|                   ; 454 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0                                                                              ; work         ;
-;          |lpm_divide_gvo:auto_generated|  ; 454 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated                                                ; work         ;
-;             |abs_divider_kbg:divider|     ; 454 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ; work         ;
+;    |textToDisplay:inst3|                  ; 3996 (521)        ; 71 (71)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                                                              ; work         ;
+;       |lpm_divide:Div0|                   ; 458 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0                                                                              ; work         ;
+;          |lpm_divide_gvo:auto_generated|  ; 458 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated                                                ; work         ;
+;             |abs_divider_kbg:divider|     ; 458 (4)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ; work         ;
 ;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ; work         ;
 ;                |lpm_abs_9v9:my_abs_num|   ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
-;       |lpm_divide:Div1|                   ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1                                                                              ; work         ;
-;          |lpm_divide_jvo:auto_generated|  ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated                                                ; work         ;
-;             |abs_divider_nbg:divider|     ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ; work         ;
-;                |lpm_abs_9v9:my_abs_num|   ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
+;       |lpm_divide:Div1|                   ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1                                                                              ; work         ;
+;          |lpm_divide_jvo:auto_generated|  ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated                                                ; work         ;
+;             |abs_divider_nbg:divider|     ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ; work         ;
+;                |lpm_abs_9v9:my_abs_num|   ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
 ;       |lpm_divide:Mod0|                   ; 1464 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0                                                                              ; work         ;
 ;          |lpm_divide_3po:auto_generated|  ; 1464 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                ; work         ;
 ;             |abs_divider_4dg:divider|     ; 1464 (1)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
 ;                |alt_u_div_t8f:divider|    ; 1456 (1456)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider  ; work         ;
 ;                |lpm_abs_9v9:my_abs_num|   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num ; work         ;
-;       |lpm_divide:Mod1|                   ; 1527 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1                                                                              ; work         ;
-;          |lpm_divide_3po:auto_generated|  ; 1527 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                ; work         ;
-;             |abs_divider_4dg:divider|     ; 1527 (7)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
-;                |alt_u_div_t8f:divider|    ; 1510 (1510)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider  ; work         ;
+;       |lpm_divide:Mod1|                   ; 1525 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1                                                                              ; work         ;
+;          |lpm_divide_3po:auto_generated|  ; 1525 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                ; work         ;
+;             |abs_divider_4dg:divider|     ; 1525 (6)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
+;                |alt_u_div_t8f:divider|    ; 1509 (1509)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider  ; work         ;
 ;                |lpm_abs_9v9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -319,7 +318,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                                                   ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |flappyBirdFinal|altpll0:inst1 ; C:/Users/rnata/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |flappyBirdFinal|altpll0:inst1 ; C:/Users/shoum/Documents/GitHub/Compsys305-Mini-Project/Quartus Files/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------------------------+
 
 
@@ -423,12 +422,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 434   ;
+; Total registers                              ; 466   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 11    ;
-; Number of registers using Asynchronous Clear ; 176   ;
+; Number of registers using Asynchronous Clear ; 144   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 255   ;
+; Number of registers using Clock Enable       ; 283   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -438,9 +437,9 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; textToDisplay:inst3|p_col[31]           ; 17      ;
 ; textToDisplay:inst3|p_col[0]            ; 1       ;
 ; textToDisplay:inst3|p_row[0]            ; 1       ;
-; textToDisplay:inst3|p_col[31]           ; 13      ;
 ; randomNums:inst10|output[7]             ; 13      ;
 ; randomNums:inst10|output[5]             ; 4       ;
 ; randomNums:inst10|output[4]             ; 4       ;
@@ -451,12 +450,16 @@ Encoding Type:  One-Hot
 ; randomNums:inst10|randVector[4]         ; 1       ;
 ; randomNums:inst10|randVector[3]         ; 2       ;
 ; randomNums:inst10|randVector[0]         ; 1       ;
+; textToDisplay:inst3|tempLives[2]        ; 2       ;
+; textToDisplay:inst3|tempLives[1]        ; 3       ;
+; collision:inst6|score[31]               ; 190     ;
+; collision:inst6|score[0]                ; 14      ;
 ; MOUSE:inst2|SHIFTOUT[3]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[5]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[6]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                 ; 1       ;
-; Total number of inverted registers = 18 ;         ;
+; Total number of inverted registers = 22 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -465,17 +468,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[12]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[4]                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[0]         ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[7]            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[9]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[1]         ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|pipes:inst32|pipe_x_pos[1]               ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |flappyBirdFinal|Priority:inst5|tempRedOut[0]             ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[5]             ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |flappyBirdFinal|Priority:inst5|tempBlueOut[1]            ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[8]             ;
 ; 88:1               ; 5 bits    ; 290 LEs       ; 5 LEs                ; 285 LEs                ; Yes        ; |flappyBirdFinal|textToDisplay:inst3|character_address[0] ;
 ; 91:1               ; 6 bits    ; 360 LEs       ; 6 LEs                ; 354 LEs                ; Yes        ; |flappyBirdFinal|textToDisplay:inst3|font_col[1]          ;
 ; 102:1              ; 2 bits    ; 136 LEs       ; 116 LEs              ; 20 LEs                 ; Yes        ; |flappyBirdFinal|textToDisplay:inst3|charvalue[4]         ;
-; 102:1              ; 4 bits    ; 272 LEs       ; 244 LEs              ; 28 LEs                 ; Yes        ; |flappyBirdFinal|textToDisplay:inst3|charvalue[0]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[1]            ;
+; 102:1              ; 4 bits    ; 272 LEs       ; 248 LEs              ; 24 LEs                 ; Yes        ; |flappyBirdFinal|textToDisplay:inst3|charvalue[2]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[0]            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |flappyBirdFinal|Background:inst23|red_out[2]             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|hundereds            ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|tens                 ;
@@ -1062,7 +1065,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -1072,38 +1075,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 29 19:16:59 2022
+    Info: Processing started: Sun May 29 18:52:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/collision.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/collision.vhd
     Info (12022): Found design unit 1: collision-behavior
     Info (12023): Found entity 1: collision
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/statemachinet.vhd
     Info (12022): Found design unit 1: fsm-Mealy
     Info (12023): Found entity 1: fsm
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/texttodisplay.vhd
     Info (12022): Found design unit 1: textToDisplay-a
     Info (12023): Found entity 1: textToDisplay
 Info (12021): Found 1 design units, including 1 entities, in source file mouseinterface.bdf
     Info (12023): Found entity 1: mouseInterface
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior
     Info (12023): Found entity 1: MOUSE
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/char_rom.vhd
     Info (12022): Found design unit 1: char_rom-SYN
     Info (12023): Found entity 1: char_rom
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/bouncy_ball.vhd
     Info (12022): Found design unit 1: bouncy_ball-behavior
     Info (12023): Found entity 1: bouncy_ball
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior
     Info (12023): Found entity 1: ball
 Info (12021): Found 1 design units, including 1 entities, in source file textdisplay.bdf
     Info (12023): Found entity 1: TextDisplay
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-arc2
     Info (12023): Found entity 1: seven_seg
 Info (12021): Found 1 design units, including 1 entities, in source file movingball.bdf
@@ -1115,23 +1118,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file altpll0
     Info (12023): Found entity 1: altpll0
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/ballwmouse.bdf
     Info (12023): Found entity 1: ballWMouse
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/priority.vhd
     Info (12022): Found design unit 1: Priority-a
     Info (12023): Found entity 1: Priority
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/background.vhd
     Info (12022): Found design unit 1: Background-a
     Info (12023): Found entity 1: Background
 Info (12021): Found 1 design units, including 1 entities, in source file fsmandbackground.bdf
     Info (12023): Found entity 1: FSMandBackground
 Info (12021): Found 1 design units, including 1 entities, in source file flappybirdfinal.bdf
     Info (12023): Found entity 1: flappyBirdFinal
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/pipes.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/pipes.vhd
     Info (12022): Found design unit 1: pipes-behavior
     Info (12023): Found entity 1: pipes
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/randomnums.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/randomnums.vhd
     Info (12022): Found design unit 1: randomNums-behaviour
     Info (12023): Found entity 1: randomNums
-Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/powerup.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/shoum/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/powerup.vhd
     Info (12022): Found design unit 1: powerup-behavior
     Info (12023): Found entity 1: powerup
 Info (12127): Elaborating entity "flappyBirdFinal" for the top level hierarchy
@@ -1216,8 +1219,7 @@ Warning (10036): Verilog HDL or VHDL warning at collision.vhd(23): object "pipeT
 Warning (10036): Verilog HDL or VHDL warning at collision.vhd(24): object "pipeBtmMax_y" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at collision.vhd(38): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at collision.vhd(42): signal "temp_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(43): signal "temp_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(45): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at collision.vhd(44): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst32"
 Warning (10540): VHDL Signal Declaration warning at pipes.vhd(29): used explicit default value for signal "gap" because signal was never assigned a value
 Info (12128): Elaborating entity "randomNums" for hierarchy "randomNums:inst10"
@@ -1364,38 +1366,6 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "collision:inst6|lives[29]" is converted into an equivalent circuit using register "collision:inst6|lives[29]~_emulated" and latch "collision:inst6|lives[29]~117"
     Warning (13310): Register "collision:inst6|lives[30]" is converted into an equivalent circuit using register "collision:inst6|lives[30]~_emulated" and latch "collision:inst6|lives[30]~121"
     Warning (13310): Register "collision:inst6|lives[31]" is converted into an equivalent circuit using register "collision:inst6|lives[31]~_emulated" and latch "collision:inst6|lives[31]~125"
-    Warning (13310): Register "collision:inst6|score[31]" is converted into an equivalent circuit using register "collision:inst6|score[31]~_emulated" and latch "collision:inst6|score[31]~1"
-    Warning (13310): Register "collision:inst6|score[30]" is converted into an equivalent circuit using register "collision:inst6|score[30]~_emulated" and latch "collision:inst6|score[30]~5"
-    Warning (13310): Register "collision:inst6|score[29]" is converted into an equivalent circuit using register "collision:inst6|score[29]~_emulated" and latch "collision:inst6|score[29]~9"
-    Warning (13310): Register "collision:inst6|score[28]" is converted into an equivalent circuit using register "collision:inst6|score[28]~_emulated" and latch "collision:inst6|score[28]~13"
-    Warning (13310): Register "collision:inst6|score[27]" is converted into an equivalent circuit using register "collision:inst6|score[27]~_emulated" and latch "collision:inst6|score[27]~17"
-    Warning (13310): Register "collision:inst6|score[26]" is converted into an equivalent circuit using register "collision:inst6|score[26]~_emulated" and latch "collision:inst6|score[26]~21"
-    Warning (13310): Register "collision:inst6|score[25]" is converted into an equivalent circuit using register "collision:inst6|score[25]~_emulated" and latch "collision:inst6|score[25]~25"
-    Warning (13310): Register "collision:inst6|score[24]" is converted into an equivalent circuit using register "collision:inst6|score[24]~_emulated" and latch "collision:inst6|score[24]~29"
-    Warning (13310): Register "collision:inst6|score[23]" is converted into an equivalent circuit using register "collision:inst6|score[23]~_emulated" and latch "collision:inst6|score[23]~33"
-    Warning (13310): Register "collision:inst6|score[22]" is converted into an equivalent circuit using register "collision:inst6|score[22]~_emulated" and latch "collision:inst6|score[22]~37"
-    Warning (13310): Register "collision:inst6|score[21]" is converted into an equivalent circuit using register "collision:inst6|score[21]~_emulated" and latch "collision:inst6|score[21]~41"
-    Warning (13310): Register "collision:inst6|score[20]" is converted into an equivalent circuit using register "collision:inst6|score[20]~_emulated" and latch "collision:inst6|score[20]~45"
-    Warning (13310): Register "collision:inst6|score[19]" is converted into an equivalent circuit using register "collision:inst6|score[19]~_emulated" and latch "collision:inst6|score[19]~49"
-    Warning (13310): Register "collision:inst6|score[18]" is converted into an equivalent circuit using register "collision:inst6|score[18]~_emulated" and latch "collision:inst6|score[18]~53"
-    Warning (13310): Register "collision:inst6|score[17]" is converted into an equivalent circuit using register "collision:inst6|score[17]~_emulated" and latch "collision:inst6|score[17]~57"
-    Warning (13310): Register "collision:inst6|score[16]" is converted into an equivalent circuit using register "collision:inst6|score[16]~_emulated" and latch "collision:inst6|score[16]~61"
-    Warning (13310): Register "collision:inst6|score[15]" is converted into an equivalent circuit using register "collision:inst6|score[15]~_emulated" and latch "collision:inst6|score[15]~65"
-    Warning (13310): Register "collision:inst6|score[14]" is converted into an equivalent circuit using register "collision:inst6|score[14]~_emulated" and latch "collision:inst6|score[14]~69"
-    Warning (13310): Register "collision:inst6|score[13]" is converted into an equivalent circuit using register "collision:inst6|score[13]~_emulated" and latch "collision:inst6|score[13]~73"
-    Warning (13310): Register "collision:inst6|score[12]" is converted into an equivalent circuit using register "collision:inst6|score[12]~_emulated" and latch "collision:inst6|score[12]~77"
-    Warning (13310): Register "collision:inst6|score[11]" is converted into an equivalent circuit using register "collision:inst6|score[11]~_emulated" and latch "collision:inst6|score[11]~81"
-    Warning (13310): Register "collision:inst6|score[10]" is converted into an equivalent circuit using register "collision:inst6|score[10]~_emulated" and latch "collision:inst6|score[10]~85"
-    Warning (13310): Register "collision:inst6|score[9]" is converted into an equivalent circuit using register "collision:inst6|score[9]~_emulated" and latch "collision:inst6|score[9]~89"
-    Warning (13310): Register "collision:inst6|score[8]" is converted into an equivalent circuit using register "collision:inst6|score[8]~_emulated" and latch "collision:inst6|score[8]~93"
-    Warning (13310): Register "collision:inst6|score[7]" is converted into an equivalent circuit using register "collision:inst6|score[7]~_emulated" and latch "collision:inst6|score[7]~97"
-    Warning (13310): Register "collision:inst6|score[6]" is converted into an equivalent circuit using register "collision:inst6|score[6]~_emulated" and latch "collision:inst6|score[6]~101"
-    Warning (13310): Register "collision:inst6|score[5]" is converted into an equivalent circuit using register "collision:inst6|score[5]~_emulated" and latch "collision:inst6|score[5]~105"
-    Warning (13310): Register "collision:inst6|score[4]" is converted into an equivalent circuit using register "collision:inst6|score[4]~_emulated" and latch "collision:inst6|score[4]~109"
-    Warning (13310): Register "collision:inst6|score[3]" is converted into an equivalent circuit using register "collision:inst6|score[3]~_emulated" and latch "collision:inst6|score[3]~113"
-    Warning (13310): Register "collision:inst6|score[2]" is converted into an equivalent circuit using register "collision:inst6|score[2]~_emulated" and latch "collision:inst6|score[2]~117"
-    Warning (13310): Register "collision:inst6|score[1]" is converted into an equivalent circuit using register "collision:inst6|score[1]~_emulated" and latch "collision:inst6|score[1]~121"
-    Warning (13310): Register "collision:inst6|score[0]" is converted into an equivalent circuit using register "collision:inst6|score[0]~_emulated" and latch "collision:inst6|score[0]~125"
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register collision:inst6|temp_score[31] will power up to Low
     Critical Warning (18010): Register collision:inst6|temp_score[0] will power up to Low
@@ -1403,17 +1373,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4896 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4889 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 4867 logic cells
+    Info (21061): Implemented 4860 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4688 megabytes
-    Info: Processing ended: Sun May 29 19:17:09 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 4709 megabytes
+    Info: Processing ended: Sun May 29 18:52:28 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:19
 
 

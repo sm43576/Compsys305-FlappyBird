@@ -40,12 +40,11 @@ BEGIN
 		counter <= 0;
 		temp_score<=0;
 		lives <= temp_lives;
-		score <= temp_score;
 								 							
 	elsif(rising_edge(clk) and vert_sync = '1' and (mode = "001" or mode = "010")) then
 		
 		--Checks if ball has been hit
-		if (temp_lives <= 0)then
+		if (temp_lives <1)then
 			temp_lives<=0;
 		
 		
