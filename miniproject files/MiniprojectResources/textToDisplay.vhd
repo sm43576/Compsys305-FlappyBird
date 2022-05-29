@@ -46,7 +46,7 @@ architecture a OF textToDisplay IS
 	
 	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(5 downto 0);
 	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
-	
+	signal tempLives: integer :=6;
 	
 	
 	
@@ -54,9 +54,8 @@ architecture a OF textToDisplay IS
 	
 	
 begin
-process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT,lives)
+process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, tempLives, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT)
 variable tens, ones, hundereds: integer := 0;
-variable tempLives: integer :=6;
 begin
 
 	
@@ -80,7 +79,7 @@ begin
 		end if;
 		
 		if(lives < tempLives)then
-			tempLives:=lives;
+			tempLives<=lives;
 		end if;
 		
 		 
@@ -127,23 +126,20 @@ begin
 		--------------------------------------------------------------TrainingMode (639x479)
 		elsif (mode = "001") then 
 		
-				for i in 0 to 5 loop
+				for i in 0 to 6 loop
 					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 						textOn <= '1';
-						charvalue <= sig_lifeT(i);
+						if(i = 6) then
+							charvalue <= sigNumScore(tempLives);
+						else
+							charvalue <= sig_lifeT(i);
+						end if;
 						character_address <= charvalue ; -- L
 						font_row <= pix_row(3 downto 1);
 						font_col <= pix_col(3 downto 1);
 						end if;
 				end loop;
 					
-				if(32<p_row and p_row<48) and (((5)*16)+16<p_col and p_col<16+(6*16)) then
-						textOn <= '1';
-						charvalue <= sigNumScore(lives);		-- display life
-						font_row <= pix_row(3 downto 1);
-						font_col <= pix_col(3 downto 1);
-				end if;
-				
 				--------------------------------- Check score
 					
 				for i in 0 to 8 loop
@@ -179,22 +175,20 @@ begin
 		
 		elsif (mode = "010") then 
 		
-					for i in 0 to 5 loop
+					for i in 0 to 6 loop
 					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 						textOn <= '1';
+						if(i = 6) then
+							charvalue <= sigNumScore(tempLives);
+						else
+							charvalue <= sig_lifeT(i);
+						end if;
 						character_address <= charvalue ; -- L
 						font_row <= pix_row(3 downto 1);
 						font_col <= pix_col(3 downto 1);
 						end if;
 					end loop;
 					
-					
-					if(32<p_row and p_row<48) and (((5)*16)+16<p_col and p_col<16+(6*16))	then
-						textOn <= '1';
-						charvalue <= sigNumScore(tempLives);		-- display life
-						font_row <= pix_row(3 downto 1);
-						font_col <= pix_col(3 downto 1);
-					end if;
 					--------------------------------- Check score
 				
 					
