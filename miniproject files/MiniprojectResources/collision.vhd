@@ -48,7 +48,7 @@ BEGIN
 			temp_lives<=0;
 		
 		
-		elsif((ballOn = '1' and Pipe1on = '1') and (ball_x  < pipe1_x + 20  and ball_x +8 > pipe1_x) and (ball_y < pipetop_y or ball_y > pipebtm_y)
+		elsif((ballOn = '1' and Pipe1on = '1') and (ball_x  < pipe1_x + 20  and ball_x +8 > pipe1_x) and (ball_y <= pipetop_y or ball_y >= pipebtm_y)
 			and counter > 100000000) then
 			temp_lives<=temp_lives-1;
 			counter<=0;

@@ -1,0 +1,13 @@
+Fri May 27 18:05:21 +1200 2022
+Trace back: invalid command name ".main_pane.cs.1.pw"
+    while executing
+"$w cget -opaqueresize"
+    (procedure "::tk::panedwindow::ReleaseSash" line 2)
+    invoked from within
+"::tk::panedwindow::ReleaseSash $w $opaque"
+    (procedure "::tk::panedwindow::2DReleaseSash" line 8)
+    invoked from within
+"::tk::panedwindow::2DReleaseSash .main_pane.cs.8.pw 102 446 120 637 0"
+    (command bound to event)
+  <2:C:/modeltech_2020.2/win32/tk8.6/bgerror.tcl:106: ::tkerror {invalid command name ".main_pane.cs.1.pw"}
+  <1:eval:1: ::tk::dialog::error::bgerror {invalid command name ".main_pane.cs.1.pw"}

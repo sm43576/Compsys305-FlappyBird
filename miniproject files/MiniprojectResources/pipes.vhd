@@ -44,7 +44,7 @@ BEGIN
 		pipe1_y_pos <= CONV_STD_LOGIC_VECTOR(0,10);
 		pipe2_y_pos <= y2;
 		
-		pipeTop_y <= pipe1_y_pos;
+		pipeTop_y <= sizey;
 		pipeBtm_y <= pipe2_y_pos;
 
 								-- and here is adding 0 to ball_x_pos making it unsigned

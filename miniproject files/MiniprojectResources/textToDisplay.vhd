@@ -59,7 +59,7 @@ variable tens, ones, hundereds: integer := 0;
 begin
 
 	
-	if rising_edge(clock_25Mhz)then
+--	if rising_edge(clock_25Mhz)then
 		p_row <= conv_integer(pix_row);
 		p_col <= conv_integer(pix_col);
 		textOn <= '0';
@@ -229,6 +229,6 @@ begin
 					end loop;
 		 
 		end if;
-	end if;
+--	end if;
 end process;	 
 end a;
