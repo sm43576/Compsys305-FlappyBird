@@ -144,7 +144,6 @@ begin
 				end loop;
 					
 <<<<<<< HEAD
-<<<<<<< HEAD
 				if(32<p_row and p_row<48) and (96<p_col and p_col<112) then
 						textOn <= '1';
 						charvalue <= sigNumScore(lives);		-- display life
@@ -154,8 +153,6 @@ begin
 					textOn<='0';
 				end if;
 				
-=======
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 =======
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 				--------------------------------- Check score
@@ -194,12 +191,9 @@ begin
 		elsif (mode = "010") then 
 		
 <<<<<<< HEAD
-<<<<<<< HEAD
 					for i in 0 to 5 loop
 						if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 =======
-=======
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 					for i in 0 to 6 loop
 					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
@@ -216,7 +210,6 @@ begin
 					end loop;
 					
 <<<<<<< HEAD
-<<<<<<< HEAD
 					
 					if(32<p_row and p_row<48) and (96<p_col and p_col<112)	then
 						textOn <= '1';
@@ -226,8 +219,6 @@ begin
 					else
 						textOn <= '0';
 					end if;
-=======
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 =======
 >>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 					--------------------------------- Check score

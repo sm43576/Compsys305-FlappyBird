@@ -2266,7 +2266,6 @@ score[31] => tens.IN1
 score[31] => Div1.IN8
 score[31] => Add1.IN63
 <<<<<<< HEAD
-<<<<<<< HEAD
 lives[0] => charvalue.DATAB
 lives[0] => charvalue.DATAB
 lives[1] => charvalue.DATAB
@@ -2304,8 +2303,6 @@ lives[29] => ~NO_FANOUT~
 lives[30] => ~NO_FANOUT~
 lives[31] => ~NO_FANOUT~
 =======
-=======
->>>>>>> parent of 56459b7 (remove commit if not fixed,( approach display lvies))
 lives[0] => LessThan3.IN32
 lives[0] => tempLives[0].DATAIN
 lives[1] => LessThan3.IN31
