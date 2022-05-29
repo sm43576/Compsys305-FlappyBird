@@ -28,31 +28,31 @@ BEGIN
 	pipeTopMin_y <="0000000000"; -- 0
 	pipeBtmMax_y <="0111011111"; -- 479
 	
-	isCollisionPipe <= '1' when ((ball_x = pipe1_x) and((ball_y >= pipeTopMin_y  and ball_y <= pipetop_y) -- ball is colliding with top pipe (0<=ball_y<=pipetop_y) 
-										or (ball_y >= pipebtm_y and ball_y<= pipeBtmMax_y))) else 	--- ball colliding with bottom pipe (pipebtm_y<= ball_y< 479)
-										'0' when ((ball_x >= pipe1_x) and (ball_y >pipetop_y) and (ball_y< pipebtm_y)); -- ball is between gap 
+	isCollisionPipe <= '1' when ((ball_x = pipe1_x) and(ball_y <= pipetop_y or ball_y >= pipebtm_y))  	--- ball colliding with bottom pipe (pipebtm_y<= ball_y< 479)
+								else		'0' when ((ball_x /= pipe1_x) and (ball_y >pipetop_y) and (ball_y< pipebtm_y)); -- ball is between gap 
 	---isCollisionPipe <= '1' when (ballOn = '1' and pipe1On = '1') else '0';
+	
+	
 checkCollison: process(vert_sync, clk, mode)
 
 BEGIN
-	if(mode = "000") then
-		temp_lives <= 2;
-		counter <= 0;
-		temp_score <= 0;
-		lives <= temp_lives;
-		score <= temp_score;
 								 							
-	
-	elsif(rising_edge(clk) and vert_sync = '1') then
-		if (temp_lives <= 0)then
+	if(rising_edge(clk) and vert_sync = '1') then
+		if(mode = "000") then
+			temp_lives <= 2;
+			counter <= 0;
+			temp_score <= 0;
+			lives <= temp_lives;
+			score <= temp_score;
+		elsif (temp_lives <= 0)then
 			temp_lives<=0;
 		
 		--Checks if ball has been hit
-		elsif((isCollisionPipe = '1') and counter > 60000000) then
+		elsif((isCollisionPipe = '1') and counter > 100000) then
 			temp_lives<=temp_lives-1;
 			counter<=0;
 		
-		elsif(counter>60000000) then
+		elsif(counter>100000) then
  -- if ball is between the gap
 			temp_score<=temp_score+1;
 			counter<=0;

@@ -30,11 +30,11 @@ size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 						-- and here is adding 0 to ball_x_pos making it unsigned
-temp_ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
+ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (mode = "001" or mode = "010") )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 --checks if pixel is in the ball boundary 
-ball_on <= temp_ball_on;
+---ball_on <= temp_ball_on;
 
 
 

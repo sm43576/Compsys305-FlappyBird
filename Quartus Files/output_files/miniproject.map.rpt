@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Sun May 29 12:29:49 2022
+Sun May 29 13:36:37 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -59,13 +59,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 29 12:29:49 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 29 13:36:37 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                     ;
 ; Top-level Entity Name              ; flappyBirdFinal                                 ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 3,301                                           ;
-;     Total combinational functions  ; 3,198                                           ;
+; Total logic elements               ; 3,197                                           ;
+;     Total combinational functions  ; 3,032                                           ;
 ;     Dedicated logic registers      ; 396                                             ;
 ; Total registers                    ; 396                                             ;
 ; Total pins                         ; 20                                              ;
@@ -227,38 +227,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 3,301                    ;
-;                                             ;                          ;
-; Total combinational functions               ; 3198                     ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1151                     ;
-;     -- 3 input functions                    ; 956                      ;
-;     -- <=2 input functions                  ; 1091                     ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2249                     ;
-;     -- arithmetic mode                      ; 949                      ;
-;                                             ;                          ;
-; Total registers                             ; 396                      ;
-;     -- Dedicated logic registers            ; 396                      ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 20                       ;
-; Total memory bits                           ; 4096                     ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-; Total PLLs                                  ; 1                        ;
-;     -- PLLs                                 ; 1                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; collision:inst6|Equal1~0 ;
-; Maximum fan-out                             ; 296                      ;
-; Total fan-out                               ; 10846                    ;
-; Average fan-out                             ; 2.98                     ;
-+---------------------------------------------+--------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                        ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 3,197                                                                                ;
+;                                             ;                                                                                      ;
+; Total combinational functions               ; 3032                                                                                 ;
+; Logic element usage by number of LUT inputs ;                                                                                      ;
+;     -- 4 input functions                    ; 1103                                                                                 ;
+;     -- 3 input functions                    ; 890                                                                                  ;
+;     -- <=2 input functions                  ; 1039                                                                                 ;
+;                                             ;                                                                                      ;
+; Logic elements by mode                      ;                                                                                      ;
+;     -- normal mode                          ; 2090                                                                                 ;
+;     -- arithmetic mode                      ; 942                                                                                  ;
+;                                             ;                                                                                      ;
+; Total registers                             ; 396                                                                                  ;
+;     -- Dedicated logic registers            ; 396                                                                                  ;
+;     -- I/O registers                        ; 0                                                                                    ;
+;                                             ;                                                                                      ;
+; I/O pins                                    ; 20                                                                                   ;
+; Total memory bits                           ; 4096                                                                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
+; Total PLLs                                  ; 1                                                                                    ;
+;     -- PLLs                                 ; 1                                                                                    ;
+;                                             ;                                                                                      ;
+; Maximum fan-out node                        ; altpll0:inst1|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
+; Maximum fan-out                             ; 275                                                                                  ;
+; Total fan-out                               ; 10222                                                                                ;
+; Average fan-out                             ; 2.94                                                                                 ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -266,9 +266,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |flappyBirdFinal                          ; 3198 (1)          ; 396 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |flappyBirdFinal                                                                                                                  ; work         ;
-;    |MOUSE:inst2|                          ; 84 (84)           ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|MOUSE:inst2                                                                                                      ; work         ;
-;    |Priority:inst5|                       ; 18 (18)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                                                                   ; work         ;
+; |flappyBirdFinal                          ; 3032 (1)          ; 396 (0)      ; 4096        ; 0            ; 0       ; 0         ; 20   ; 0            ; |flappyBirdFinal                                                                                                                  ; work         ;
+;    |MOUSE:inst2|                          ; 85 (85)           ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|MOUSE:inst2                                                                                                      ; work         ;
+;    |Priority:inst5|                       ; 17 (17)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|Priority:inst5                                                                                                   ; work         ;
 ;    |VGA_SYNC:inst8|                       ; 59 (59)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|VGA_SYNC:inst8                                                                                                   ; work         ;
 ;    |altpll0:inst1|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1                                                                                                    ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|altpll0:inst1|altpll:altpll_component                                                                            ; work         ;
@@ -277,20 +277,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst                                                                                                    ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component                                                                    ; work         ;
 ;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated                                     ; work         ;
-;    |collision:inst6|                      ; 379 (379)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|collision:inst6                                                                                                  ; work         ;
+;    |collision:inst6|                      ; 210 (210)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|collision:inst6                                                                                                  ; work         ;
 ;    |fsm:inst24|                           ; 19 (19)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|fsm:inst24                                                                                                       ; work         ;
 ;    |pipes:inst32|                         ; 115 (115)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|pipes:inst32                                                                                                     ; work         ;
 ;    |randomNums:inst10|                    ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|randomNums:inst10                                                                                                ; work         ;
-;    |textToDisplay:inst3|                  ; 2433 (406)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                                                              ; work         ;
-;       |lpm_divide:Div0|                   ; 480 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0                                                                              ; work         ;
-;          |lpm_divide_gvo:auto_generated|  ; 480 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated                                                ; work         ;
-;             |abs_divider_kbg:divider|     ; 480 (4)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ; work         ;
+;    |textToDisplay:inst3|                  ; 2436 (409)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3                                                                                              ; work         ;
+;       |lpm_divide:Div0|                   ; 478 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0                                                                              ; work         ;
+;          |lpm_divide_gvo:auto_generated|  ; 478 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated                                                ; work         ;
+;             |abs_divider_kbg:divider|     ; 478 (4)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider                        ; work         ;
 ;                |alt_u_div_t5f:divider|    ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|alt_u_div_t5f:divider  ; work         ;
-;                |lpm_abs_9v9:my_abs_num|   ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
-;       |lpm_divide:Div1|                   ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1                                                                              ; work         ;
-;          |lpm_divide_jvo:auto_generated|  ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated                                                ; work         ;
-;             |abs_divider_nbg:divider|     ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ; work         ;
-;                |lpm_abs_9v9:my_abs_num|   ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
+;                |lpm_abs_9v9:my_abs_num|   ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div0|lpm_divide_gvo:auto_generated|abs_divider_kbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
+;       |lpm_divide:Div1|                   ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1                                                                              ; work         ;
+;          |lpm_divide_jvo:auto_generated|  ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated                                                ; work         ;
+;             |abs_divider_nbg:divider|     ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider                        ; work         ;
+;                |lpm_abs_9v9:my_abs_num|   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Div1|lpm_divide_jvo:auto_generated|abs_divider_nbg:divider|lpm_abs_9v9:my_abs_num ; work         ;
 ;       |lpm_divide:Mod1|                   ; 1534 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1                                                                              ; work         ;
 ;          |lpm_divide_3po:auto_generated|  ; 1534 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated                                                ; work         ;
 ;             |abs_divider_4dg:divider|     ; 1534 (8)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |flappyBirdFinal|textToDisplay:inst3|lpm_divide:Mod1|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                        ; work         ;
@@ -449,9 +449,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Total registers                              ; 396   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 176   ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 239   ;
+; Number of registers using Clock Enable       ; 270   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -461,21 +461,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; collision:inst6|lives[0]                ; 2       ;
+; collision:inst6|lives[31]               ; 1       ;
 ; randomNums:inst10|output[7]             ; 13      ;
 ; randomNums:inst10|output[5]             ; 4       ;
 ; randomNums:inst10|output[4]             ; 4       ;
 ; randomNums:inst10|randVector[1]         ; 4       ;
 ; MOUSE:inst2|send_char                   ; 3       ;
-; collision:inst6|temp_lives[1]           ; 6       ;
+; collision:inst6|temp_lives[0]           ; 3       ;
+; collision:inst6|temp_lives[1]           ; 3       ;
 ; randomNums:inst10|randVector[4]         ; 1       ;
 ; randomNums:inst10|randVector[3]         ; 2       ;
 ; randomNums:inst10|randVector[0]         ; 1       ;
+; collision:inst6|score[0]                ; 11      ;
+; collision:inst6|score[31]               ; 154     ;
 ; MOUSE:inst2|SHIFTOUT[3]                 ; 1       ;
+; collision:inst6|temp_score[0]           ; 2       ;
+; collision:inst6|temp_score[31]          ; 2       ;
 ; MOUSE:inst2|SHIFTOUT[5]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[6]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                 ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                 ; 1       ;
-; Total number of inverted registers = 14 ;         ;
+; Total number of inverted registers = 21 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -484,19 +491,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[8]            ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[2]                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|VGA_SYNC:inst8|v_count[0]                ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|new_cursor_column[3]         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|pipes:inst32|pipe_x_pos[1]               ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |flappyBirdFinal|Priority:inst5|tempBlueOut[2]            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|pipes:inst32|pipe_x_pos[10]              ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[16]           ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 22 LEs               ; 11 LEs                 ; Yes        ; |flappyBirdFinal|Priority:inst5|tempGreenOut[2]           ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |flappyBirdFinal|MOUSE:inst2|cursor_column[4]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[1]            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |flappyBirdFinal|Background:inst23|blue_out[3]            ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |flappyBirdFinal|collision:inst6|temp_score[27]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |flappyBirdFinal|collision:inst6|temp_lives[0]            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |flappyBirdFinal|collision:inst6|temp_score[31]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |flappyBirdFinal|Background:inst23|red_out[2]             ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|hundereds[3]         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|tens[3]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|tens[2]              ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |flappyBirdFinal|textToDisplay:inst3|ones[0]              ;
 ; 50:1               ; 6 bits    ; 198 LEs       ; 6 LEs                ; 192 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|character_address[0] ;
-; 61:1               ; 6 bits    ; 240 LEs       ; 6 LEs                ; 234 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|font_col[1]          ;
+; 61:1               ; 6 bits    ; 240 LEs       ; 6 LEs                ; 234 LEs                ; No         ; |flappyBirdFinal|textToDisplay:inst3|font_col[0]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -1078,7 +1087,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1088,7 +1097,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 29 12:29:30 2022
+    Info: Processing started: Sun May 29 13:36:24 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/rnata/documents/github/compsys305-mini-project/miniproject files/miniprojectresources/collision.vhd
@@ -1228,8 +1237,8 @@ Warning (10492): VHDL Process Statement warning at statemachinet.vhd(73): signal
 Warning (10492): VHDL Process Statement warning at statemachinet.vhd(82): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at statemachinet.vhd(89): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "collision" for hierarchy "collision:inst6"
-Warning (10492): VHDL Process Statement warning at collision.vhd(42): signal "temp_lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at collision.vhd(43): signal "temp_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at collision.vhd(23): object "pipeTopMin_y" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at collision.vhd(24): object "pipeBtmMax_y" assigned a value but never read
 Info (10041): Inferred latch for "isCollisionPipe" at collision.vhd(31)
 Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst32"
 Warning (10540): VHDL Signal Declaration warning at pipes.vhd(29): used explicit default value for signal "gap" because signal was never assigned a value
@@ -1443,90 +1452,21 @@ Warning (13012): Latch textToDisplay:inst3|hundereds[3] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal collision:inst6|score[31]
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "collision:inst6|lives[0]" is converted into an equivalent circuit using register "collision:inst6|lives[0]~_emulated" and latch "collision:inst6|lives[0]~1"
-    Warning (13310): Register "collision:inst6|lives[1]" is converted into an equivalent circuit using register "collision:inst6|lives[1]~_emulated" and latch "collision:inst6|lives[1]~5"
-    Warning (13310): Register "collision:inst6|lives[2]" is converted into an equivalent circuit using register "collision:inst6|lives[2]~_emulated" and latch "collision:inst6|lives[2]~9"
-    Warning (13310): Register "collision:inst6|lives[3]" is converted into an equivalent circuit using register "collision:inst6|lives[3]~_emulated" and latch "collision:inst6|lives[3]~13"
-    Warning (13310): Register "collision:inst6|lives[4]" is converted into an equivalent circuit using register "collision:inst6|lives[4]~_emulated" and latch "collision:inst6|lives[4]~17"
-    Warning (13310): Register "collision:inst6|lives[5]" is converted into an equivalent circuit using register "collision:inst6|lives[5]~_emulated" and latch "collision:inst6|lives[5]~21"
-    Warning (13310): Register "collision:inst6|lives[6]" is converted into an equivalent circuit using register "collision:inst6|lives[6]~_emulated" and latch "collision:inst6|lives[6]~25"
-    Warning (13310): Register "collision:inst6|lives[7]" is converted into an equivalent circuit using register "collision:inst6|lives[7]~_emulated" and latch "collision:inst6|lives[7]~29"
-    Warning (13310): Register "collision:inst6|lives[8]" is converted into an equivalent circuit using register "collision:inst6|lives[8]~_emulated" and latch "collision:inst6|lives[8]~33"
-    Warning (13310): Register "collision:inst6|lives[9]" is converted into an equivalent circuit using register "collision:inst6|lives[9]~_emulated" and latch "collision:inst6|lives[9]~37"
-    Warning (13310): Register "collision:inst6|lives[10]" is converted into an equivalent circuit using register "collision:inst6|lives[10]~_emulated" and latch "collision:inst6|lives[10]~41"
-    Warning (13310): Register "collision:inst6|lives[11]" is converted into an equivalent circuit using register "collision:inst6|lives[11]~_emulated" and latch "collision:inst6|lives[11]~45"
-    Warning (13310): Register "collision:inst6|lives[12]" is converted into an equivalent circuit using register "collision:inst6|lives[12]~_emulated" and latch "collision:inst6|lives[12]~49"
-    Warning (13310): Register "collision:inst6|lives[13]" is converted into an equivalent circuit using register "collision:inst6|lives[13]~_emulated" and latch "collision:inst6|lives[13]~53"
-    Warning (13310): Register "collision:inst6|lives[14]" is converted into an equivalent circuit using register "collision:inst6|lives[14]~_emulated" and latch "collision:inst6|lives[14]~57"
-    Warning (13310): Register "collision:inst6|lives[15]" is converted into an equivalent circuit using register "collision:inst6|lives[15]~_emulated" and latch "collision:inst6|lives[15]~61"
-    Warning (13310): Register "collision:inst6|lives[16]" is converted into an equivalent circuit using register "collision:inst6|lives[16]~_emulated" and latch "collision:inst6|lives[16]~65"
-    Warning (13310): Register "collision:inst6|lives[17]" is converted into an equivalent circuit using register "collision:inst6|lives[17]~_emulated" and latch "collision:inst6|lives[17]~69"
-    Warning (13310): Register "collision:inst6|lives[18]" is converted into an equivalent circuit using register "collision:inst6|lives[18]~_emulated" and latch "collision:inst6|lives[18]~73"
-    Warning (13310): Register "collision:inst6|lives[19]" is converted into an equivalent circuit using register "collision:inst6|lives[19]~_emulated" and latch "collision:inst6|lives[19]~77"
-    Warning (13310): Register "collision:inst6|lives[20]" is converted into an equivalent circuit using register "collision:inst6|lives[20]~_emulated" and latch "collision:inst6|lives[20]~81"
-    Warning (13310): Register "collision:inst6|lives[21]" is converted into an equivalent circuit using register "collision:inst6|lives[21]~_emulated" and latch "collision:inst6|lives[21]~85"
-    Warning (13310): Register "collision:inst6|lives[22]" is converted into an equivalent circuit using register "collision:inst6|lives[22]~_emulated" and latch "collision:inst6|lives[22]~89"
-    Warning (13310): Register "collision:inst6|lives[23]" is converted into an equivalent circuit using register "collision:inst6|lives[23]~_emulated" and latch "collision:inst6|lives[23]~93"
-    Warning (13310): Register "collision:inst6|lives[24]" is converted into an equivalent circuit using register "collision:inst6|lives[24]~_emulated" and latch "collision:inst6|lives[24]~97"
-    Warning (13310): Register "collision:inst6|lives[25]" is converted into an equivalent circuit using register "collision:inst6|lives[25]~_emulated" and latch "collision:inst6|lives[25]~101"
-    Warning (13310): Register "collision:inst6|lives[26]" is converted into an equivalent circuit using register "collision:inst6|lives[26]~_emulated" and latch "collision:inst6|lives[26]~105"
-    Warning (13310): Register "collision:inst6|lives[27]" is converted into an equivalent circuit using register "collision:inst6|lives[27]~_emulated" and latch "collision:inst6|lives[27]~109"
-    Warning (13310): Register "collision:inst6|lives[28]" is converted into an equivalent circuit using register "collision:inst6|lives[28]~_emulated" and latch "collision:inst6|lives[28]~113"
-    Warning (13310): Register "collision:inst6|lives[29]" is converted into an equivalent circuit using register "collision:inst6|lives[29]~_emulated" and latch "collision:inst6|lives[29]~117"
-    Warning (13310): Register "collision:inst6|lives[30]" is converted into an equivalent circuit using register "collision:inst6|lives[30]~_emulated" and latch "collision:inst6|lives[30]~121"
-    Warning (13310): Register "collision:inst6|lives[31]" is converted into an equivalent circuit using register "collision:inst6|lives[31]~_emulated" and latch "collision:inst6|lives[31]~125"
-    Warning (13310): Register "collision:inst6|score[0]" is converted into an equivalent circuit using register "collision:inst6|score[0]~_emulated" and latch "collision:inst6|score[0]~1"
-    Warning (13310): Register "collision:inst6|score[31]" is converted into an equivalent circuit using register "collision:inst6|score[31]~_emulated" and latch "collision:inst6|score[31]~5"
-    Warning (13310): Register "collision:inst6|score[28]" is converted into an equivalent circuit using register "collision:inst6|score[28]~_emulated" and latch "collision:inst6|score[28]~9"
-    Warning (13310): Register "collision:inst6|score[27]" is converted into an equivalent circuit using register "collision:inst6|score[27]~_emulated" and latch "collision:inst6|score[27]~13"
-    Warning (13310): Register "collision:inst6|score[26]" is converted into an equivalent circuit using register "collision:inst6|score[26]~_emulated" and latch "collision:inst6|score[26]~17"
-    Warning (13310): Register "collision:inst6|score[25]" is converted into an equivalent circuit using register "collision:inst6|score[25]~_emulated" and latch "collision:inst6|score[25]~21"
-    Warning (13310): Register "collision:inst6|score[24]" is converted into an equivalent circuit using register "collision:inst6|score[24]~_emulated" and latch "collision:inst6|score[24]~25"
-    Warning (13310): Register "collision:inst6|score[23]" is converted into an equivalent circuit using register "collision:inst6|score[23]~_emulated" and latch "collision:inst6|score[23]~29"
-    Warning (13310): Register "collision:inst6|score[22]" is converted into an equivalent circuit using register "collision:inst6|score[22]~_emulated" and latch "collision:inst6|score[22]~33"
-    Warning (13310): Register "collision:inst6|score[21]" is converted into an equivalent circuit using register "collision:inst6|score[21]~_emulated" and latch "collision:inst6|score[21]~37"
-    Warning (13310): Register "collision:inst6|score[20]" is converted into an equivalent circuit using register "collision:inst6|score[20]~_emulated" and latch "collision:inst6|score[20]~41"
-    Warning (13310): Register "collision:inst6|score[19]" is converted into an equivalent circuit using register "collision:inst6|score[19]~_emulated" and latch "collision:inst6|score[19]~45"
-    Warning (13310): Register "collision:inst6|score[18]" is converted into an equivalent circuit using register "collision:inst6|score[18]~_emulated" and latch "collision:inst6|score[18]~49"
-    Warning (13310): Register "collision:inst6|score[17]" is converted into an equivalent circuit using register "collision:inst6|score[17]~_emulated" and latch "collision:inst6|score[17]~53"
-    Warning (13310): Register "collision:inst6|score[16]" is converted into an equivalent circuit using register "collision:inst6|score[16]~_emulated" and latch "collision:inst6|score[16]~57"
-    Warning (13310): Register "collision:inst6|score[15]" is converted into an equivalent circuit using register "collision:inst6|score[15]~_emulated" and latch "collision:inst6|score[15]~61"
-    Warning (13310): Register "collision:inst6|score[14]" is converted into an equivalent circuit using register "collision:inst6|score[14]~_emulated" and latch "collision:inst6|score[14]~65"
-    Warning (13310): Register "collision:inst6|score[13]" is converted into an equivalent circuit using register "collision:inst6|score[13]~_emulated" and latch "collision:inst6|score[13]~69"
-    Warning (13310): Register "collision:inst6|score[12]" is converted into an equivalent circuit using register "collision:inst6|score[12]~_emulated" and latch "collision:inst6|score[12]~73"
-    Warning (13310): Register "collision:inst6|score[11]" is converted into an equivalent circuit using register "collision:inst6|score[11]~_emulated" and latch "collision:inst6|score[11]~77"
-    Warning (13310): Register "collision:inst6|score[10]" is converted into an equivalent circuit using register "collision:inst6|score[10]~_emulated" and latch "collision:inst6|score[10]~81"
-    Warning (13310): Register "collision:inst6|score[9]" is converted into an equivalent circuit using register "collision:inst6|score[9]~_emulated" and latch "collision:inst6|score[9]~85"
-    Warning (13310): Register "collision:inst6|score[8]" is converted into an equivalent circuit using register "collision:inst6|score[8]~_emulated" and latch "collision:inst6|score[8]~89"
-    Warning (13310): Register "collision:inst6|score[7]" is converted into an equivalent circuit using register "collision:inst6|score[7]~_emulated" and latch "collision:inst6|score[7]~93"
-    Warning (13310): Register "collision:inst6|score[29]" is converted into an equivalent circuit using register "collision:inst6|score[29]~_emulated" and latch "collision:inst6|score[29]~97"
-    Warning (13310): Register "collision:inst6|score[30]" is converted into an equivalent circuit using register "collision:inst6|score[30]~_emulated" and latch "collision:inst6|score[30]~101"
-    Warning (13310): Register "collision:inst6|score[6]" is converted into an equivalent circuit using register "collision:inst6|score[6]~_emulated" and latch "collision:inst6|score[6]~105"
-    Warning (13310): Register "collision:inst6|score[5]" is converted into an equivalent circuit using register "collision:inst6|score[5]~_emulated" and latch "collision:inst6|score[5]~109"
-    Warning (13310): Register "collision:inst6|score[4]" is converted into an equivalent circuit using register "collision:inst6|score[4]~_emulated" and latch "collision:inst6|score[4]~113"
-    Warning (13310): Register "collision:inst6|score[3]" is converted into an equivalent circuit using register "collision:inst6|score[3]~_emulated" and latch "collision:inst6|score[3]~117"
-    Warning (13310): Register "collision:inst6|score[2]" is converted into an equivalent circuit using register "collision:inst6|score[2]~_emulated" and latch "collision:inst6|score[2]~121"
-    Warning (13310): Register "collision:inst6|score[1]" is converted into an equivalent circuit using register "collision:inst6|score[1]~_emulated" and latch "collision:inst6|score[1]~125"
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register collision:inst6|temp_lives[0] will power up to Low
-    Critical Warning (18010): Register collision:inst6|temp_score[31] will power up to Low
-    Critical Warning (18010): Register collision:inst6|temp_score[0] will power up to Low
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3339 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3234 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 3310 logic cells
+    Info (21061): Implemented 3205 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 161 warnings
-    Info: Peak virtual memory: 4696 megabytes
-    Info: Processing ended: Sun May 29 12:29:49 2022
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Sun May 29 13:36:37 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:13
 
 
