@@ -40,14 +40,15 @@ BEGIN
 			temp_lives <= 3;
 			counter <= 0;
 			temp_score<=0;
-			
-		elsif (temp_lives = 0)then
-			temp_lives<=0;
 		
 		--Checks if ball has been hit
 		elsif((ballOn = '1' and Pipe1on = '1') and counter > 250000000) then
 			temp_lives<=temp_lives-1;
 			counter<=0;
+			
+		elsif (temp_lives <1)then
+			temp_lives<=0;
+		
 		
 		elsif(counter>250000000) then --betrween 250 - 800 million
  -- if ball is between the gap
