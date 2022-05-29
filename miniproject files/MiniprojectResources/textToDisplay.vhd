@@ -45,7 +45,7 @@ architecture a OF textToDisplay IS
 	-- numbers from 0 to 9
 	
 	type gameOver is array(0 to 9) of std_LOGIC_VECTOR(5 downto 0);
-	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","011001","000101","010010","100000");
+	signal siggameOver: gameOver:= ("000111","000001","001101","000101", "100000","001111","010110","000101","010010","100000");
 	signal tempLives: integer :=6;
 	
 	
