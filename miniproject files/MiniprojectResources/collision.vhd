@@ -35,18 +35,16 @@ checkCollison: process(vert_sync, clk)
 
 BEGIN
 
-	
-	
+	if(mode = "000" or mode = "011") then
+		temp_lives <= 3;
+		counter <= 0;
+		temp_score<=0;
+		lives <= temp_lives;
 								 							
-	if(rising_edge(clk) and vert_sync = '1') then
-		if(mode = "000" or mode = "011") then
-			temp_lives <= 3;
-			counter <= 0;
-			temp_score<=0;
-			lives <= temp_lives;
+	elsif(rising_edge(clk) and vert_sync = '1' and (mode = "001" or mode = "010")) then
 		
 		--Checks if ball has been hit
-		elsif((ballOn = '1' and Pipe1on = '1') and counter > 250000000) then
+		if((ballOn = '1' and Pipe1on = '1') and counter > 250000000) then
 			temp_lives<=temp_lives-1;
 			counter<=0;
 			
@@ -59,10 +57,7 @@ BEGIN
 			temp_score<=temp_score+1;
 			counter<=0;
 		end if;
-		
-
-		
-		
+	
 		-- Update lives and score outputs
 		lives <= temp_lives;
 		score <= temp_score;
