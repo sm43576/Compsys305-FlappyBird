@@ -28,7 +28,7 @@ BEGIN
 	pipeTopMin_y <="0000000000"; -- 0
 	pipeBtmMax_y <="0111011111"; -- 479
 	
-	isCollisionPipe <= '1' when (ballOn = '1' and Pipe1on = '1') else '0';---isCollisionPipe <= '1' when (ballOn = '1' and pipe1On = '1') else '0';
+	--isCollisionPipe <= '1' when (ballOn = '1' and Pipe1on = '1') else '0';---isCollisionPipe <= '1' when (ballOn = '1' and pipe1On = '1') else '0';
 	
 	
 checkCollison: process(vert_sync, clk, mode)
@@ -45,7 +45,7 @@ BEGIN
 			temp_lives<=0;
 		
 		--Checks if ball has been hit
-		elsif((isCollisionPipe = '1') and counter > 250000000) then
+		elsif((ballOn = '1' and Pipe1on = '1') and counter > 250000000) then
 			temp_lives<=temp_lives-1;
 			counter<=0;
 		
