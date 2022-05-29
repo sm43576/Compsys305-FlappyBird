@@ -56,127 +56,68 @@ begin
 process(clock_25Mhz,p_row,p_col,pix_row,pix_col,mode,sig_title,sig_trainT,sig_normT, sigNumScore,siggameOver,charvalue, sig_lifeT, score, sig_scoreT)
 variable tens, ones, hundereds: integer := 0;
 begin
-	p_row <= conv_integer(pix_row);
-	p_col <= conv_integer(pix_col);
-	textOn <= '0';
-	------------------------------------------------ Flappy Bird Title
-	if(mode = "000") then
-		
-		for i in 0 to 11 loop
-			if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
-				textOn <= '1';
-				charvalue <= sig_title(i);
-				character_address <= charvalue ; -- L
-				font_row <= pix_row(4 downto 2);
-				font_col <= pix_col(4 downto 2);
-			elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
-				character_address <= "100000";
-			end if;
-		end loop;
-		
-		-- train start instructions
-		for i in 0 to 24 loop
-			
-			if(320<p_row and p_row<336) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
-				textOn <='1';
-				charvalue <= sig_trainT(i);
-				character_address <= charvalue ; 
-				font_row <= pix_row(3 downto 1);
-				font_col <= pix_col(3 downto 1);
-			end if;
-		end loop;
-		
-		-- Normal game mode start instruction
-		for i in 0 to 23 loop
-			if(336<p_row and p_row<352) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
-				textOn <='1';
-				charvalue <= sig_normT(i);
-				character_address <= charvalue ; 
-				font_row <= pix_row(3 downto 1);
-				font_col <= pix_col(3 downto 1);
-			end if;
-		end loop;
-	
-	
-	--------------------------------------------------------------TrainingMode (639x479)
-	elsif (mode = "001") then 
-	
-			for i in 0 to 6 loop
-				if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
-					textOn <= '1';
-					if(i = 6) then
-						charvalue <= sigNumScore(lives);
-					else
-						charvalue <= sig_lifeT(i);
-					end if;
-					character_address <= charvalue ; -- L
-					font_row <= pix_row(3 downto 1);
-					font_col <= pix_col(3 downto 1);
-					end if;
-			end loop;
-				
-			--------------------------------- Check score
-			if (score < 10) then
-				ones := score;
-				tens:= 0;
-				hundereds := 0;
-			elsif(score > 9) then
-				ones := score mod 10;
-				tens := score/10;
-				hundereds := 0;
-			elsif(score >99) then
-				ones := score mod 100;
-				tens := score mod 10;
-				hundereds := score/100;
-			end if;	
-				
-			for i in 0 to 8 loop
-				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
-					textOn <= '1';
-					
-					-- display numbers 
-						if (i = 6) then
-							charvalue <=sigNumScore(hundereds);
-						elsif(i = 7) then
-							charvalue <= sigNumScore(tens);
-						elsif(i = 8) then
-							charvalue <=sigNumScore(ones);
-						
-						-- display SCORE[space]
-						else
-							charvalue <= sig_scoreT(i);
-						end if;
-			
-						character_address <= charvalue ; -- L
-						font_row <= pix_row(4 downto 2);
-						font_col <= pix_col(4 downto 2);
-					end if;
-				end loop;
 
 	
-	
-	
-	
-	
-	
-	-------------------------------------------------------------- Game mode
-	
-	elsif (mode = "010") then 
-	
-				for i in 0 to 6 loop
-				if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
+	if rising_edge(clock_25Mhz)then
+		p_row <= conv_integer(pix_row);
+		p_col <= conv_integer(pix_col);
+		textOn <= '0';
+		------------------------------------------------ Flappy Bird Title
+		if(mode = "000") then
+		
+			for i in 0 to 11 loop
+				if(96<p_row and p_row<128) and (((i-1)*32)+96<p_col and p_col<96+(i*32))	 then
 					textOn <= '1';
-					if(i = 6) then
-						charvalue <= sigNumScore(lives);
-					else
-						charvalue <= sig_lifeT(i);
-					end if;
+					charvalue <= sig_title(i);
 					character_address <= charvalue ; -- L
+					font_row <= pix_row(4 downto 2);
+					font_col <= pix_col(4 downto 2);
+				elsif((96<p_row and p_row<128) and p_col<64) then -- to get rid of the lines
+					character_address <= "100000";
+				end if;
+			end loop;
+		
+			-- train start instructions
+			for i in 0 to 24 loop
+				
+				if(320<p_row and p_row<336) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
+					textOn <='1';
+					charvalue <= sig_trainT(i);
+					character_address <= charvalue ; 
 					font_row <= pix_row(3 downto 1);
 					font_col <= pix_col(3 downto 1);
-					end if;
+				end if;
+			end loop;
+		
+			-- Normal game mode start instruction
+			for i in 0 to 23 loop
+				if(336<p_row and p_row<352) and (((i-1)*16)+96<p_col and p_col<96+(i*16))	 then
+					textOn <='1';
+					charvalue <= sig_normT(i);
+					character_address <= charvalue ; 
+					font_row <= pix_row(3 downto 1);
+					font_col <= pix_col(3 downto 1);
+				end if;
+			end loop;
+		
+		
+		--------------------------------------------------------------TrainingMode (639x479)
+		elsif (mode = "001") then 
+		
+				for i in 0 to 6 loop
+					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
+						textOn <= '1';
+						if(i = 6) then
+							charvalue <= sigNumScore(lives);
+						else
+							charvalue <= sig_lifeT(i);
+						end if;
+						character_address <= charvalue ; -- L
+						font_row <= pix_row(3 downto 1);
+						font_col <= pix_col(3 downto 1);
+						end if;
 				end loop;
-				
+					
 				--------------------------------- Check score
 				if (score < 10) then
 					ones := score;
@@ -190,47 +131,107 @@ begin
 					ones := score mod 100;
 					tens := score mod 10;
 					hundereds := score/100;
-				end if;
-				
+				end if;	
+					
 				for i in 0 to 8 loop
-	
 					if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
 						textOn <= '1';
-						-- display numbers 
-						if (i = 6) then
-							charvalue <=sigNumScore(hundereds);
-						elsif(i = 7) then
-							charvalue <= sigNumScore(tens);
-						elsif(i = 8) then
-							charvalue <=sigNumScore(ones);
 						
-						-- display SCORE[space]
-						else
-							charvalue <= sig_scoreT(i);
+						-- display numbers 
+							if (i = 6) then
+								charvalue <=sigNumScore(hundereds);
+							elsif(i = 7) then
+								charvalue <= sigNumScore(tens);
+							elsif(i = 8) then
+								charvalue <=sigNumScore(ones);
+							
+							-- display SCORE[space]
+							else
+								charvalue <= sig_scoreT(i);
+							end if;
+				
+							character_address <= charvalue ; -- L
+							font_row <= pix_row(4 downto 2);
+							font_col <= pix_col(4 downto 2);
 						end if;
+					end loop;
+
+		
+		
+		
+		
+		
+		
+		-------------------------------------------------------------- Game mode
+		
+		elsif (mode = "010") then 
+		
+					for i in 0 to 6 loop
+					if(32<p_row and p_row<48) and (((i-1)*16)+16<p_col and p_col<16+(i*16))	 then
+						textOn <= '1';
+						if(i = 6) then
+							charvalue <= sigNumScore(lives);
+						else
+							charvalue <= sig_lifeT(i);
+						end if;
+						character_address <= charvalue ; -- L
+						font_row <= pix_row(3 downto 1);
+						font_col <= pix_col(3 downto 1);
+						end if;
+					end loop;
 					
+					--------------------------------- Check score
+					if (score < 10) then
+						ones := score;
+						tens:= 0;
+						hundereds := 0;
+					elsif(score > 9) then
+						ones := score mod 10;
+						tens := score/10;
+						hundereds := 0;
+					elsif(score >99) then
+						ones := score mod 100;
+						tens := score mod 10;
+						hundereds := score/100;
+					end if;
+					
+					for i in 0 to 8 loop
+		
+						if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
+							textOn <= '1';
+							-- display numbers 
+							if (i = 6) then
+								charvalue <=sigNumScore(hundereds);
+							elsif(i = 7) then
+								charvalue <= sigNumScore(tens);
+							elsif(i = 8) then
+								charvalue <=sigNumScore(ones);
+							
+							-- display SCORE[space]
+							else
+								charvalue <= sig_scoreT(i);
+							end if;
+						
+							character_address <= charvalue ; -- L
+							font_row <= pix_row(4 downto 2);
+							font_col <= pix_col(4 downto 2);
+						end if;
+					end loop;
+					
+		 
+		
+		elsif(mode = "011") then
+			for i in 0 to 9 loop
+					if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
+						textOn <= '1';
+						charvalue <= siggameOver(i);
 						character_address <= charvalue ; -- L
 						font_row <= pix_row(4 downto 2);
 						font_col <= pix_col(4 downto 2);
 					end if;
-				end loop;
-				
-	 
-	
-	elsif(mode = "011") then
-		for i in 0 to 9 loop
-				if(96<p_row and p_row<128) and (((i-1)*32)+224<p_col and p_col<224+(i*32))	 then
-					textOn <= '1';
-					charvalue <= siggameOver(i);
-					character_address <= charvalue ; -- L
-					font_row <= pix_row(4 downto 2);
-					font_col <= pix_col(4 downto 2);
-				end if;
-				end loop;
-	 
-	--elsif (mode = "100") then
-		--textOn <='1';
-	 -- game finished text
+					end loop;
+		 
+		end if;
 	end if;
 end process;	 
 end a;
