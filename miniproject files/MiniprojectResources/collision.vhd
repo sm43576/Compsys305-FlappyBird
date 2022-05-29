@@ -31,15 +31,19 @@ BEGIN
 	--isCollisionPipe <= '1' when (ballOn = '1' and Pipe1on = '1') else '0';---isCollisionPipe <= '1' when (ballOn = '1' and pipe1On = '1') else '0';
 	
 	
-checkCollison: process(vert_sync, clk, mode)
+checkCollison: process(vert_sync, clk)
 
 BEGIN
+
+	
+	
 								 							
 	if(rising_edge(clk) and vert_sync = '1') then
-		if(mode = "000") then
+		if(mode = "000" or mode = "011") then
 			temp_lives <= 3;
 			counter <= 0;
 			temp_score<=0;
+			lives <= temp_lives;
 		
 		--Checks if ball has been hit
 		elsif((ballOn = '1' and Pipe1on = '1') and counter > 250000000) then
@@ -55,6 +59,10 @@ BEGIN
 			temp_score<=temp_score+1;
 			counter<=0;
 		end if;
+		
+
+		
+		
 		-- Update lives and score outputs
 		lives <= temp_lives;
 		score <= temp_score;
